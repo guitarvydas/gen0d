@@ -4,20 +4,16 @@
         "name": "main",
         "children": [
             {
+                "name": "Procs",
+                "id": 3
+            },
+            {
                 "name": "Read Text File",
                 "id": 5
             },
             {
-                "name": "?A",
-                "id": 10
-            },
-            {
                 "name": "$ node generate.js",
                 "id": 11
-            },
-            {
-                "name": "Procs",
-                "id": 17
             }
         ],
         "connections": [
@@ -56,20 +52,7 @@
                 "source_port": "output",
                 "target": {
                     "name": "Procs",
-                    "id": 17
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "$ node generate.js",
-                    "id": 11
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "?A",
-                    "id": 10
+                    "id": 3
                 },
                 "target_port": "input"
             },
@@ -85,32 +68,6 @@
                     "id": 0
                 },
                 "target_port": "error"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Procs",
-                    "id": 17
-                },
-                "source_port": "error",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "error"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Procs",
-                    "id": 17
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "output"
             },
             {
                 "dir": 2,
@@ -124,6 +81,32 @@
                     "id": 0
                 },
                 "target_port": "error"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Procs",
+                    "id": 3
+                },
+                "source_port": "error",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "error"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Procs",
+                    "id": 3
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "output"
             }
         ]
     },
