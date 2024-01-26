@@ -1,0 +1,34 @@
+skeleton {
+  Drawings = Array<Drawing>
+  Drawing = "{" FileName DrawingName Children Connections "}"
+
+  Children = Key<"children"> ":" "[" Child+ "]"
+  Connections = Key<"connections"> ":" "[" UnnamedObject+ "]"
+
+  Child = "{" Key<"name"> ":" string Key<"id"> ":" integer "}"
+
+  FileName = Attribute<"file">
+  DrawingName = Attribute<"name">
+  
+  Key<s> = dq s dq
+  Array<x> = "[" x+ "]"
+  Attribute<name> = Key<name> ":" string
+
+  NamedAttribute = string ":" (string | integer | constant)
+  NamedArray = string ":" "[" NamedObject+ "]"
+  UnnamedObject = "{" NamedField+ "}"
+  NamedObject = string ":" UnnamedObject
+
+  NamedField = NamedObject | NamedArray | NamedAttribute
+
+  string = dq notDQ* dq
+  dq = "\""
+  notDQ = ~dq anychar
+  anychar =
+    | "\\" any -- escaped
+    | any -- other
+    
+  integer = digit+
+  constant = "true" | "false"
+  space += ","
+}

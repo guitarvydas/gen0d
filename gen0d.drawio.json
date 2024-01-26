@@ -4,6 +4,10 @@
         "name": "main",
         "children": [
             {
+                "name": "Procs",
+                "id": 3
+            },
+            {
                 "name": "Read Text File",
                 "id": 5
             },
@@ -40,6 +44,32 @@
                 "target_port": "input"
             },
             {
+                "dir": 1,
+                "source": {
+                    "name": "$ node generate.js",
+                    "id": 11
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "Procs",
+                    "id": 3
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "$ node generate.js",
+                    "id": 11
+                },
+                "source_port": "error",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "error"
+            },
+            {
                 "dir": 2,
                 "source": {
                     "name": "Read Text File",
@@ -55,21 +85,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "$ node generate.js",
-                    "id": 11
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "output"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "$ node generate.js",
-                    "id": 11
+                    "name": "Procs",
+                    "id": 3
                 },
                 "source_port": "error",
                 "target": {
@@ -77,6 +94,19 @@
                     "id": 0
                 },
                 "target_port": "error"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Procs",
+                    "id": 3
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "output"
             }
         ]
     },
@@ -88,6 +118,177 @@
         ],
         "connections": [
 
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "Procs",
+        "children": [
+            {
+                "name": "Transpile",
+                "id": 4
+            },
+            {
+                "name": "'procs'",
+                "id": 15
+            },
+            {
+                "name": "'null.js'",
+                "id": 16
+            },
+            {
+                "name": "'procs.rwr'",
+                "id": 19
+            },
+            {
+                "name": "'procs.ohm'",
+                "id": 22
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'null.js'",
+                    "id": 16
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'procs.rwr'",
+                    "id": 19
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'procs.ohm'",
+                    "id": 22
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'procs'",
+                    "id": 15
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
+                    "id": 16
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'procs.rwr'",
+                    "id": 19
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'procs.ohm'",
+                    "id": 22
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'procs'",
+                    "id": 15
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "error",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "error"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "output"
+            }
         ]
     }
 ]

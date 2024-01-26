@@ -1,0 +1,7 @@
+procs {
+  chars [char+] = ‛«char»’
+  char_macro [m] = ‛«m»’
+  char_any [c] = ‛’
+  macro [procname code] = ‛\n«procname» :: proc () { «code» }’
+  escstuff [_lb cs+ _rb] = ‛«decodeURIComponent (cs)»’
+}

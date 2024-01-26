@@ -1,0 +1,14 @@
+procs {
+  chars = char+
+  char =
+    | macro -- macro
+    | any   -- any
+
+  macro = procname code
+  procname = escstuff
+  code = escstuff
+  escstuff = "❨" nonBracket+ "❩"
+  nonBracket= ~"❨" ~"❩" any
+}
+
+??? This should ignore the connections section

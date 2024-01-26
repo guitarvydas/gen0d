@@ -17,6 +17,11 @@ start_function :: proc (main_container : ^zd.Eh) {
 
 
 components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
+    zd.append_leaf (leaves, std.string_constant ("procs"))
+    zd.append_leaf (leaves, std.string_constant ("procs.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("procs.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("null.js"))
+    //    zd.append_leaf (leaves, zd.Leaf_Template { name = "trash", instantiate = trash_instantiate })
 }
 
 
