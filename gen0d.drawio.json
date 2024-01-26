@@ -129,23 +129,83 @@
                 "id": 4
             },
             {
-                "name": "'procs'",
-                "id": 15
+                "name": "'package generated<br>'",
+                "id": 14
             },
             {
                 "name": "'null.js'",
-                "id": 16
+                "id": 15
             },
             {
                 "name": "'procs.rwr'",
-                "id": 19
+                "id": 18
             },
             {
                 "name": "'procs.ohm'",
-                "id": 22
+                "id": 21
+            },
+            {
+                "name": "'procs'",
+                "id": 24
+            },
+            {
+                "name": "stringconcat",
+                "id": 32
             }
         ],
         "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'procs'",
+                    "id": 24
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'null.js'",
+                    "id": 15
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'procs.ohm'",
+                    "id": 21
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'package generated<br>'",
+                    "id": 14
+                },
+                "target_port": "\u237a"
+            },
             {
                 "dir": 0,
                 "source": {
@@ -167,81 +227,42 @@
                 },
                 "source_port": "input",
                 "target": {
-                    "name": "'null.js'",
-                    "id": 16
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "input",
-                "target": {
                     "name": "'procs.rwr'",
-                    "id": 19
+                    "id": 18
                 },
                 "target_port": "\u237a"
             },
             {
-                "dir": 0,
+                "dir": 1,
                 "source": {
-                    "name": "",
-                    "id": 0
+                    "name": "Transpile",
+                    "id": 4
                 },
-                "source_port": "input",
+                "source_port": "output",
                 "target": {
-                    "name": "'procs.ohm'",
-                    "id": 22
+                    "name": "stringconcat",
+                    "id": 32
                 },
-                "target_port": "\u237a"
+                "target_port": "2"
             },
             {
-                "dir": 0,
+                "dir": 1,
                 "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "input",
-                "target": {
                     "name": "'procs'",
-                    "id": 15
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'null.js'",
-                    "id": 16
+                    "id": 24
                 },
                 "source_port": "\u237a",
                 "target": {
                     "name": "Transpile",
                     "id": 4
                 },
-                "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'procs.rwr'",
-                    "id": 19
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
+                "target_port": "grammar name"
             },
             {
                 "dir": 1,
                 "source": {
                     "name": "'procs.ohm'",
-                    "id": 22
+                    "id": 21
                 },
                 "source_port": "\u237a",
                 "target": {
@@ -253,7 +274,20 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'procs'",
+                    "name": "'procs.rwr'",
+                    "id": 18
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
                     "id": 15
                 },
                 "source_port": "\u237a",
@@ -261,7 +295,46 @@
                     "name": "Transpile",
                     "id": 4
                 },
-                "target_port": "grammar name"
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'package generated<br>'",
+                    "id": 14
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "stringconcat",
+                    "id": 32
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "stringconcat",
+                    "id": 32
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "output"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "stringconcat",
+                    "id": 32
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "error"
             },
             {
                 "dir": 2,
@@ -275,19 +348,6 @@
                     "id": 0
                 },
                 "target_port": "error"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "output"
             }
         ]
     }
