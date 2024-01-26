@@ -20,8 +20,10 @@ generator0D {
   namechar = ~codeMark ~nl ~dq any
   nl = "\n"
   codechar =
+    | nextMark -- next
     | dq codechar* dq -- nested
     | ~nl ~dq innerchar -- other
   codeMark = "∷" | "\\u2237"
+  nextMark = "⇒" | "\\u21d2"
 
 }
