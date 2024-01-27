@@ -4,7 +4,7 @@
         "name": "main",
         "children": [
             {
-                "name": "Procs",
+                "name": "&lt;br&gt; to newline",
                 "id": 3
             },
             {
@@ -14,6 +14,10 @@
             {
                 "name": "$ node generate.js",
                 "id": 11
+            },
+            {
+                "name": "Procs",
+                "id": 17
             }
         ],
         "connections": [
@@ -52,9 +56,35 @@
                 "source_port": "output",
                 "target": {
                     "name": "Procs",
-                    "id": 3
+                    "id": 17
                 },
                 "target_port": "input"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Procs",
+                    "id": 17
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "&lt;br&gt; to newline",
+                    "id": 3
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Procs",
+                    "id": 17
+                },
+                "source_port": "error",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "error"
             },
             {
                 "dir": 2,
@@ -85,7 +115,20 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Procs",
+                    "name": "&lt;br&gt; to newline",
+                    "id": 3
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "output"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "&lt;br&gt; to newline",
                     "id": 3
                 },
                 "source_port": "error",
@@ -94,19 +137,6 @@
                     "id": 0
                 },
                 "target_port": "error"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Procs",
-                    "id": 3
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "output"
             }
         ]
     },
@@ -129,10 +159,6 @@
                 "id": 4
             },
             {
-                "name": "'package generated<br>'",
-                "id": 14
-            },
-            {
                 "name": "'null.js'",
                 "id": 15
             },
@@ -149,8 +175,12 @@
                 "id": 24
             },
             {
+                "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                "id": 27
+            },
+            {
                 "name": "stringconcat",
-                "id": 32
+                "id": 28
             }
         ],
         "connections": [
@@ -162,8 +192,34 @@
                 },
                 "source_port": "input",
                 "target": {
+                    "name": "'procs.ohm'",
+                    "id": 21
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
                     "name": "'procs'",
                     "id": 24
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "input",
+                "target": {
+                    "name": "'procs.rwr'",
+                    "id": 18
                 },
                 "target_port": "\u237a"
             },
@@ -188,21 +244,8 @@
                 },
                 "source_port": "input",
                 "target": {
-                    "name": "'procs.ohm'",
-                    "id": 21
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "input",
-                "target": {
-                    "name": "'package generated<br>'",
-                    "id": 14
+                    "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                    "id": 27
                 },
                 "target_port": "\u237a"
             },
@@ -220,30 +263,17 @@
                 "target_port": "input"
             },
             {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "input",
-                "target": {
-                    "name": "'procs.rwr'",
-                    "id": 18
-                },
-                "target_port": "\u237a"
-            },
-            {
                 "dir": 1,
                 "source": {
-                    "name": "Transpile",
-                    "id": 4
+                    "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                    "id": 27
                 },
-                "source_port": "output",
+                "source_port": "\u237a",
                 "target": {
                     "name": "stringconcat",
-                    "id": 32
+                    "id": 28
                 },
-                "target_port": "2"
+                "target_port": "1"
             },
             {
                 "dir": 1,
@@ -300,21 +330,21 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'package generated<br>'",
-                    "id": 14
+                    "name": "Transpile",
+                    "id": 4
                 },
-                "source_port": "\u237a",
+                "source_port": "output",
                 "target": {
                     "name": "stringconcat",
-                    "id": 32
+                    "id": 28
                 },
-                "target_port": "1"
+                "target_port": "2"
             },
             {
                 "dir": 2,
                 "source": {
                     "name": "stringconcat",
-                    "id": 32
+                    "id": 28
                 },
                 "source_port": "output",
                 "target": {
@@ -327,7 +357,7 @@
                 "dir": 2,
                 "source": {
                     "name": "stringconcat",
-                    "id": 32
+                    "id": 28
                 },
                 "source_port": "2",
                 "target": {
@@ -341,6 +371,57 @@
                 "source": {
                     "name": "Transpile",
                     "id": 4
+                },
+                "source_port": "error",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "error"
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "&lt;br&gt; to newline",
+        "children": [
+            {
+                "name": "br2nl",
+                "id": 8
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "br2nl",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "br2nl",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "br2nl",
+                    "id": 8
                 },
                 "source_port": "error",
                 "target": {

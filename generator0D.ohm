@@ -20,6 +20,9 @@ generator0D {
   namechar = ~codeMark ~nl ~dq any
   nl = "\n"
   codechar =
+    | "\\\"" -- dquote
+    | "\\\\" -- backslash
+    | "\\n" -- nl
     | nextMark -- next
     | dq codechar* dq -- nested
     | ~nl ~dq innerchar -- other
