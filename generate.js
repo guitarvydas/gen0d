@@ -24,7 +24,7 @@ semantics.addOperation('gen', {
     anychar : function (c) { return this.sourceString; },
     
     escapedChar_dquote : function (_) { return '"'; },
-    codeMacro: function (dq1, namecs, _defcode, ws2, cs, dq2) { return `❨${encodeURIComponent (namecs.gen ().join (''))}❩❨${encodeURIComponent (cs.gen ().join (''))}❩`; },
+    codeMacro: function (dq1, namecs, _defcode, ws2, cs, dq2) { return `∷❨${encodeURIComponent (namecs.gen ().join (''))}❩❨${encodeURIComponent (cs.gen ().join (''))}❩`; },
     codechar_nested : function (dq1, cs, dq2) { return '"' + cs.gen ().join ('') + '"'; },
     codechar_other : function (c) { return this.sourceString; },
     codechar_next: function (x) { return ' zd.send (eh=eh, port="", datum=zd.new_datum_bang (), causingMessage=msg) '; },

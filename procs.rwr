@@ -15,7 +15,7 @@ procs {
 
   Object [_lb NamedValue+ _rb] = ‛«NamedValue»’
   Array [_lb x+ _rb] = ‛«x»’
-  CodeDescriptor [procname code] =
+  CodeDescriptor [_mark procname code] =
    ‛\n«decodeURIComponent (procname)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {«decodeURIComponent (code)»
 	}
