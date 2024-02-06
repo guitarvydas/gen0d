@@ -1,4 +1,4 @@
-generator0D {
+encoder0D {
   chars = char+
   char =
     | escapedChar -- esc

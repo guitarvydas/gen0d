@@ -4,7 +4,7 @@ const ohm = require ('ohm-js');
 let argv;
 let srcFileName;
 
-let grammarSrc = fs.readFileSync ('generator0D.ohm', 'utf-8'); // read from file to maintain programmer's sanity
+let grammarSrc = fs.readFileSync ('encoder0D.ohm', 'utf-8'); // read from file to maintain programmer's sanity
 const grammar = ohm.grammar(grammarSrc);
 
 const semantics = grammar.createSemantics();

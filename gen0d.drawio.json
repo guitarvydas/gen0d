@@ -4,24 +4,20 @@
         "name": "main",
         "children": [
             {
+                "name": "&lt;br&gt; to newline",
+                "id": 3
+            },
+            {
                 "name": "Read Text File",
                 "id": 5
             },
             {
-                "name": "?A",
-                "id": 10
-            },
-            {
-                "name": "$ node generate.js",
+                "name": "$ node encodemacros.js",
                 "id": 11
             },
             {
                 "name": "Procs",
                 "id": 17
-            },
-            {
-                "name": "&lt;br&gt; to newline",
-                "id": 23
             }
         ],
         "connections": [
@@ -41,20 +37,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Procs",
-                    "id": 17
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "&lt;br&gt; to newline",
-                    "id": 23
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "$ node generate.js",
+                    "name": "$ node encodemacros.js",
                     "id": 11
                 },
                 "source_port": "output",
@@ -72,7 +55,7 @@
                 },
                 "source_port": "output",
                 "target": {
-                    "name": "$ node generate.js",
+                    "name": "$ node encodemacros.js",
                     "id": 11
                 },
                 "target_port": "input"
@@ -80,21 +63,47 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "$ node generate.js",
-                    "id": 11
+                    "name": "Procs",
+                    "id": 17
                 },
                 "source_port": "output",
                 "target": {
-                    "name": "?A",
-                    "id": 10
+                    "name": "&lt;br&gt; to newline",
+                    "id": 3
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
+                    "name": "Procs",
+                    "id": 17
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "$ node encodemacros.js",
+                    "id": 11
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
                     "name": "&lt;br&gt; to newline",
-                    "id": 23
+                    "id": 3
                 },
                 "source_port": "",
                 "target": {
@@ -107,40 +116,14 @@
                 "dir": 2,
                 "source": {
                     "name": "&lt;br&gt; to newline",
-                    "id": 23
+                    "id": 3
                 },
-                "source_port": "error",
+                "source_port": "\u2717",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "error"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Procs",
-                    "id": 17
-                },
-                "source_port": "error",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "error"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "$ node generate.js",
-                    "id": 11
-                },
-                "source_port": "error",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "error"
+                "target_port": "\u2717"
             },
             {
                 "dir": 2,
@@ -148,12 +131,12 @@
                     "name": "Read Text File",
                     "id": 5
                 },
-                "source_port": "error",
+                "source_port": "\u2717",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "error"
+                "target_port": "\u2717"
             }
         ]
     },
