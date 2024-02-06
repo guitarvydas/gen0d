@@ -37,19 +37,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Read Text File",
-                    "id": 5
-                },
-                "source_port": "output",
-                "target": {
-                    "name": "$ node generate.js",
-                    "id": 11
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "$ node generate.js",
                     "id": 11
                 },
@@ -72,6 +59,19 @@
                     "id": 3
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Read Text File",
+                    "id": 5
+                },
+                "source_port": "output",
+                "target": {
+                    "name": "$ node generate.js",
+                    "id": 11
+                },
+                "target_port": "input"
             },
             {
                 "dir": 2,
