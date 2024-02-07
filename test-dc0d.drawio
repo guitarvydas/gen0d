@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-02-07T21:37:13.830Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="b8cbfTkZTEp-Y_pogTaG" version="23.0.2" type="device" pages="4">
+<mxfile host="Electron" modified="2024-02-07T21:54:34.071Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="U81bxNLGV8isPTjv1SXF" version="23.0.2" type="device" pages="4">
   <diagram name="main" id="4NC5C235ceEbJDFCXTHk">
     <mxGraphModel dx="1114" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -109,7 +109,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="c4hhCbNcadVvZpYAVF6g" name="Shop">
-    <mxGraphModel dx="1114" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="371" dy="229" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -130,7 +130,7 @@
         <mxCell id="LY3EbIqGwphYwSvvPRLA-5" value="" style="rhombus;whiteSpace=wrap;html=1;rounded=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontStyle=1;glass=0;sketch=0;fontSize=12;points=[[0,0.5,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[1,0.5,0,0,0]];shadow=1;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="1089" y="182.5" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="LY3EbIqGwphYwSvvPRLA-6" value="&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;⟪&lt;/span&gt;choice&lt;/b&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;⟫&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&quot;buy?&quot;, &quot;buy&quot;,&lt;br&gt;&quot;&quot;, &quot;leave&quot;" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="LY3EbIqGwphYwSvvPRLA-6" value="&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;⟪&lt;/span&gt;choice&lt;/b&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;⟫&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&#39;buy?&#39;, &#39;buy&#39;,&lt;br&gt;&#39;&#39;, &#39;leave&#39;" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="589" y="90" width="180" height="170" as="geometry">
             <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
           </mxGeometry>

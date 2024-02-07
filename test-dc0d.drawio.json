@@ -139,7 +139,7 @@
                 "id": 5
             },
             {
-                "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
                 "id": 7
             },
             {
@@ -156,7 +156,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
                     "id": 7
                 },
                 "target_port": ""
@@ -182,7 +182,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
                     "id": 7
                 },
                 "target_port": ""
@@ -195,7 +195,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
                     "id": 7
                 },
                 "target_port": "buy?"
@@ -203,7 +203,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
                     "id": 7
                 },
                 "source_port": "buy",
@@ -216,7 +216,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
                     "id": 7
                 },
                 "source_port": "leave",

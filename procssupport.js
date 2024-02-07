@@ -7,10 +7,15 @@ _ = {
 	return name;
     },
     pushNewPredicateName : function () {
-	predicateNameStack.push (_.predicateGensym ());
-	console.error (_.predicateStack);
+	_.predicateNameStack.push (_.predicateGensym ());
+	return "";
     },
-    topPredicateName : function () { return _.predicateNameStack [_.predicateNameState.len - 1]; },
-    popPredicateName : function () { _.predicateNameStack.pop (); return ""; }
+    topPredicateName : function () {
+	return _.predicateNameStack [_.predicateNameStack.length - 1];
+    },
+    popPredicateName : function () {
+	_.predicateNameStack.pop ();
+	return "";
+    }
 }
 ,

@@ -19,6 +19,8 @@ encoder0D {
 
   codeMacro = dq namechar* codeMark spaces codechar+ dq 
   predicateMacro = dq predicateMark spaces codechar+ dq 
+  choiceMacro = dq choiceMark spaces codechar+ dq 
+
   dq = "\""
   namechar = 
     | ~defmark ~nl ~dq html -- html
@@ -35,6 +37,12 @@ encoder0D {
   codeMark = "∷" | "\\u2237"
   nextMark = "⇒" | "\\u21d2"
   predicateMark = "⁇" | "\\u2047"
+  choiceMark =
+    | "⟪choice⟫" -- short
+    | choiceLB "choice" choiceRB -- long
+
+  choiceLB = "\u27ea"
+  choiceRB = "\u27eb"
 
   // marks used to define macro phrases (e.g. nextMark is an operator, not a def)
   defmark = codeMark | predicateMark
