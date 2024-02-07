@@ -25,7 +25,12 @@ procs {
 
   PredicateDescriptor [_mark code] ‛«_.pushNewPredicateName ()»’ =
    ‛\n«_.topPredicateName ()» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
-	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {«code»
+	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
+	  if («code») {
+            zd.send (eh=eh, port="", datum=zd.datum_new_bool (true), causingMessage=msg)
+          } else {
+            zd.send (eh=eh, port="", datum=zd.datum_new_bool (false), causingMessage=msg)
+          }
 	}
 	instance_name := zd.gensym ("«_.topPredicateName ()»")
 	return zd.make_leaf (instance_name, owner, nil, handler)
