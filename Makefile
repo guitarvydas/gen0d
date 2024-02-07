@@ -2,7 +2,7 @@ LIBSRC=0D/odin/std
 ODIN_FLAGS ?= -debug -o:none
 D2J=0d/das2json/das2json
 
-dev: clean run
+dev: test-dc0d.drawio.json clean run
 
 run: gen0d transpile.drawio.json
 	./gen0d main gen0d.drawio $(LIBSRC)/transpile.drawio
@@ -18,3 +18,7 @@ transpile.drawio.json: $(LIBSRC)/transpile.drawio
 
 clean:
 	rm -rf gen0d gen0d.dSYM
+
+
+test-dc0d.drawio.json:
+	$(D2J) test-dc0d.drawio
