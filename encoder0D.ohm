@@ -2,6 +2,7 @@ encoder0D {
   chars = char+
   char =
     | escapedChar -- esc
+    | html -- html
     | codeMacro -- macro
     | anychar -- any
 
@@ -17,16 +18,22 @@ encoder0D {
 
   codeMacro = dq namechar* codeMark spaces codechar+ dq 
   dq = "\""
-  namechar = ~codeMark ~nl ~dq any
+  namechar = 
+    | ~codeMark ~nl ~dq html
+    | ~codeMark ~nl ~dq any
   nl = "\n"
   codechar =
     | "\\\"" -- dquote
     | "\\\\" -- backslash
     | "\\n" -- nl
     | nextMark -- next
+    | html -- html
     | dq codechar* dq -- nested
     | ~nl ~dq innerchar -- other
   codeMark = "∷" | "\\u2237"
   nextMark = "⇒" | "\\u21d2"
+
+  html = "<" htmlchar+ ">"
+  htmlchar = ~">" any
 
 }

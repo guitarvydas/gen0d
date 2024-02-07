@@ -10,33 +10,37 @@ const grammar = ohm.grammar(grammarSrc);
 const semantics = grammar.createSemantics();
 
 // Register the semantic action
-semantics.addOperation('gen', {
-    chars : function (cs) { return cs.gen ().join (''); },
+semantics.addOperation('encmac', {
+    chars : function (cs) { return cs.encmac ().join (''); },
 
-    char_esc : function (c) { return c.gen (); },
-    char_macro : function (m) { return "\n" + m.gen (); },
-    char_any : function (c) { return c.gen (); },
+    char_esc : function (c) { return c.encmac (); },
+    char_macro : function (m) { return "\n" + m.encmac (); },
+    char_any : function (c) { return c.encmac (); },
 
-    innerchar_esc : function (c) { return c.gen (); },
-    innerchar_macro : function (m) { return m.gen (); },
-    innerchar_any : function (c) { return c.gen (); },
+    innerchar_esc : function (c) { return c.encmac (); },
+    innerchar_macro : function (m) { return m.encmac (); },
+    innerchar_any : function (c) { return c.encmac (); },
 
     anychar : function (c) { return this.sourceString; },
     
     escapedChar_dquote : function (_) { return '"'; },
-    codeMacro: function (dq1, namecs, _defcode, ws2, cs, dq2) { return `∷❨${encodeURIComponent (namecs.gen ().join (''))}❩❨${encodeURIComponent (cs.gen ().join (''))}❩`; },
-    codechar_nested : function (dq1, cs, dq2) { return '"' + cs.gen ().join ('') + '"'; },
+    codeMacro: function (dq1, namecs, _defcode, ws2, cs, dq2) { return `∷❨${encodeURIComponent (namecs.encmac ().join (''))}❩❨${encodeURIComponent (cs.encmac ().join (''))}❩`; },
+    codechar_nested : function (dq1, cs, dq2) { return '"' + cs.encmac ().join ('') + '"'; },
     codechar_other : function (c) { return this.sourceString; },
     codechar_next: function (x) { return ' zd.send (eh=eh, port="", datum=zd.new_datum_bang (), causingMessage=msg) '; },
 
     codechar_dquote: function (c) { return '"';},
     codechar_backslash: function (c) { return '\\';},
     codechar_nl: function (c) { return '\n';},
+    codechar_html: function (h) { return h; },
     
     codeMark: function (x) { return "∷"; },
     nextMark: function (x) { return "⇒"; },
+
+    html: function (lb, cs, rb) { return "<" + cs.encmac ().join ('') + ">"; },
+
     _terminal: function () { return this.sourceString; },
-    _iter: function (...children) { return children.map(c => c.gen ()); },
+    _iter: function (...children) { return children.map(c => c.encmac ()); },
 });
 
 function main () {
@@ -48,7 +52,7 @@ function main () {
 	let src = fs.readFileSync (srcFileName, 'utf-8');
 	const match = grammar.match(src);
 	if (match.succeeded()) {
-	    const g = semantics(match).gen ();
+	    const g = semantics(match).encmac ();
 	    console.log(g);
 	} else {
 	    throw 'Failed to match input string against the grammar';
