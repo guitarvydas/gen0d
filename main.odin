@@ -25,6 +25,10 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("procs.rwr"))
     zd.append_leaf (leaves, std.string_constant ("null.js"))
 
+    zd.append_leaf (leaves, std.string_constant ("encoder0D"))
+    zd.append_leaf (leaves, std.string_constant ("encoder0D.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("encoder0D.rwr"))
+
     zd.append_leaf (leaves, zd.Leaf_Template { name = "br2nl", instantiate = br2nl })
 }
 

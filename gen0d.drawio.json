@@ -467,8 +467,24 @@
         "name": "Prepare Macros",
         "children": [
             {
-                "name": "$ node encodemacros.js",
-                "id": 6
+                "name": "Transpile",
+                "id": 4
+            },
+            {
+                "name": "'null.js'",
+                "id": 13
+            },
+            {
+                "name": "'encoder0D.rwr'",
+                "id": 16
+            },
+            {
+                "name": "'encoder0D.ohm'",
+                "id": 19
+            },
+            {
+                "name": "'encoder0D'",
+                "id": 22
             }
         ],
         "connections": [
@@ -480,29 +496,120 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "$ node encodemacros.js",
-                    "id": 6
+                    "name": "'null.js'",
+                    "id": 13
                 },
-                "target_port": ""
+                "target_port": "\u237a"
             },
             {
-                "dir": 2,
+                "dir": 0,
                 "source": {
-                    "name": "$ node encodemacros.js",
-                    "id": 6
-                },
-                "source_port": "\u2717",
-                "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "\u2717"
+                "source_port": "",
+                "target": {
+                    "name": "'encoder0D.rwr'",
+                    "id": 16
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'encoder0D.ohm'",
+                    "id": 19
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'encoder0D'",
+                    "id": 22
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encoder0D.rwr'",
+                    "id": 16
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encoder0D.ohm'",
+                    "id": 19
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encoder0D'",
+                    "id": 22
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "$ node encodemacros.js",
-                    "id": 6
+                    "name": "Transpile",
+                    "id": 4
                 },
                 "source_port": "",
                 "target": {
@@ -510,6 +617,19 @@
                     "id": 0
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             }
         ]
     },
@@ -520,19 +640,6 @@
 
         ],
         "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 4
-                },
-                "target_port": ""
-            },
             {
                 "dir": 3,
                 "source": {

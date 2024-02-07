@@ -34,6 +34,9 @@ semantics.addOperation('encmac', {
     codechar_nl: function (c) { return '\n';},
     codechar_html: function (h) { return h; },
     
+    namechar_html: function (c) {return c; },
+    namechar_other: function (c) {return c; },
+
     codeMark: function (x) { return "∷"; },
     nextMark: function (x) { return "⇒"; },
 
