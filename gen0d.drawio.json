@@ -637,14 +637,150 @@
         "file": "gen0d.drawio",
         "name": "Remove Drawio Noise",
         "children": [
-
+            {
+                "name": "Transpile",
+                "id": 4
+            },
+            {
+                "name": "'null.js'",
+                "id": 13
+            },
+            {
+                "name": "'stripHTML.rwr'",
+                "id": 16
+            },
+            {
+                "name": "'stripHTML.ohm'",
+                "id": 19
+            },
+            {
+                "name": "'stripHTML'",
+                "id": 22
+            }
         ],
         "connections": [
             {
-                "dir": 3,
+                "dir": 0,
                 "source": {
                     "name": "",
                     "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'stripHTML.rwr'",
+                    "id": 16
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'stripHTML.ohm'",
+                    "id": 19
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'stripHTML'",
+                    "id": 22
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'stripHTML.rwr'",
+                    "id": 16
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'stripHTML.ohm'",
+                    "id": 19
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'stripHTML'",
+                    "id": 22
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
                 },
                 "source_port": "",
                 "target": {
@@ -652,6 +788,19 @@
                     "id": 0
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             }
         ]
     }
