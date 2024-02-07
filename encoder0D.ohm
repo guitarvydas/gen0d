@@ -19,8 +19,8 @@ encoder0D {
   codeMacro = dq namechar* codeMark spaces codechar+ dq 
   dq = "\""
   namechar = 
-    | ~codeMark ~nl ~dq html -- html
-    | ~codeMark ~nl ~dq any -- other
+    | ~mark ~nl ~dq html -- html
+    | ~mark ~nl ~dq any -- other
   nl = "\n"
   codechar =
     | "\\\"" -- dquote
@@ -32,6 +32,8 @@ encoder0D {
     | ~nl ~dq innerchar -- other
   codeMark = "∷" | "\\u2237"
   nextMark = "⇒" | "\\u21d2"
+  predicateMark = "⁇" | "\\u2047"
+  mark = codeMark | nextMark | predicateMark
 
   html = "<" htmlchar+ ">"
   htmlchar = ~">" any

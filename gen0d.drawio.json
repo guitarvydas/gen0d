@@ -93,19 +93,6 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Exhale Procs",
-                    "id": 15
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
                     "name": "&lt;br&gt; to newline",
                     "id": 21
                 },
@@ -160,6 +147,19 @@
                 "source": {
                     "name": "Remove Drawio Noise",
                     "id": 14
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Exhale Procs",
+                    "id": 15
                 },
                 "source_port": "\u2717",
                 "target": {
