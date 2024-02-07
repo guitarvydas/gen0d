@@ -7,6 +7,7 @@ encoder0D {
   escapedChar [dq] = ‛\\"’
 
   codeMacro [dq1 namechar* codeMark spaces codechar+ dq2] = ‛∷❨«encodeURIComponent (namechar)»❩❨«encodeURIComponent (codechar)»❩’ 
+  predicateMacro [dq1 predMark spaces codechar+ dq2] = ‛⁇❨«encodeURIComponent (codechar)»❩’ 
   dq [c] = ‛"’
   namechar_html [x] = ‛«x»’
   namechar_other [x] = ‛«x»’

@@ -129,5 +129,103 @@
                 "target_port": ""
             }
         ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Shop",
+        "children": [
+            {
+                "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                "id": 5
+            },
+            {
+                "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                "id": 7
+            },
+            {
+                "name": "<b>\u2047</b><br>p.wallet &gt;= weapon.cost",
+                "id": 15
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "id": 7
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "<b>\u2047</b><br>p.wallet &gt;= weapon.cost",
+                    "id": 15
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                    "id": 5
+                },
+                "source_port": "",
+                "target": {
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "id": 7
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<b>\u2047</b><br>p.wallet &gt;= weapon.cost",
+                    "id": 15
+                },
+                "source_port": "",
+                "target": {
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "id": 7
+                },
+                "target_port": "buy?"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "id": 7
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                    "id": 5
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>\"buy?\", \"buy\",<br>\"\", \"leave\"",
+                    "id": 7
+                },
+                "source_port": "leave",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
     }
 ]

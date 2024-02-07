@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-02-07T20:21:08.340Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="3q2i7wUrSSmOhTaieO0f" version="23.0.2" type="device" pages="4">
+<mxfile host="Electron" modified="2024-02-07T21:37:13.830Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="b8cbfTkZTEp-Y_pogTaG" version="23.0.2" type="device" pages="4">
   <diagram name="main" id="4NC5C235ceEbJDFCXTHk">
     <mxGraphModel dx="1114" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -113,7 +113,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="LY3EbIqGwphYwSvvPRLA-1" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;∷&lt;br&gt;&lt;/b&gt;p.pwr += weapon.pwr&lt;br&gt;p.wallet -= weapon.cost" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="LY3EbIqGwphYwSvvPRLA-1" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;updgrade∷&lt;br&gt;&lt;/b&gt;p.pwr += weapon.pwr&lt;br&gt;p.wallet -= weapon.cost" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="849" y="91" width="201" height="110" as="geometry">
             <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -177,15 +177,6 @@
         <mxCell id="LY3EbIqGwphYwSvvPRLA-17" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="LY3EbIqGwphYwSvvPRLA-16" target="LY3EbIqGwphYwSvvPRLA-10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LY3EbIqGwphYwSvvPRLA-18" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" target="LY3EbIqGwphYwSvvPRLA-15">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="220" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="250" y="220" />
-              <mxPoint x="250" y="223" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="LY3EbIqGwphYwSvvPRLA-19" style="edgeStyle=orthogonalEdgeStyle;shape=connector;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="LY3EbIqGwphYwSvvPRLA-4" target="LY3EbIqGwphYwSvvPRLA-7">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -211,6 +202,9 @@
         </mxCell>
         <mxCell id="LY3EbIqGwphYwSvvPRLA-25" value="The feedback loop is &lt;i&gt;not&lt;/i&gt;&amp;nbsp;recursion, again, it is more like feedback in electronics circuits. [I can give more detail, but don&#39;t want to cloud the issues with details at first]." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;" vertex="1" parent="1">
           <mxGeometry x="250" y="600" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="LY3EbIqGwphYwSvvPRLA-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;" edge="1" parent="1" source="LY3EbIqGwphYwSvvPRLA-4" target="LY3EbIqGwphYwSvvPRLA-15">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

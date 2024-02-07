@@ -3,7 +3,8 @@ encoder0D {
   char =
     | escapedChar -- esc
     | html -- html
-    | codeMacro -- macro
+    | codeMacro -- codemacro
+    | predicateMacro -- predmacro
     | anychar -- any
 
   innerchar =
@@ -17,10 +18,11 @@ encoder0D {
     | "\\\"" -- dquote
 
   codeMacro = dq namechar* codeMark spaces codechar+ dq 
+  predicateMacro = dq predicateMark spaces codechar+ dq 
   dq = "\""
   namechar = 
-    | ~mark ~nl ~dq html -- html
-    | ~mark ~nl ~dq any -- other
+    | ~defmark ~nl ~dq html -- html
+    | ~defmark ~nl ~dq any -- other
   nl = "\n"
   codechar =
     | "\\\"" -- dquote
@@ -33,7 +35,9 @@ encoder0D {
   codeMark = "∷" | "\\u2237"
   nextMark = "⇒" | "\\u21d2"
   predicateMark = "⁇" | "\\u2047"
-  mark = codeMark | nextMark | predicateMark
+
+  // marks used to define macro phrases (e.g. nextMark is an operator, not a def)
+  defmark = codeMark | predicateMark
 
   html = "<" htmlchar+ ">"
   htmlchar = ~">" any

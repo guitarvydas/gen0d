@@ -20,5 +20,5 @@ clean:
 	rm -rf gen0d gen0d.dSYM
 
 
-test-dc0d.drawio.json:
+test-dc0d.drawio.json: test-dc0d.drawio
 	$(D2J) test-dc0d.drawio

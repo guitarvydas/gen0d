@@ -16,13 +16,14 @@ procs {
   NamedValue = string ":" Value
   NamedAttribute = NamedValue
 
-  Value = Object | Array<Value> | CodeDescriptor | Atom
+  Value = Object | Array<Value> | CodeDescriptor | PredicateDescriptor | Atom
   KeyedString<k> = Key<k> ":" string
 
   Object = "{" NamedValue+ "}"
   Array<x> = "[" x+ "]"
   Atom = string | integer | constant
   CodeDescriptor = "∷" procname code
+  PredicateDescriptor = "⁇"  code
 
   string = dq notDQ* dq
   dq = "\""
