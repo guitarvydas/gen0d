@@ -135,16 +135,16 @@
         "name": "Shop",
         "children": [
             {
-                "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                "name": "<b>Shop Choice</b>",
                 "id": 5
             },
             {
-                "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
-                "id": 7
+                "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                "id": 10
             },
             {
                 "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
-                "id": 15
+                "id": 13
             }
         ],
         "connections": [
@@ -156,11 +156,425 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
-                    "id": 7
+                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "id": 13
                 },
                 "target_port": ""
             },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                    "id": 10
+                },
+                "source_port": "",
+                "target": {
+                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "id": 13
+                },
+                "source_port": "yes",
+                "target": {
+                    "name": "<b>Shop Choice</b>",
+                    "id": 5
+                },
+                "target_port": "buy"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<b>Shop Choice</b>",
+                    "id": 5
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
+                    "id": 10
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "id": 13
+                },
+                "source_port": "no",
+                "target": {
+                    "name": "<b>Shop Choice</b>",
+                    "id": 5
+                },
+                "target_port": "no buy"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "<b>Shop Choice</b>",
+                    "id": 5
+                },
+                "source_port": "leave",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Shop Choice",
+        "children": [
+            {
+                "name": "Sync Ask",
+                "id": 6
+            },
+            {
+                "name": "Format Shop Choice",
+                "id": 10
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "no buy",
+                "target": {
+                    "name": "Format Shop Choice",
+                    "id": 10
+                },
+                "target_port": "no buy"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "Format Shop Choice",
+                    "id": 10
+                },
+                "target_port": "buy"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Format Shop Choice",
+                    "id": 10
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Sync Ask",
+                    "id": 6
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Sync Ask",
+                    "id": 6
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Format Shop Choice",
+        "children": [
+            {
+                "name": "'leave;buy'",
+                "id": 5
+            },
+            {
+                "name": "'leave'",
+                "id": 8
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "'leave;buy'",
+                    "id": 5
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "no buy",
+                "target": {
+                    "name": "'leave'",
+                    "id": 8
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "'leave'",
+                    "id": 8
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "'leave;buy'",
+                    "id": 5
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Alternate Format Shop Choice",
+        "children": [
+            {
+                "name": "1then2",
+                "id": 3
+            },
+            {
+                "name": "'leave'",
+                "id": 7
+            },
+            {
+                "name": "'buy'",
+                "id": 14
+            },
+            {
+                "name": "1then2",
+                "id": 17
+            },
+            {
+                "name": "'leave'",
+                "id": 23
+            },
+            {
+                "name": "Make String List",
+                "id": 31
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "no buy",
+                "target": {
+                    "name": "1then2",
+                    "id": 3
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "'leave'",
+                    "id": 7
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "'buy'",
+                    "id": 14
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "buy",
+                "target": {
+                    "name": "1then2",
+                    "id": 3
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "no buy",
+                "target": {
+                    "name": "'leave'",
+                    "id": 23
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 3
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "Make String List",
+                    "id": 31
+                },
+                "target_port": "go"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 17
+                },
+                "source_port": "1",
+                "target": {
+                    "name": "Make String List",
+                    "id": 31
+                },
+                "target_port": "concat"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'buy'",
+                    "id": 14
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "1then2",
+                    "id": 17
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 17
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "1then2",
+                    "id": 3
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 3
+                },
+                "source_port": "1",
+                "target": {
+                    "name": "Make String List",
+                    "id": 31
+                },
+                "target_port": "concat"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'leave'",
+                    "id": 7
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "1then2",
+                    "id": 17
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'leave'",
+                    "id": 23
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "1then2",
+                    "id": 3
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Make String List",
+                    "id": 31
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Sync Ask",
+        "children": [
+            {
+                "name": "$ dialog",
+                "id": 8
+            }
+        ],
+        "connections": [
             {
                 "dir": 0,
                 "source": {
@@ -169,62 +583,36 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
-                    "id": 15
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
-                    "id": 5
-                },
-                "source_port": "",
-                "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
-                    "id": 7
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
-                    "id": 15
-                },
-                "source_port": "",
-                "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
-                    "id": 7
-                },
-                "target_port": "buy?"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
-                    "id": 7
-                },
-                "source_port": "buy",
-                "target": {
-                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost",
-                    "id": 5
+                    "name": "$ dialog",
+                    "id": 8
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "<span style=\"border-color: var(--border-color);\"><b><span style=\"border-color: var(--border-color);\">\u27ea</span>choice</b><b style=\"border-color: var(--border-color);\">\u27eb</b><br></span>'buy?', 'buy',<br>'', 'leave'",
-                    "id": 7
+                    "name": "$ dialog",
+                    "id": 8
                 },
-                "source_port": "leave",
+                "source_port": "",
                 "target": {
                     "name": "",
                     "id": 0
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "$ dialog",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             }
         ]
     }
