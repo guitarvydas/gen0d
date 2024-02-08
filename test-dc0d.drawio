@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-02-08T03:56:08.027Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="nLjW39rGWHvBDdAXWGGx" version="23.0.2" type="device" pages="10">
+<mxfile host="Electron" modified="2024-02-08T12:51:08.055Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.0.2 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="EuzPfaxKEVFlFQrG70vM" version="23.0.2" type="device" pages="10">
   <diagram name="main" id="4NC5C235ceEbJDFCXTHk">
     <mxGraphModel dx="1114" dy="687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -226,7 +226,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Is2-R2kpy-hobnmmWNnx-1" value="&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;&lt;i&gt;Rest&lt;/i&gt;∷&lt;br&gt;&lt;/b&gt;&lt;/span&gt;p.ok = max_recharge&lt;br&gt;ndays += 1&lt;br&gt;zd.send (eh=eh, port=&quot;&quot;, datum=zd.new_datum_string (fmt.aprintf (&quot;p=%v m=%v ndays=%v\n&quot;, p, m, ndays)), causingMessage=msg)" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="Is2-R2kpy-hobnmmWNnx-1" value="&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;b&gt;&lt;i&gt;Rest&lt;/i&gt;∷&lt;br&gt;&lt;/b&gt;&lt;/span&gt;p.ok = max_recharge&lt;br&gt;ndays += 1&lt;br&gt;zd.send (eh=eh, port=&quot;&quot;, datum=zd.new_datum_string (fmt.aprintf (&quot;p=%v m=%v ndays=%v\n&quot;, p, m, ndays)), causingMessage=msg)&lt;br&gt;⇒" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="150" y="50" width="540" height="100" as="geometry">
             <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -257,7 +257,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="LY3EbIqGwphYwSvvPRLA-1" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;updgrade∷&lt;br&gt;&lt;/b&gt;p.pwr += weapon.pwr&lt;br&gt;p.wallet -= weapon.cost" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="LY3EbIqGwphYwSvvPRLA-1" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;updgrade∷&lt;br&gt;&lt;/b&gt;p.pwr += weapon.pwr&lt;br&gt;p.wallet -= weapon.cost&lt;br&gt;⇒" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=0;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#d6b656;fillColor=#fff2cc;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="850" y="81" width="201" height="79" as="geometry">
             <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
           </mxGeometry>
