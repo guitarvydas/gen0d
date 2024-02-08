@@ -2,8 +2,8 @@ procs {
   Drawings = Array<Drawing>
   Drawing = "{" FileName DrawingName Children Connections "}"
 
-  Children = Key<"children"> ":" "[" Child+ "]"
-  Connections = Key<"connections"> ":" "[" Object+ "]"
+  Children = Key<"children"> ":" "[" Child* "]"
+  Connections = Key<"connections"> ":" "[" Object* "]"
 
   Child = "{" Key<"name"> ":" Value Key<"id"> ":" integer "}"
 

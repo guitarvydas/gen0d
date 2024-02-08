@@ -46,8 +46,20 @@
                 "id": 4
             },
             {
-                "name": "Rest",
+                "name": "Game Ask",
                 "id": 8
+            },
+            {
+                "name": "Rest",
+                "id": 16
+            },
+            {
+                "name": "Adventure",
+                "id": 21
+            },
+            {
+                "name": "Shop",
+                "id": 26
             }
         ],
         "connections": [
@@ -67,28 +79,158 @@
             {
                 "dir": 1,
                 "source": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "source_port": "shop",
+                "target": {
+                    "name": "Shop",
+                    "id": 26
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Adventure",
+                    "id": 21
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "source_port": "rest",
+                "target": {
+                    "name": "Rest",
+                    "id": 16
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
                     "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_hp<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
                     "id": 4
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Rest",
+                    "name": "Game Ask",
                     "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Rest",
+                    "id": 16
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Shop",
+                    "id": 26
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "source_port": "adventure",
+                "target": {
+                    "name": "Adventure",
+                    "id": 21
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Rest",
+                    "name": "Game Ask",
                     "id": 8
                 },
-                "source_port": "",
+                "source_port": "quit",
                 "target": {
                     "name": "",
                     "id": 0
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Shop",
+                    "id": 26
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Rest",
+                    "id": 16
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Adventure",
+                    "id": 21
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Game Ask",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             }
         ]
     },
@@ -613,6 +755,208 @@
                     "id": 0
                 },
                 "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Game Ask",
+        "children": [
+            {
+                "name": "'adventure;rest;shop;quit'",
+                "id": 8
+            },
+            {
+                "name": "Sync Ask",
+                "id": 9
+            },
+            {
+                "name": "1then2",
+                "id": 21
+            },
+            {
+                "name": "Demux 4",
+                "id": 26
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "go",
+                "target": {
+                    "name": "'adventure;rest;shop;quit'",
+                    "id": 8
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 21
+                },
+                "source_port": "1",
+                "target": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "target_port": "menu"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 21
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "target_port": "choice"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Sync Ask",
+                    "id": 9
+                },
+                "source_port": "",
+                "target": {
+                    "name": "1then2",
+                    "id": 21
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'adventure;rest;shop;quit'",
+                    "id": 8
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "1then2",
+                    "id": 21
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'adventure;rest;shop;quit'",
+                    "id": 8
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Sync Ask",
+                    "id": 9
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Sync Ask",
+                    "id": 9
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "source_port": "4",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "quit"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "source_port": "3",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "shop"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "rest"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 26
+                },
+                "source_port": "1",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "advenure"
+            }
+        ]
+    },
+    {
+        "file": "test-dc0d.drawio",
+        "name": "Adventure",
+        "children": [
+
+        ],
+        "connections": [
+            {
+                "dir": 3,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
             }
         ]
     }

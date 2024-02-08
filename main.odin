@@ -35,6 +35,10 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("stripHTML.ohm"))
     zd.append_leaf (leaves, std.string_constant ("stripHTML.rwr"))
 
+    zd.append_leaf (leaves, std.string_constant ("rmHTML"))
+    zd.append_leaf (leaves, std.string_constant ("rmHTML.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("rmHTML.rwr"))
+
     zd.append_leaf (leaves, zd.Leaf_Template { name = "br2nl", instantiate = br2nl })
 }
 
