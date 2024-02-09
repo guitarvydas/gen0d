@@ -20,9 +20,16 @@ start_function :: proc (main_container : ^zd.Eh) {
 
 components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>"))
+
+    zd.append_leaf (leaves, std.string_constant ("<br>components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {"))
+    zd.append_leaf (leaves, std.string_constant ("}"))
+
     zd.append_leaf (leaves, std.string_constant ("procs"))
     zd.append_leaf (leaves, std.string_constant ("procs.ohm"))
     zd.append_leaf (leaves, std.string_constant ("procs.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("incs"))
+    zd.append_leaf (leaves, std.string_constant ("incs.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("incs.rwr"))
     zd.append_leaf (leaves, std.string_constant ("procssupport.js"))
 
     zd.append_leaf (leaves, std.string_constant ("null.js"))
