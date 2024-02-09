@@ -12,7 +12,7 @@ main :: proc() {
 }
 
 start_function :: proc (main_container : ^zd.Eh) {
-    filename := zd.new_datum_string ("test-dc0d.drawio.json")
+    filename := zd.new_datum_string ("dc0d.drawio.json")
     msg := zd.make_message("", filename, zd.make_cause (main_container, nil) )
     main_container.handler(main_container, msg)
 }

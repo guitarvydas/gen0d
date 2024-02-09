@@ -40,5 +40,6 @@ procs {
   anychar_escaped [_bs any] = ‛’
   anychar_other [any] = ‛’
 
+  procname [s] = ‛«s.replaceAll (" ", "_")»’
   escstuff [_lb cs+ _rb] = ‛«decodeURIComponent (cs)»’
 }
