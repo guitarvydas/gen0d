@@ -27,9 +27,9 @@ procs {
    ‛\n«_.topPredicateName ()» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	  if («code») {
-            zd.send (eh=eh, port="yes", datum=zd.datum_new_bang (), causingMessage=msg)
+            zd.send (eh=eh, port="yes", datum=zd.new_datum_bang (), causingMessage=msg)
           } else {
-            zd.send (eh=eh, port="no", datum=zd.datum_new_bang (), causingMessage=msg)
+            zd.send (eh=eh, port="no", datum=zd.new_datum_bang (), causingMessage=msg)
           }
 	}
 	instance_name := zd.gensym ("«_.topPredicateName ()»")

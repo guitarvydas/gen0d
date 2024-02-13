@@ -1,6 +1,6 @@
 [
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "main",
         "children": [
             {
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Game",
         "children": [
             {
@@ -46,7 +46,7 @@
                 "id": 2
             },
             {
-                "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_hp<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
+                "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_recharge<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
                 "id": 4
             },
             {
@@ -83,7 +83,7 @@
                 },
                 "source_port": "cold start",
                 "target": {
-                    "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_hp<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
+                    "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_recharge<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
                     "id": 4
                 },
                 "target_port": ""
@@ -195,7 +195,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_hp<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
+                    "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_recharge<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
                     "id": 4
                 },
                 "source_port": "",
@@ -226,7 +226,7 @@
                 },
                 "source_port": "restart",
                 "target": {
-                    "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_hp<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
+                    "name": "<i style=\"\"><b>init</b></i><b>\u2237<br></b>p.ok = max_recharge<br>p.wallet = 0<br>p.pwr = 4<br>ndays = 0<br>\u21d2",
                     "id": 4
                 },
                 "target_port": ""
@@ -286,7 +286,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Rest",
         "children": [
             {
@@ -324,7 +324,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Shop",
         "children": [
             {
@@ -332,11 +332,11 @@
                 "id": 5
             },
             {
-                "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost<br>\u21d2",
+                "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += damage_sword<br>p.wallet -= cost_sword<br>\u21d2",
                 "id": 10
             },
             {
-                "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                "name": "<b>\u2047</b>p.wallet &gt;= cost_sword",
                 "id": 13
             }
         ],
@@ -349,7 +349,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "name": "<b>\u2047</b>p.wallet &gt;= cost_sword",
                     "id": 13
                 },
                 "target_port": ""
@@ -357,12 +357,12 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost<br>\u21d2",
+                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += damage_sword<br>p.wallet -= cost_sword<br>\u21d2",
                     "id": 10
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "name": "<b>\u2047</b>p.wallet &gt;= cost_sword",
                     "id": 13
                 },
                 "target_port": ""
@@ -370,7 +370,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "name": "<b>\u2047</b>p.wallet &gt;= cost_sword",
                     "id": 13
                 },
                 "source_port": "yes",
@@ -388,7 +388,7 @@
                 },
                 "source_port": "buy",
                 "target": {
-                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += weapon.pwr<br>p.wallet -= weapon.cost<br>\u21d2",
+                    "name": "<b style=\"border-color: var(--border-color);\">updgrade\u2237<br></b>p.pwr += damage_sword<br>p.wallet -= cost_sword<br>\u21d2",
                     "id": 10
                 },
                 "target_port": ""
@@ -396,7 +396,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<b>\u2047</b>p.wallet &gt;= weapon.cost",
+                    "name": "<b>\u2047</b>p.wallet &gt;= cost_sword",
                     "id": 13
                 },
                 "source_port": "no",
@@ -422,7 +422,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Shop Choice",
         "children": [
             {
@@ -490,7 +490,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Format Shop Choice",
         "children": [
             {
@@ -558,7 +558,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Alternate Format Shop Choice",
         "children": [
             {
@@ -759,7 +759,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Sync Ask",
         "children": [
             {
@@ -810,7 +810,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Game Ask",
         "children": [
             {
@@ -990,15 +990,15 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Adventure",
         "children": [
             {
-                "name": "<b style=\"border-color: var(--border-color);\">Generate Monster\u2237<br></b>m.wallet := cost_sword<br>m.ok = max_recharge<br>m.pwr = damage_sword<br>\u21d2",
+                "name": "<b style=\"border-color: var(--border-color);\">Generate Monster\u2237<br></b>m.wallet = cost_sword<br>m.ok = max_recharge<br>m.pwr = damage_sword<br>\u21d2",
                 "id": 7
             },
             {
-                "name": "<b style=\"border-color: var(--border-color);\">adventure\u2237<br></b>spoils :- 0<br>\u21d2",
+                "name": "<b style=\"border-color: var(--border-color);\">adventure\u2237<br></b>spoils := 0<br>\u21d2",
                 "id": 8
             },
             {
@@ -1015,7 +1015,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<b style=\"border-color: var(--border-color);\">adventure\u2237<br></b>spoils :- 0<br>\u21d2",
+                    "name": "<b style=\"border-color: var(--border-color);\">adventure\u2237<br></b>spoils := 0<br>\u21d2",
                     "id": 8
                 },
                 "target_port": ""
@@ -1023,7 +1023,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<b style=\"border-color: var(--border-color);\">Generate Monster\u2237<br></b>m.wallet := cost_sword<br>m.ok = max_recharge<br>m.pwr = damage_sword<br>\u21d2",
+                    "name": "<b style=\"border-color: var(--border-color);\">Generate Monster\u2237<br></b>m.wallet = cost_sword<br>m.ok = max_recharge<br>m.pwr = damage_sword<br>\u21d2",
                     "id": 7
                 },
                 "source_port": "",
@@ -1036,12 +1036,12 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "<b style=\"border-color: var(--border-color);\">adventure\u2237<br></b>spoils :- 0<br>\u21d2",
+                    "name": "<b style=\"border-color: var(--border-color);\">adventure\u2237<br></b>spoils := 0<br>\u21d2",
                     "id": 8
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<b style=\"border-color: var(--border-color);\">Generate Monster\u2237<br></b>m.wallet := cost_sword<br>m.ok = max_recharge<br>m.pwr = damage_sword<br>\u21d2",
+                    "name": "<b style=\"border-color: var(--border-color);\">Generate Monster\u2237<br></b>m.wallet = cost_sword<br>m.ok = max_recharge<br>m.pwr = damage_sword<br>\u21d2",
                     "id": 7
                 },
                 "target_port": ""
@@ -1088,7 +1088,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Fight",
         "children": [
             {
@@ -1212,7 +1212,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Fight Auto",
         "children": [
             {
@@ -1379,7 +1379,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Fight Ask",
         "children": [
             {
@@ -1533,7 +1533,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Fight Step",
         "children": [
             {
@@ -1678,7 +1678,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Flee",
         "children": [
 
@@ -1700,7 +1700,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Win",
         "children": [
             {
@@ -1768,7 +1768,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Win Ask",
         "children": [
             {
@@ -1922,7 +1922,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Die",
         "children": [
             {
@@ -1973,7 +1973,7 @@
         ]
     },
     {
-        "file": "../../dc0d/dc0d.drawio",
+        "file": "../dc0d/dc0d.drawio",
         "name": "Die Ask",
         "children": [
             {
@@ -2124,6 +2124,19 @@
                 },
                 "target_port": "quit"
             }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Page-20",
+        "children": [
+            {
+                "name": "Fight Auto",
+                "id": 2
+            }
+        ],
+        "connections": [
+
         ]
     }
 ]
