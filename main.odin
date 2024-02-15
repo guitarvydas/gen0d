@@ -47,6 +47,13 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("rmHTML.rwr"))
 
     zd.append_leaf (leaves, zd.Leaf_Template { name = "br2nl", instantiate = br2nl })
+
+    zd.append_leaf (leaves, std.string_constant ("encodejson"))
+    zd.append_leaf (leaves, std.string_constant ("encodejson.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("encodejson.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("decode"))
+    zd.append_leaf (leaves, std.string_constant ("decode.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("decode.rwr"))
 }
 
 br2nl :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {

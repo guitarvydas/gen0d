@@ -1,0 +1,12 @@
+encodejson {
+  chars = char+
+  char =
+    | string -- string
+    | any -- other
+
+string = dq notDQ* dq
+dq = "\""
+notDQ =
+  | "\\\"" -- escdquote
+  | ~dq any -- other
+}

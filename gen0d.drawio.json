@@ -8,20 +8,20 @@
                 "id": 9
             },
             {
-                "name": "Exhale Procs",
-                "id": 15
+                "name": "Decode",
+                "id": 14
             },
             {
-                "name": "Cleanup For Includer",
-                "id": 19
+                "name": "Exhale Procs",
+                "id": 15
             },
             {
                 "name": "Cleanup",
                 "id": 21
             },
             {
-                "name": "Generate Includer",
-                "id": 27
+                "name": "Encode JSON",
+                "id": 26
             },
             {
                 "name": "Read Text File",
@@ -34,6 +34,14 @@
             {
                 "name": "Combine Generated Code",
                 "id": 41
+            },
+            {
+                "name": "Cleanup For Includer",
+                "id": 45
+            },
+            {
+                "name": "Generate Includer",
+                "id": 47
             }
         ],
         "connections": [
@@ -53,6 +61,19 @@
             {
                 "dir": 1,
                 "source": {
+                    "name": "Exhale Procs",
+                    "id": 15
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Cleanup",
+                    "id": 21
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
                     "name": "Read Text File",
                     "id": 32
                 },
@@ -62,6 +83,45 @@
                     "id": 34
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Generate Includer",
+                    "id": 47
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Cleanup For Includer",
+                    "id": 45
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Prepare Macros",
+                    "id": 9
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Generate Includer",
+                    "id": 47
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Cleanup For Includer",
+                    "id": 45
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Combine Generated Code",
+                    "id": 41
+                },
+                "target_port": "inc"
             },
             {
                 "dir": 1,
@@ -79,19 +139,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Exhale Procs",
-                    "id": 15
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Cleanup",
-                    "id": 21
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Prepare Macros",
                     "id": 9
                 },
@@ -105,41 +152,28 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Includer",
-                    "id": 27
+                    "name": "Remove Drawio Noise",
+                    "id": 34
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Cleanup For Includer",
-                    "id": 19
+                    "name": "Encode JSON",
+                    "id": 26
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Prepare Macros",
-                    "id": 9
+                    "name": "Encode JSON",
+                    "id": 26
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Generate Includer",
-                    "id": 27
+                    "name": "Decode",
+                    "id": 14
                 },
                 "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Cleanup For Includer",
-                    "id": 19
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Combine Generated Code",
-                    "id": 41
-                },
-                "target_port": "inc"
             },
             {
                 "dir": 2,
@@ -157,8 +191,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Cleanup For Includer",
-                    "id": 19
+                    "name": "Decode",
+                    "id": 14
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -170,8 +204,21 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Combine Generated Code",
-                    "id": 41
+                    "name": "Generate Includer",
+                    "id": 47
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Cleanup For Includer",
+                    "id": 45
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -209,6 +256,19 @@
             {
                 "dir": 2,
                 "source": {
+                    "name": "Encode JSON",
+                    "id": 26
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
                     "name": "Prepare Macros",
                     "id": 9
                 },
@@ -222,8 +282,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Remove Drawio Noise",
-                    "id": 34
+                    "name": "Decode",
+                    "id": 14
                 },
                 "source_port": "",
                 "target": {
@@ -248,8 +308,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Generate Includer",
-                    "id": 27
+                    "name": "Combine Generated Code",
+                    "id": 41
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -1765,6 +1825,348 @@
                 "source": {
                     "name": "Cleanout HTML",
                     "id": 5
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "Encode JSON",
+        "children": [
+            {
+                "name": "Transpile",
+                "id": 4
+            },
+            {
+                "name": "'null.js'",
+                "id": 13
+            },
+            {
+                "name": "'encodejson.rwr'",
+                "id": 16
+            },
+            {
+                "name": "'encodejson.ohm'",
+                "id": 19
+            },
+            {
+                "name": "'encodejson'",
+                "id": 22
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'encodejson.rwr'",
+                    "id": 16
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'encodejson.ohm'",
+                    "id": 19
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'encodejson'",
+                    "id": 22
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encodejson.rwr'",
+                    "id": 16
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encodejson.ohm'",
+                    "id": 19
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encodejson'",
+                    "id": 22
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "Decode",
+        "children": [
+            {
+                "name": "Transpile",
+                "id": 4
+            },
+            {
+                "name": "'null.js'",
+                "id": 13
+            },
+            {
+                "name": "'decode.rwr'",
+                "id": 16
+            },
+            {
+                "name": "'decode.ohm'",
+                "id": 19
+            },
+            {
+                "name": "'decode'",
+                "id": 22
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'decode.rwr'",
+                    "id": 16
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'decode.ohm'",
+                    "id": 19
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'decode'",
+                    "id": 22
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'null.js'",
+                    "id": 13
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'decode.rwr'",
+                    "id": 16
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'decode.ohm'",
+                    "id": 19
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'decode'",
+                    "id": 22
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
                 },
                 "source_port": "\u2717",
                 "target": {
