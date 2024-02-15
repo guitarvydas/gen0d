@@ -1205,7 +1205,7 @@
                 "id": 30
             },
             {
-                "name": "'<br>components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {'",
+                "name": "'<br>generated_components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {'",
                 "id": 32
             },
             {
@@ -1287,7 +1287,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'<br>components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {'",
+                    "name": "'<br>generated_components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {'",
                     "id": 32
                 },
                 "target_port": "\u237a"
@@ -1308,7 +1308,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'<br>components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {'",
+                    "name": "'<br>generated_components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {'",
                     "id": 32
                 },
                 "source_port": "\u237a",

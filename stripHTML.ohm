@@ -10,6 +10,11 @@ stripHTML {
     | "<span " nonRB+ ">" -- spanWithAttr
     | "<span>" -- spanNoAttr
     | "</span>" -- closeSpan
+
+    | "<br " nonRB+ ">" -- brWithAttr
+    | "<br>" -- brNoAttr
+    | "</br>" -- closeBr
+
     | any -- other    
 
   nonRB = ~">" any

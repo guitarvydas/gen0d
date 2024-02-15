@@ -13,6 +13,10 @@ stripHTML {
   char_spanNoAttr [_] = ‛’
   char_closeSpan [_] = ‛’
 
+  char_brWithAttr [lb nonRB+ rb] = ‛<br>’
+  char_brNoAttr [_] = ‛<br>’
+  char_closeBr [_] = ‛’
+
   char_other [c] = ‛«c»’
 
   nonRB [c] = ‛«c»’
