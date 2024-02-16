@@ -20,6 +20,6 @@ namesandcode {
   notRQ = ~rq any
   codeMark = "∷" | "\\u2237" | "%5Cu2237"
   nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
-  predicateMark = "⁇"
+  predicateMark = "⁇" | "\\u2047" | "%5Cu2047"
   notCodeMarkNotRQ = ~codeMark ~rq any
 }
