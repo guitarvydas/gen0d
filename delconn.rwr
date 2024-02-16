@@ -1,0 +1,7 @@
+delconn {
+  chars [cs+] = ‛«cs»’
+  connections [lq _connections rq spaces1 _colon spaces2 _lb conn+ _rb] = ‛’
+
+  conn_rec [lb conn+ rb] = ‛’
+  conn_bottom [c] = ‛’
+}
