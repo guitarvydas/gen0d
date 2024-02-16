@@ -1,6 +1,6 @@
-escapejson {
+encodejson {
   chars [cs+] = ‛«cs»’
   char_string [s] = ‛«s»’
   char_other [c] = ‛«c»’
-  string [_lb cs* _rb] = ‛"«encodeURIComponent(cs)»"’
+  string [_lb cs* _rb] = ‛“«encodeURIComponent(cs)»”’
 }

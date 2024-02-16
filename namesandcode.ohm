@@ -1,0 +1,25 @@
+// rules:
+// text1          --> ė⟪text1⟫
+// text1 ∷ text2  --> š⟪text1⟫⟪text2⟫
+// ⁇ text2        --> ž⟪gensym⟫⟪text2⟫
+namesandcode {
+  chars = char+
+  char =
+    | predicateString -- predicate
+    | codeString -- code
+    | nameString -- name
+    | any -- other
+
+  predicateString = lq "name" rq spaces ":" spaces lq predicateMark notRQ* rq 
+  codeString = lq "name" rq spaces ":" spaces lq notCodeMarkNotRQ* codeMark notRQ* rq 
+  nameString = lq "name" rq spaces ":" spaces string
+
+  string = lq notRQ* rq
+  lq = "“"
+  rq = "”"
+  notRQ = ~rq any
+  codeMark = "∷" | "\\u2237" | "%5Cu2237"
+  nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
+  predicateMark = "⁇"
+  notCodeMarkNotRQ = ~codeMark ~rq any
+}

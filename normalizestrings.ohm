@@ -1,4 +1,4 @@
-encodejson {
+normalizestrings {
   chars = char+
   char =
     | string -- string
@@ -6,7 +6,6 @@ encodejson {
 
   string = dq notDQ* dq
   dq = "\""
-  notDQ =
-    | "\\\"" -- escdquote
-    | ~dq any -- other
+  notDQ = ~dq any
 }
+

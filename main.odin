@@ -54,6 +54,12 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("decode"))
     zd.append_leaf (leaves, std.string_constant ("decode.ohm"))
     zd.append_leaf (leaves, std.string_constant ("decode.rwr"))
+
+    zd.append_leaf (leaves, std.string_constant ("namesandcode"))
+    zd.append_leaf (leaves, std.string_constant ("namesandcode.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("namesandcode.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("namesandcodesupport.js"))
+
 }
 
 br2nl :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {

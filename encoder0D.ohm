@@ -34,15 +34,15 @@ encoder0D {
     | html -- html
     | dq codechar* dq -- nested
     | ~nl ~dq innerchar -- other
-  codeMark = "∷" | "\\u2237"
-  nextMark = "⇒" | "\\u21d2"
-  predicateMark = "⁇" | "\\u2047"
+  codeMark = "∷" | "\\u2237" | "%5Cu2237"
+  nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
+  predicateMark = "⁇" | "\\u2047" | "5Cu2047"
   choiceMark =
     | "⟪choice⟫" -- short
     | choiceLB "choice" choiceRB -- long
 
-  choiceLB = "\u27ea"
-  choiceRB = "\u27eb"
+  choiceLB = "\u27ea" | "%5Cu27ea"
+  choiceRB = "\u27eb" | "%5Cu27eb"
 
   // marks used to define macro phrases (e.g. nextMark is an operator, not a def)
   defmark = codeMark | predicateMark

@@ -1,0 +1,9 @@
+normalizestrings {
+  chars [char+] = ‛«c»’
+  char_string [s] = ‛«s»’
+  char_other [c] = ‛«c»’
+  string [_lq cs* _rq] = ‛“«encodeURI (cs)»”’
+  dq [c] =    ‛«c»’
+  notDQ [c] =    ‛«c»’
+}
+

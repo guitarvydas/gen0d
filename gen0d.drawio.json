@@ -4,44 +4,52 @@
         "name": "main",
         "children": [
             {
+                "name": "Encode JSON",
+                "id": 3
+            },
+            {
+                "name": "?A",
+                "id": 8
+            },
+            {
                 "name": "Prepare Macros",
                 "id": 9
             },
             {
-                "name": "Decode",
+                "name": "Exhale Procs",
                 "id": 14
             },
             {
-                "name": "Exhale Procs",
-                "id": 15
-            },
-            {
                 "name": "Cleanup",
-                "id": 21
+                "id": 20
             },
             {
-                "name": "Encode JSON",
-                "id": 26
+                "name": "Split Names and Code",
+                "id": 24
             },
             {
                 "name": "Read Text File",
-                "id": 32
+                "id": 30
             },
             {
                 "name": "Remove Drawio Noise",
-                "id": 34
+                "id": 32
             },
             {
                 "name": "Combine Generated Code",
-                "id": 41
+                "id": 39
             },
             {
-                "name": "Cleanup For Includer",
-                "id": 45
+                "name": "Decode",
+                "id": 44
             },
             {
                 "name": "Generate Includer",
-                "id": 47
+                "id": 45
+            },
+            {
+                "name": "Cleanup For Includer",
+                "id": 49
             }
         ],
         "connections": [
@@ -54,20 +62,33 @@
                 "source_port": "",
                 "target": {
                     "name": "Read Text File",
-                    "id": 32
+                    "id": 30
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Exhale Procs",
-                    "id": 15
+                    "name": "Generate Includer",
+                    "id": 45
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Cleanup",
-                    "id": 21
+                    "name": "Cleanup For Includer",
+                    "id": 49
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Remove Drawio Noise",
+                    "id": 32
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Encode JSON",
+                    "id": 3
                 },
                 "target_port": ""
             },
@@ -75,38 +96,51 @@
                 "dir": 1,
                 "source": {
                     "name": "Read Text File",
-                    "id": 32
+                    "id": 30
                 },
                 "source_port": "",
                 "target": {
                     "name": "Remove Drawio Noise",
-                    "id": 34
+                    "id": 32
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Includer",
-                    "id": 47
+                    "name": "Combine Generated Code",
+                    "id": 39
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Cleanup For Includer",
-                    "id": 45
+                    "name": "Decode",
+                    "id": 44
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Prepare Macros",
-                    "id": 9
+                    "name": "Split Names and Code",
+                    "id": 24
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Generate Includer",
-                    "id": 47
+                    "name": "Decode",
+                    "id": 44
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Cleanup",
+                    "id": 20
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Decode",
+                    "id": 44
                 },
                 "target_port": ""
             },
@@ -114,27 +148,40 @@
                 "dir": 1,
                 "source": {
                     "name": "Cleanup For Includer",
-                    "id": 45
+                    "id": 49
                 },
                 "source_port": "",
                 "target": {
                     "name": "Combine Generated Code",
-                    "id": 41
+                    "id": 39
                 },
                 "target_port": "inc"
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Cleanup",
-                    "id": 21
+                    "name": "Prepare Macros",
+                    "id": 9
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Combine Generated Code",
-                    "id": 41
+                    "name": "Generate Includer",
+                    "id": 45
                 },
-                "target_port": "gen"
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Exhale Procs",
+                    "id": 14
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Cleanup",
+                    "id": 20
+                },
+                "target_port": ""
             },
             {
                 "dir": 1,
@@ -145,20 +192,7 @@
                 "source_port": "",
                 "target": {
                     "name": "Exhale Procs",
-                    "id": 15
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Remove Drawio Noise",
-                    "id": 34
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Encode JSON",
-                    "id": 26
+                    "id": 14
                 },
                 "target_port": ""
             },
@@ -166,33 +200,33 @@
                 "dir": 1,
                 "source": {
                     "name": "Encode JSON",
-                    "id": 26
+                    "id": 3
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Decode",
-                    "id": 14
+                    "name": "Split Names and Code",
+                    "id": 24
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Encode JSON",
+                    "id": 3
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?A",
+                    "id": 8
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Remove Drawio Noise",
-                    "id": 34
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Decode",
-                    "id": 14
+                    "name": "Cleanup For Includer",
+                    "id": 49
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -205,19 +239,6 @@
                 "dir": 2,
                 "source": {
                     "name": "Generate Includer",
-                    "id": 47
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Cleanup For Includer",
                     "id": 45
                 },
                 "source_port": "\u2717",
@@ -230,8 +251,73 @@
             {
                 "dir": 2,
                 "source": {
+                    "name": "Encode JSON",
+                    "id": 3
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Combine Generated Code",
+                    "id": 39
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Remove Drawio Noise",
+                    "id": 32
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
                     "name": "Cleanup",
-                    "id": 21
+                    "id": 20
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Decode",
+                    "id": 44
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Decode",
+                    "id": 44
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -244,20 +330,7 @@
                 "dir": 2,
                 "source": {
                     "name": "Exhale Procs",
-                    "id": 15
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Encode JSON",
-                    "id": 26
+                    "id": 14
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -282,21 +355,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Decode",
-                    "id": 14
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Read Text File",
-                    "id": 32
+                    "name": "Split Names and Code",
+                    "id": 24
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -308,8 +368,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Combine Generated Code",
-                    "id": 41
+                    "name": "Read Text File",
+                    "id": 30
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2148,6 +2208,177 @@
                     "id": 4
                 },
                 "target_port": "grammar name"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "Split Names and Code",
+        "children": [
+            {
+                "name": "Transpile",
+                "id": 4
+            },
+            {
+                "name": "'namesandcodesupport.js'",
+                "id": 13
+            },
+            {
+                "name": "'namesandcode.rwr'",
+                "id": 14
+            },
+            {
+                "name": "'namesandcode.ohm'",
+                "id": 17
+            },
+            {
+                "name": "'namesandcode'",
+                "id": 20
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'namesandcodesupport.js'",
+                    "id": 13
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'namesandcode.rwr'",
+                    "id": 14
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'namesandcode'",
+                    "id": 20
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "input"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'namesandcode.ohm'",
+                    "id": 17
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'namesandcode.rwr'",
+                    "id": 14
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'namesandcode.ohm'",
+                    "id": 17
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'namesandcode'",
+                    "id": 20
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'namesandcodesupport.js'",
+                    "id": 13
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
             },
             {
                 "dir": 2,
