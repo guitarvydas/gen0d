@@ -69,15 +69,15 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Cleanup For Includer",
-                    "id": 49
+                    "name": "Prepare Macros",
+                    "id": 9
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Combine Generated Code",
-                    "id": 39
+                    "name": "Generate Includer",
+                    "id": 45
                 },
-                "target_port": "inc"
+                "target_port": ""
             },
             {
                 "dir": 1,
@@ -108,21 +108,8 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Delete Connections Section",
-                    "id": 36
-                },
-                "source_port": "",
-                "target": {
                     "name": "Split Names and Code",
                     "id": 18
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Combine Generated Code",
-                    "id": 39
                 },
                 "source_port": "",
                 "target": {
@@ -134,8 +121,8 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Split Names and Code",
-                    "id": 18
+                    "name": "Combine Generated Code",
+                    "id": 39
                 },
                 "source_port": "",
                 "target": {
@@ -160,15 +147,15 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Prepare Macros",
-                    "id": 9
+                    "name": "Cleanup For Includer",
+                    "id": 49
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Generate Includer",
-                    "id": 45
+                    "name": "Combine Generated Code",
+                    "id": 39
                 },
-                "target_port": ""
+                "target_port": "inc"
             },
             {
                 "dir": 1,
@@ -219,6 +206,19 @@
                 "target": {
                     "name": "Exhale Procs",
                     "id": 14
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Delete Connections Section",
+                    "id": 36
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Split Names and Code",
+                    "id": 18
                 },
                 "target_port": ""
             },
