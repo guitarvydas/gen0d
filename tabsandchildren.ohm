@@ -1,0 +1,27 @@
+tabsandchildren {
+  Drawings = Array<Drawing>
+  Drawing = "{" FileName DrawingName Children "}"
+
+  FileName = Key<"file"> ":" string
+  DrawingName = NoNameCode
+  Children = Key<"children"> ":" Array<Child>
+
+  Child = "{" (NoNameCode | NamedCode | NamedPredicate) Key<"id"> ":" integer "}"
+  
+  NoNameCode = "ė" Name
+  NamedCode =  "š" Name Code 
+  NamedPredicate = "ž" Name Code
+
+  Array<x> = "[" x+ "]"
+  Name = bracketed_ascii
+  Code = bracketed_ascii
+  bracketed_ascii = "⟪" ascii+ "⟫"
+  ascii = "\u0000" .. "\u00FF"
+  string = lq ascii* rq
+  lq = "“"
+  rq = "”"
+  Key<s> = lq s rq
+  integer = digit+
+
+  space += ","
+}

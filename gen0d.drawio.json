@@ -108,19 +108,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Split Names and Code",
-                    "id": 18
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Decode",
-                    "id": 53
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Combine Generated Code",
                     "id": 39
                 },
@@ -247,6 +234,19 @@
                     "id": 0
                 },
                 "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Split Names and Code",
+                    "id": 18
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
             },
             {
                 "dir": 2,

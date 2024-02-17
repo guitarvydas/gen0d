@@ -3,7 +3,6 @@ procs {
   Drawing = "{" FileName DrawingName Children Connections "}"
 
   Children = Key<"children"> ":" "[" Child* "]"
-  Connections = Key<"connections"> ":" "[" Object* "]"
 
   Child = "{" Key<"name"> ":" Value Key<"id"> ":" integer "}"
 
@@ -25,7 +24,7 @@ procs {
   CodeDescriptor = "∷" procname code
   PredicateDescriptor = "⁇"  code
 
-  string = dq notDQ* dq
+  string = lq notRQ* rq
   dq = "\""
   notDQ = ~dq anychar
   anychar =
