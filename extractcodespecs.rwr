@@ -13,11 +13,13 @@ extractcodespecs {
   NamedPredicate [_zh Name Code] = ‛ž «Name» «Code»’
 
   Array [_lb x+ _rb] = ‛«x»’
-  Name [bracketed_ascii] = ‛«bracketed_ascii»’
-  Code [bracketed_ascii] = ‛«bracketed_ascii»’
-  bracketed_ascii [_lb ascii+ _rb] = ‛⟪«ascii»⟫’
-  ascii [c] = ‛«c»’
-  string [lq ascii* rq] = ‛«lq»ascii»«rq»’
+  Name [bracketed_runes] = ‛«bracketed_runes»’
+  Code [bracketed_runes] = ‛«bracketed_runes»’
+  bracketed_runes [_lb rune+ _rb] = ‛⟪«rune»⟫’
+  string [lq rune* rq] = ‛«lq»rune»«rq»’
+  nonspecialrune [c] = ‛«c»’
+  open [c] = ‛«c»’
+  close [c] = ‛«c»’
   lq [c] = ‛«c»’
   rq [c] = ‛«c»’
   Key [lq s rq] = ‛«lq»«s»«rq»’

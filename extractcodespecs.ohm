@@ -13,11 +13,13 @@ extractcodespecs {
   NamedPredicate = "ž" Name Code
 
   Array<x> = "[" x+ "]"
-  Name = bracketed_ascii
-  Code = bracketed_ascii
-  bracketed_ascii = "⟪" ascii+ "⟫"
-  ascii = "\u0000" .. "\u00FF"
-  string = lq ascii* rq
+  Name = bracketed_runes
+  Code = bracketed_runes
+  bracketed_runes = "⟪" nonspecialrune+ "⟫"
+  string = lq nonspecialrune* rq
+  nonspecialrune = ~open ~close ~lq ~rq any
+  open = "⟪"
+  close = "⟫"
   lq = "“"
   rq = "”"
   Key<s> = lq s rq
