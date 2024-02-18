@@ -1,9 +1,9 @@
 codesnippets {
-  Snippets = Code+
-  Code =
+  Snippets = CodeSpec+
+  CodeSpec =
     | "ė" Name       -- nonamecode
     | "š" Name Code  -- namedcode
-    | "ž" Name Code  -- namepredicate
+    | "ž" Name Code  -- namedpredicate
 
   Name = bracketed_ascii
   Code = bracketed_ascii

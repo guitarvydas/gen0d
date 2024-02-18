@@ -24,29 +24,13 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("<br>generated_components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {"))
     zd.append_leaf (leaves, std.string_constant ("}"))
 
-    zd.append_leaf (leaves, std.string_constant ("procs"))
-    zd.append_leaf (leaves, std.string_constant ("procs.ohm"))
-    zd.append_leaf (leaves, std.string_constant ("procs.rwr"))
-    zd.append_leaf (leaves, std.string_constant ("incs"))
-    zd.append_leaf (leaves, std.string_constant ("incs.ohm"))
-    zd.append_leaf (leaves, std.string_constant ("incs.rwr"))
-    zd.append_leaf (leaves, std.string_constant ("procssupport.js"))
-
     zd.append_leaf (leaves, std.string_constant ("null.js"))
 
-    zd.append_leaf (leaves, std.string_constant ("encoder0D"))
-    zd.append_leaf (leaves, std.string_constant ("encoder0D.ohm"))
-    zd.append_leaf (leaves, std.string_constant ("encoder0D.rwr"))
+    zd.append_leaf (leaves, zd.Leaf_Template { name = "br2nl", instantiate = br2nl })
 
     zd.append_leaf (leaves, std.string_constant ("stripHTML"))
     zd.append_leaf (leaves, std.string_constant ("stripHTML.ohm"))
     zd.append_leaf (leaves, std.string_constant ("stripHTML.rwr"))
-
-    zd.append_leaf (leaves, std.string_constant ("rmHTML"))
-    zd.append_leaf (leaves, std.string_constant ("rmHTML.ohm"))
-    zd.append_leaf (leaves, std.string_constant ("rmHTML.rwr"))
-
-    zd.append_leaf (leaves, zd.Leaf_Template { name = "br2nl", instantiate = br2nl })
 
     zd.append_leaf (leaves, std.string_constant ("encodejson"))
     zd.append_leaf (leaves, std.string_constant ("encodejson.ohm"))
@@ -67,6 +51,12 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("extractcodespecs"))
     zd.append_leaf (leaves, std.string_constant ("extractcodespecs.ohm"))
     zd.append_leaf (leaves, std.string_constant ("extractcodespecs.rwr"))
+
+    zd.append_leaf (leaves, std.string_constant ("codesnippets"))
+    zd.append_leaf (leaves, std.string_constant ("codesnippets.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("genprocs.rwr"))
+
+
 }
 
 br2nl :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {
