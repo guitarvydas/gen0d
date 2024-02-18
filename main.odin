@@ -27,6 +27,7 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("null.js"))
 
     zd.append_leaf (leaves, zd.Leaf_Template { name = "br2nl", instantiate = br2nl })
+    zd.append_leaf (leaves, zd.Leaf_Template { name = "rmBrackets", instantiate = rmBrackets })
 
     zd.append_leaf (leaves, std.string_constant ("stripHTML"))
     zd.append_leaf (leaves, std.string_constant ("stripHTML.ohm"))
@@ -56,6 +57,10 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("codesnippets.ohm"))
     zd.append_leaf (leaves, std.string_constant ("genprocs.rwr"))
 
+    zd.append_leaf (leaves, std.string_constant ("rmHTML"))
+    zd.append_leaf (leaves, std.string_constant ("rmHTML.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("rmHTML.rwr"))
+
 
 }
 
@@ -63,6 +68,17 @@ br2nl :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {
     handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	s := msg.datum.repr (msg.datum)
 	r, _ := strings.replace_all (s, "<br>", "\n")
+        zd.send (eh=eh, port="", datum=zd.new_datum_string (r), causingMessage=msg)
+    }
+    name_with_id := zd.gensym("br2nl")
+    return zd.make_leaf (name_with_id, owner, nil, handler)
+}
+
+rmBrackets :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {
+    handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
+	s := msg.datum.repr (msg.datum)
+	r0, _ := strings.replace_all (s, "⟪", "")
+	r, _ := strings.replace_all (r0, "⟫", "")
         zd.send (eh=eh, port="", datum=zd.new_datum_string (r), causingMessage=msg)
     }
     name_with_id := zd.gensym("br2nl")
