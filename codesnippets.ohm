@@ -1,0 +1,13 @@
+codesnippets {
+  Snippets = Code+
+  Code =
+    | "ė" Name       -- nonamecode
+    | "š" Name Code  -- namedcode
+    | "ž" Name Code  -- namepredicate
+
+  Name = bracketed_ascii
+  Code = bracketed_ascii
+  
+  bracketed_ascii = "⟪" ascii+ "⟫"
+  ascii = "\u0000" .. "\u00FF"
+}
