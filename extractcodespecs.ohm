@@ -1,5 +1,5 @@
-tabsandchildren {
-  Drawings = Array<Drawing>
+extractcodespecs {
+  Drawings = "[" Drawing+ "]"
   Drawing = "{" FileName DrawingName Children "}"
 
   FileName = Key<"file"> ":" string

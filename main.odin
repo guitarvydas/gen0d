@@ -63,6 +63,10 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("delconn"))
     zd.append_leaf (leaves, std.string_constant ("delconn.ohm"))
     zd.append_leaf (leaves, std.string_constant ("delconn.rwr"))
+
+    zd.append_leaf (leaves, std.string_constant ("extractcodespecs"))
+    zd.append_leaf (leaves, std.string_constant ("extractcodespecs.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("extractcodespecs.rwr"))
 }
 
 br2nl :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {

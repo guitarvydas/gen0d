@@ -1,0 +1,25 @@
+extractcodespecs {
+  Drawings [_lb Drawings+ _rb] = ‛«Drawings»’
+  Drawing [ _lb FileName DrawingName Children _rb] = ‛«Children»’
+
+  FileName [Key_file _colon string] = ‛’
+  DrawingName [NoNameCode] = ‛’
+  Children [Key_children _colon Array_Child] = ‛«Array_Child»’
+
+  Child [_lb nameAndCode Key_id _colon integer _rb] = ‛\n«nameAndCode»’
+  
+  NoNameCode [_eh Name] = ‛ė «Name»’
+  NamedCode [_sh Name Code] = ‛š «Name» «Code»’ 
+  NamedPredicate [_zh Name Code] = ‛ž «Name» «Code»’
+
+  Array [_lb x+ _rb] = ‛«x»’
+  Name [bracketed_ascii] = ‛«bracketed_ascii»’
+  Code [bracketed_ascii] = ‛«bracketed_ascii»’
+  bracketed_ascii [_lb ascii+ _rb] = ‛⟪«ascii»⟫’
+  ascii [c] = ‛«c»’
+  string [lq ascii* rq] = ‛«lq»ascii»«rq»’
+  lq [c] = ‛«c»’
+  rq [c] = ‛«c»’
+  Key [lq s rq] = ‛«lq»«s»«rq»’
+  integer [digits+] = ‛«digits»’
+}
