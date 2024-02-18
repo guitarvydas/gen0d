@@ -8,7 +8,7 @@ namesandcode {
   char_code [x] = ‛«x»’
   char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
-  predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _qq cs* rq2] ‛«_.pushNewPredicateName ()»’ = ‛ž⟪««_.topPredicateName ()»»⟫⟪«cs»⟫«_.popPredicateName ()»’
+  predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _qq cs* rq2] ‛«_.pushNewPredicateName ()»’ = ‛ž⟪«_.topPredicateName ()»⟫⟪«cs»⟫«_.popPredicateName ()»’
   codeString [lq1 _name rq1 _spc1 _colon _spc2 lq2 ns* _codeMark cs* rq2] = ‛š⟪«ns»⟫⟪«cs»⟫’ 
   nameString [lq _name rq _spc1 _colon _spc2 s] = ‛ė⟪«s»⟫’
 
