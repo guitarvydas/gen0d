@@ -1,0 +1,6 @@
+decode {
+  chars [cs+] = ‛«decodeURIComponent(cs)»’
+  char_lq [c] = ‛"’
+  char_rq [c] = ‛"’
+  char_other [c] = ‛«c»’
+}

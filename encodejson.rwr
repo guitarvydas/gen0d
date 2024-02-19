@@ -1,0 +1,7 @@
+encodejson {
+  chars [cs+] = ‛«cs»’
+  char_string [s] = ‛«s»’
+  char_comma [c] = ‛’
+  char_other [c] = ‛«c»’
+  string [_lb cs* _rb] = ‛“«encodeURIComponent(cs)»”’
+}

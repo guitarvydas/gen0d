@@ -1,0 +1,8 @@
+decode {
+  chars = char+
+  char =
+    | "“"  -- lq
+    | "”"  -- rq
+    | any  -- other
+
+}

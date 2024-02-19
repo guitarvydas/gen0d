@@ -1,0 +1,20 @@
+codesnippets {
+  Snippets = CodeSpec+
+  CodeSpec =
+    | "ė" Name       -- nonamecode
+    | "š" Name Code  -- namedcode
+    | "ž" Name Code  -- namedpredicate
+
+  Name = bracketed_rune
+  Code = bracketed_rune
+  
+  bracketed_rune = "⟪" nonspecialrune+ "⟫"
+  nonspecialrune = 
+    | ~open ~close ~lq ~rq next -- next
+    | ~open ~close ~lq ~rq any  -- any
+  next = "⇒" | "\\u21d2" | "%5Cu21d2"
+  open = "⟪"
+  close = "⟫"
+  lq = "“"
+  rq = "”"
+}

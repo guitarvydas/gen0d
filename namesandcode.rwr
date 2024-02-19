@@ -1,0 +1,23 @@
+// rules:
+// text1          --> ė⟪text1⟫
+// text1 ∷ text2  --> š⟪text1⟫⟪text2⟫
+// ⁇ text2        --> ž⟪gensym⟫⟪text2⟫
+namesandcode {
+  chars [cs+] = ‛«cs»’
+  char_predicate [x] = ‛«x»’
+  char_code [x] = ‛«x»’
+  char_name [x] = ‛«x»’
+  char_other [x] = ‛«x»’
+  predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _qq cs* rq2] ‛«_.pushNewPredicateName ()»’ = ‛ž⟪«_.topPredicateName ()»⟫⟪«cs»⟫«_.popPredicateName ()»’
+  codeString [lq1 _name rq1 _spc1 _colon _spc2 lq2 ns* _codeMark cs* rq2] = ‛š⟪«ns»⟫⟪«cs»⟫’ 
+  nameString [lq _name rq _spc1 _colon _spc2 s] = ‛ė⟪«s»⟫’
+
+  string [lq cs* rq] = ‛«cs»’
+  lq [c] = ‛«c»’
+  rq [c] = ‛«c»’
+  notRQ [c] = ‛«c»’
+  codeMark [c] = ‛«c»’
+  nextMark [c] = ‛«c»’
+  predicateMark [c] = ‛«c»’
+  notCodeMarkNotRQ [c] = ‛«c»’
+}

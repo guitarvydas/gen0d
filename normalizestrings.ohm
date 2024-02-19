@@ -1,0 +1,11 @@
+normalizestrings {
+  chars = char+
+  char =
+    | string -- string
+    | any -- other
+
+  string = dq notDQ* dq
+  dq = "\""
+  notDQ = ~dq any
+}
+

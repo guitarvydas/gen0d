@@ -6,9 +6,9 @@ encoder0D {
 
   escapedChar [dq] = ‛\\"’
 
-  codeMacro [dq1 namechar* codeMark spaces codechar+ dq2] = ‛∷❨«encodeURIComponent (namechar)»❩❨«encodeURIComponent (codechar)»❩’ 
-  predicateMacro [dq1 predMark spaces codechar+ dq2] = ‛⁇❨«encodeURIComponent (codechar)»❩’
-  choiceMacro [dq1 choiceMark spaces codechar+ dq2] = ‛⟪choice⟫❨«encodeURIComponent (codechar)»❩’
+  codeMacro [dq1 namechar* codeMark spaces codechar+ dq2] = ‛∷❨«namechar»❩❨«codechar»❩’ 
+  predicateMacro [dq1 predMark spaces codechar+ dq2] = ‛⁇❨«codechar»❩’
+  choiceMacro [dq1 choiceMark spaces codechar+ dq2] = ‛⟪choice⟫❨«codechar»❩’
 
   dq [c] = ‛"’
   namechar_html [x] = ‛«x»’

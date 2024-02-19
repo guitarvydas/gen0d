@@ -1,0 +1,16 @@
+delconn {
+  chars = char+
+  char =
+    | connections -- connections
+    | any -- other
+
+  connections = lq "connections" rq spaces ":" spaces "[" conn* "]"
+
+  conn =
+    | "[" conn* "]" -- rec
+    | ~"]" any -- bottom
+
+  lq = "“" | "\""
+  rq = "”" | "\""
+
+}

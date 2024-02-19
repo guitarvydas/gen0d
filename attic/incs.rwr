@@ -25,5 +25,6 @@ incs {
   anychar_other [any] = ‛’
 
   procname [s] = ‛«s.replaceAll (" ", "_")»’
-  escstuff [_lb cs+ _rb] = ‛«decodeURIComponent (cs)»’
+  escstuff [_lb cs+ _rb] = ‛«cs»’
+
 }
