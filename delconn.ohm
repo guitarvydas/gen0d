@@ -4,10 +4,10 @@ delconn {
     | connections -- connections
     | any -- other
 
-  connections = lq "connections" rq spaces ":" spaces "[" conn+ "]"
+  connections = lq "connections" rq spaces ":" spaces "[" conn* "]"
 
   conn =
-    | "[" conn+ "]" -- rec
+    | "[" conn* "]" -- rec
     | ~"]" any -- bottom
 
   lq = "“" | "\""

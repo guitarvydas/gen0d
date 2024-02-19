@@ -12,7 +12,7 @@ extractcodespecs {
   NamedCode =  "š" Name Code
   NamedPredicate = "ž" Name Code
 
-  Array<x> = "[" x+ "]"
+  Array<x> = "[" x* "]"
   Name = bracketed_runes
   Code = bracketed_runes
   bracketed_runes = "⟪" nonspecialrune+ "⟫"
