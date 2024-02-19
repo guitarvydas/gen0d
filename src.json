@@ -53,5 +53,65 @@
                 "target_port": ""
             }
         ]
+    },
+    {
+        "file": "small-test.drawio",
+        "name": "Page-2",
+        "children": [
+            {
+                "name": "Empty",
+                "id": 4
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Empty",
+                    "id": 4
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Empty",
+                    "id": 4
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "small-test.drawio",
+        "name": "Empty",
+        "children": [
+
+        ],
+        "connections": [
+            {
+                "dir": 3,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
     }
 ]
