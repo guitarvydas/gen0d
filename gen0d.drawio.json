@@ -8,7 +8,7 @@
                 "id": 9
             },
             {
-                "name": "Remove Drawio Noise",
+                "name": "Delete Connections Section",
                 "id": 11
             },
             {
@@ -16,7 +16,7 @@
                 "id": 16
             },
             {
-                "name": "Encode JSON",
+                "name": "Remove Drawio Noise",
                 "id": 17
             },
             {
@@ -24,7 +24,7 @@
                 "id": 23
             },
             {
-                "name": "Delete Connections Section",
+                "name": "Encode JSON",
                 "id": 29
             },
             {
@@ -53,12 +53,12 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Encode JSON",
+                    "name": "Remove Drawio Noise",
                     "id": 17
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Delete Connections Section",
+                    "name": "Encode JSON",
                     "id": 29
                 },
                 "target_port": ""
@@ -66,7 +66,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Delete Connections Section",
+                    "name": "Encode JSON",
                     "id": 29
                 },
                 "source_port": "",
@@ -92,12 +92,12 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Remove Drawio Noise",
+                    "name": "Delete Connections Section",
                     "id": 11
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Encode JSON",
+                    "name": "Remove Drawio Noise",
                     "id": 17
                 },
                 "target_port": ""
@@ -123,7 +123,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Remove Drawio Noise",
+                    "name": "Delete Connections Section",
                     "id": 11
                 },
                 "target_port": ""
@@ -144,7 +144,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Delete Connections Section",
+                    "name": "Encode JSON",
                     "id": 29
                 },
                 "source_port": "\u2717",
@@ -183,7 +183,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Encode JSON",
+                    "name": "Remove Drawio Noise",
                     "id": 17
                 },
                 "source_port": "\u2717",
@@ -209,7 +209,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Remove Drawio Noise",
+                    "name": "Delete Connections Section",
                     "id": 11
                 },
                 "source_port": "\u2717",

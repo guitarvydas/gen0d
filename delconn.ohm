@@ -10,7 +10,7 @@ delconn {
     | "[" conn+ "]" -- rec
     | ~"]" any -- bottom
 
-  lq = "“"
-  rq = "”"
+  lq = "“" | "\""
+  rq = "”" | "\""
 
 }
