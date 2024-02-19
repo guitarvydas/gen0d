@@ -1,0 +1,21 @@
+codesnippets {
+  Snippets [Code+] = ‛«Code»’
+  Name [bracketed_rune] = ‛«_.legalizeName (bracketed_rune)»’
+  Code [bracketed_rune] = ‛«bracketed_rune»’
+  
+  bracketed_rune [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
+  open [c] = ‛«c»’
+  close [c] = ‛«c»’
+  lq [c] = ‛«c»’
+  rq [c] = ‛«c»’
+
+
+  CodeSpec_nonamecode [_tag Name] = ‛«_tag»«Name»’
+
+  CodeSpec_namedcode [_tag Name Code] =  ‛«_tag»«Name»«Code»’
+
+  CodeSpec_namedpredicate [_tag Name Code] = ‛«_tag»«Name»«Code»’
+
+  next [c] = ‛«c»’
+
+}

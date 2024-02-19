@@ -13,14 +13,14 @@ codesnippets {
   CodeSpec_nonamecode [_tag Name] = ‛’
 
   CodeSpec_namedcode [_tag Name Code] = 
-   ‛\n«Name» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
+   ‛\n«_.legalizeName (Name)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {«Code»
 	}
 	return zd.make_leaf ("«Name»", owner, nil, handler)
     }’
 
   CodeSpec_namedpredicate [_tag Name Code] =
-   ‛\n«Name» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
+   ‛\n«_.legalizeName (Name)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	  if («Code») {
             zd.send (eh=eh, port="yes", datum=zd.new_datum_bang (), causingMessage=msg)
