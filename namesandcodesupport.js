@@ -34,6 +34,9 @@ _ = {
     popChoiceName : function () {
 	_.choiceNameStack.pop ();
 	return "";
+    },
+    legalizeName : function (s) {
+	return s.replaceAll (" ", "_");
     }
 }
 ,
