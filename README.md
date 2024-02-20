@@ -1,5 +1,5 @@
 # Project created with 0D (drawware)
 
-run ./gencode.sh to strip duplicate library warning (i.e. to redirect output to a file, capturing generated Odin code)
+Generate compilable code from the diagrams in ../dc0d.
 
-“”
+![](doc/gen0d-main.drawio.svg)
