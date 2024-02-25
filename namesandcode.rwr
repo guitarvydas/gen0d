@@ -1,7 +1,7 @@
 // rules:
 // text1         --> ė⟪text1⟫
 // ėtext1 text2  --> š⟪text1⟫⟪text2⟫
-// λtext1 text2  --> ž⟪gensym⟫⟪text2⟫
+// λtext1 text2  --> λ⟪gensym⟫⟪text2⟫
 namesandcode {
   chars [cs+] = ‛«cs»’
   char_predicate [x] = ‛«x»’
