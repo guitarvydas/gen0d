@@ -61,6 +61,7 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("codesnippets"))
     zd.append_leaf (leaves, std.string_constant ("codesnippets.ohm"))
     zd.append_leaf (leaves, std.string_constant ("odinsupport.js"))
+    zd.append_leaf (leaves, std.string_constant ("legalizeforodin.rwr"))
     zd.append_leaf (leaves, std.string_constant ("genprocs.rwr"))
     zd.append_leaf (leaves, std.string_constant ("genincs.rwr"))
 

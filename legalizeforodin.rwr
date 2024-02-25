@@ -1,21 +1,34 @@
 codesnippets {
   Snippets [Code+] = ‛«Code»’
-  Name [bracketed_rune] = ‛«_.legalizeName (bracketed_rune)»’
-  Code [bracketed_rune] = ‛«bracketed_rune»’
-  
-  bracketed_rune [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
-  open [c] = ‛«c»’
-  close [c] = ‛«c»’
-  lq [c] = ‛«c»’
-  rq [c] = ‛«c»’
-
-
   CodeSpec_nonamecode [_tag Name] = ‛«_tag» «Name»’
 
   CodeSpec_namedcode [_tag Name Code] =  ‛«_tag» «Name» «Code»’
 
   CodeSpec_namedpredicate [_tag Name Code] = ‛«_tag» «Name» «Code»’
 
-  next [c] = ‛«c»’
+  Name [bracketed_rune] = ‛«_.legalizeName (bracketed_rune)»’
+  Code [bracketed_rune] = ‛«bracketed_rune»’
+  
+  bracketed_rune [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
 
+  rune_wrapped [eLT attr+ eGT stuff+ eLTSL id eGT2] = ‛«eLT»«attr»«eGT»«stuff»«eLTSL»«id»«eGT2»’
+  rune_raw [r] = ‛«r»’
+
+  rawrune_next [c] = ‛«c»’
+  rawrune_any [c] = ‛«c»’
+
+  id [cs+] = ‛«cs»’
+  attr [c] = ‛«c»’
+  notGT [c] = ‛«c»’
+  stuff [c] = ‛«c»’
+
+  next [c] = ‛«c»’
+  open [c] = ‛«c»’
+  close [c] = ‛«c»’
+  lq [c] = ‛«c»’
+  rq [c] = ‛«c»’
+  eLT [c] = ‛«c»’
+  eGT [c] = ‛«c»’
+  eSL [c] = ‛«c»’
+  eLTSL [lt sl] = ‛«lt»«sl»’
 }
