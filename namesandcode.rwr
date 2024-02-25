@@ -6,9 +6,11 @@ namesandcode {
   chars [cs+] = ‛«cs»’
   char_predicate [x] = ‛«x»’
   char_code [x] = ‛«x»’
+  char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
   predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _lambda predname cs* rq2] = ‛λ⟪«predname»⟫⟪«cs»⟫’
   codeString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _shMark codename cs* rq2] = ‛š⟪«codename»⟫⟪«cs»⟫’ 
+  nameString [lq _name rq _spc1 _colon _spc2 s] = ‛ė⟪«s»⟫’
 
   string [lq cs* rq] = ‛«cs»’
   lq [c] = ‛«c»’

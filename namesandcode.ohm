@@ -7,10 +7,12 @@ namesandcode {
   char =
     | predicateString -- predicate
     | codeString -- code
+    | nameString -- name
     | any -- other
 
   predicateString = lq "name" rq spaces ":" spaces lq lambdaMark id codeChar* rq 
   codeString = lq "name" rq spaces ":" spaces lq shMark id codeChar* rq 
+  nameString = lq "name" rq spaces ":" spaces string
 
   string = lq codeChar* rq
   lq = "“"
