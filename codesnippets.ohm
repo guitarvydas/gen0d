@@ -3,7 +3,7 @@ codesnippets {
   CodeSpec =
     | "ė" Name       -- nonamecode
     | "š" Name Code  -- namedcode
-    | "ž" Name Code  -- namedpredicate
+    | "λ" Name Code  -- namedpredicate
 
   Name = bracketed_rune
   Code = bracketed_rune

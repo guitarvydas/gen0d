@@ -1,25 +1,49 @@
 // rules:
 // text1          --> ė⟪text1⟫
-// text1 ∷ text2  --> š⟪text1⟫⟪text2⟫
-// ⁇ text2        --> ž⟪gensym⟫⟪text2⟫
+// štext1 text2  --> š⟪text1⟫⟪text2⟫
+// λtext2        --> λ⟪gensym⟫⟪text2⟫
 namesandcode {
   chars = char+
   char =
     | predicateString -- predicate
     | codeString -- code
-    | nameString -- name
     | any -- other
 
-  predicateString = lq "name" rq spaces ":" spaces lq predicateMark notRQ* rq 
-  codeString = lq "name" rq spaces ":" spaces lq notCodeMarkNotRQ* codeMark notRQ* rq 
-  nameString = lq "name" rq spaces ":" spaces string
+  predicateString = lq "name" rq spaces ":" spaces lq lambdaMark id codeChar* rq 
+  codeString = lq "name" rq spaces ":" spaces lq shMark id codeChar* rq 
 
-  string = lq notRQ* rq
+  string = lq codeChar* rq
   lq = "“"
   rq = "”"
-  notRQ = ~rq any
-  codeMark = "∷" | "\\u2237" | "%5Cu2237"
+  codeChar = ~rq any
+  lambdaMark = "λ" | "%5Cu03BB"
+  shMark = "š" | "%5Cu0161"
   nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
-  predicateMark = "⁇" | "\\u2047" | "%5Cu2047"
-  notCodeMarkNotRQ = ~codeMark ~rq any
+
+  id =
+    | bracketedID -- bracketed
+    | basicID space -- basic
+  bracketedID = eLT basicID attr* eGT stuff eLT eSL basicID eGT
+  stuff = 
+    | bracketedID -- nested
+    | basicChar+ -- other
+  basicChar = ~eLT ~eGT ~space any
+  basicID = firstLetter moreLetter*
+  firstLetter = letter | "_"
+  moreLetter = letter | digit | "_"
+  
+  attr = ws+ basicID "=" string
+  ws = eSP | eTAB // | " " | "\\t"
+  eLT = "%3C" // | "<"
+  eGT = "%3E" // | ">"
+  eSL = "%2F" // | "\\"
+
+  //ehMark = "ė" | "%5Cu0117"
+  //codeMark = "∷" | "\\u2237" | "%5Cu2237"
+  //predicateMark = "⁇" | "\\u2047" | "%5Cu2047"
+
+  eSP  = "%20"
+  eTAB = "%09"
+  eNL  = "%0A"
+  space += eSP | eTAB | eNL
 }

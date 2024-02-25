@@ -1,23 +1,39 @@
 // rules:
-// text1          --> ė⟪text1⟫
-// text1 ∷ text2  --> š⟪text1⟫⟪text2⟫
-// ⁇ text2        --> ž⟪gensym⟫⟪text2⟫
+// text1         --> ė⟪text1⟫
+// ėtext1 text2  --> š⟪text1⟫⟪text2⟫
+// λtext1 text2  --> ž⟪gensym⟫⟪text2⟫
 namesandcode {
   chars [cs+] = ‛«cs»’
   char_predicate [x] = ‛«x»’
   char_code [x] = ‛«x»’
-  char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
-  predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _qq cs* rq2] ‛«_.pushNewPredicateName ()»’ = ‛ž⟪«_.topPredicateName ()»⟫⟪«cs»⟫«_.popPredicateName ()»’
-  codeString [lq1 _name rq1 _spc1 _colon _spc2 lq2 ns* _codeMark cs* rq2] = ‛š⟪«ns»⟫⟪«cs»⟫’ 
-  nameString [lq _name rq _spc1 _colon _spc2 s] = ‛ė⟪«s»⟫’
+  predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _lambda predname cs* rq2] = ‛λ⟪«predname»⟫⟪«cs»⟫’
+  codeString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _shMark codename cs* rq2] = ‛š⟪«codename»⟫⟪«cs»⟫’ 
 
   string [lq cs* rq] = ‛«cs»’
   lq [c] = ‛«c»’
   rq [c] = ‛«c»’
-  notRQ [c] = ‛«c»’
-  codeMark [c] = ‛«c»’
+  codeChar [c] = ‛«c»’
+  lambdaMark [c] = ‛«c»’
+  shMark [c] = ‛«c»’
   nextMark [c] = ‛«c»’
-  predicateMark [c] = ‛«c»’
-  notCodeMarkNotRQ [c] = ‛«c»’
+
+  id_bracketed [x] = ‛«x»’
+  id_basic [x ws] = ‛«x»’
+  bracketedID [eLT basicID attr* eGT eLT2 stuff eSL basicID2 eGT2] = ‛«eLT»«basicID»«attr»«eGT»«eLT2»«stuff»«eSL»«basicID2»«eGT2»’
+  stuff_nested [bID] = ‛«bID»’
+  stuff_other [c+] = ‛«c»’
+  basicChar [c] = ‛«c»’
+  basicID [first more*] = ‛«first»«more»’
+  firstLetter [c] = ‛«c»’
+  moreLetter [c] = ‛«c»’
+  attr [ws+ basicID _eq str] = ‛«ws»«basicID»«_eq»«str»’
+
+  ws [c] = ‛«c»’
+  eLT [c] = ‛«c»’
+  eGT [c] = ‛«c»’
+  eSL [c] = ‛«c»’
+  eSP [c] = ‛«c»’
+  eTAB [c] = ‛«c»’
+  eNL [c] = ‛«c»’
 }
