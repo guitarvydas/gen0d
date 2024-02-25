@@ -27,7 +27,7 @@ namesandcode {
   stuff = 
     | bracketedID -- nested
     | basicChar+ -- other
-  basicChar = ~eLT ~eGT ~space any
+  basicChar = ~(eLT eSL) any
   basicID = firstLetter moreLetter*
   firstLetter = letter | "_"
   moreLetter = letter | digit | "_"
