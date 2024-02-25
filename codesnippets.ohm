@@ -8,13 +8,28 @@ codesnippets {
   Name = bracketed_rune
   Code = bracketed_rune
   
-  bracketed_rune = "⟪" nonspecialrune+ "⟫"
-  nonspecialrune = 
-    | ~open ~close ~lq ~rq next -- next
-    | ~open ~close ~lq ~rq any  -- any
+  bracketed_rune = "⟪" rune+ "⟫"
+
+  rune =
+    | eLT attr+ eGT stuff+ eLTSL id eGT -- wrapped
+    | rawrune -- raw
+    
+  rawrune = 
+    | next -- next
+    | ~eLTSL ~eGT ~eLT ~open ~close ~lq ~rq any  -- any
+
+  id = notGT+
+  attr = notGT
+  notGT = ~eGT any
+  stuff = ~eLTSL any
+
   next = "⇒" | "\\u21d2" | "%5Cu21d2"
   open = "⟪"
   close = "⟫"
   lq = "“"
   rq = "”"
+  eLT = "%3C" // | "<"
+  eGT = "%3E" // | ">"
+  eSL = "%2F" // | "\\"
+  eLTSL = eLT eSL
 }
