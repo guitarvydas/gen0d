@@ -4,12 +4,8 @@
         "name": "Page-1",
         "children": [
             {
-                "name": "\u0161<sub>hit_monster</sub><br>zd.send (eh, \"\", zd.new_datum_int_as_string (p.pwr), msg)<br>\u21d2",
+                "name": "\u03bb<sub>a</sub><br>x (y)",
                 "id": 3
-            },
-            {
-                "name": "<span style=\"border-color: var(--border-color);\">\u03bb</span><sub>pred_0</sub><br>x &gt; y",
-                "id": 8
             }
         ],
         "connections": [
@@ -21,89 +17,16 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "\u0161<sub>hit_monster</sub><br>zd.send (eh, \"\", zd.new_datum_int_as_string (p.pwr), msg)<br>\u21d2",
+                    "name": "\u03bb<sub>a</sub><br>x (y)",
                     "id": 3
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "\u0161<sub>hit_monster</sub><br>zd.send (eh, \"\", zd.new_datum_int_as_string (p.pwr), msg)<br>\u21d2",
-                    "id": 3
-                },
-                "source_port": "",
-                "target": {
-                    "name": "<span style=\"border-color: var(--border-color);\">\u03bb</span><sub>pred_0</sub><br>x &gt; y",
-                    "id": 8
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "<span style=\"border-color: var(--border-color);\">\u03bb</span><sub>pred_0</sub><br>x &gt; y",
-                    "id": 8
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            }
-        ]
-    },
-    {
-        "file": "small-test.drawio",
-        "name": "Page-2",
-        "children": [
-            {
-                "name": "Empty",
-                "id": 4
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Empty",
-                    "id": 4
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Empty",
-                    "id": 4
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            }
-        ]
-    },
-    {
-        "file": "small-test.drawio",
-        "name": "Empty",
-        "children": [
-
-        ],
-        "connections": [
-            {
-                "dir": 3,
-                "source": {
-                    "name": "",
-                    "id": 0
+                    "name": "\u03bb<sub>a</sub><br>x (y)",
+                    "id": 3
                 },
                 "source_port": "",
                 "target": {
