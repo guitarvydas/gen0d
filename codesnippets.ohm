@@ -1,43 +1,63 @@
 codesnippets {
+
   Snippets = CodeSpec+
   CodeSpec =
     | "ė" Name       -- nonamecode
     | "š" Name Code  -- namedcode
     | "λ" Name Code  -- namedpredicate
 
-  Name = bracketed_item_nobr
-  Code = bracketed_item
+  Name =  "⟪" ID "⟫"
+  Code =  "⟪" CodeContent "⟫"
+
+  ID =
+    | HTMLbr -- br  // allows treating <br> in name differently than <br> in Content
+    | ContentItem -- other
+  CodeContent = ContentItem+
   
-  bracketed_item = "⟪" item+ "⟫"
-  bracketed_item_nobr = "⟪" itemnobr+ "⟫"
 
-  item =
-    | eLT "br" attr? eGT -- br
-    | eLT id attr? eGT stuff+ eLTSL id eGT -- wrapped
-    | rawitem -- raw
+
+//// mid level
+
+    ContentItem =
+      | cLT BasicID Attr? cGT ContentItem+ cLTSL BasicID cGT -- wrapped
+      | BasicContent -- basic
+
+    BasicContent = 
+      | cNext -- next
+      | cSP -- space
+      | cTAB -- tab
+      | cNL -- newline
+      | string -- string
+      | ~Delimiter any  -- any
+
+    Attr = (cSP | cTAB) SingleAttr+
+    SingleAttr = (cSP | cTAB)? BasicID "=" string ","?
     
-  rawitem = 
-    | next -- next
-    | ~eLTSL ~eGT ~eLT ~open ~close ~lq ~rq any  -- any
+    HTMLbr = cLT "br" Attr? cGT
 
-  itemnobr =
-    | eLT "br" attr? eGT -- br
-    | item -- other
+    BasicID = firstLetter moreIDCharacter*
+    firstLetter = letter | "_"
+    moreIDCharacter = letter | digit | "_"
     
-  id = notGT+
-  attr = (eSP | eTAB) notGT+
-  notGT = ~eGT any
-  stuff = ~eLTSL any
+//// low level
 
-  next = "⇒" | "\\u21d2" | "%5Cu21d2"
-  open = "⟪"
-  close = "⟫"
-  lq = "“"
-  rq = "”"
-  eLT = "%3C" | "<"
-  eGT = "%3E" | ">"
-  eSL = "%2F" | "\\"
-  eLTSL = eLT eSL
-  eSP  = "%20" | " "
-  eTAB = "%09" | "\t"
+      cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
+      cOpen = "⟪"
+      cClose = "⟫"
+      cLT = "%3C" | "<"
+      cGT = "%3E" | ">"
+      cSL = "%2F" | "\\"
+      cLTSL = cLT cSL
+      cSP  = "%20" | " "
+      cTAB = "%09" | "\t"
+      cNL = "%09" | "\n"
+      lq = "“"
+      rq = "”"
+      string = lq (~rq any)* rq
+
+      MacroCharacter = cNext
+      ContainerCharacter = cOpen | cClose | cLT | cGT | cSL | cLTSL
+      WS = cSP | cTAB | cNL
+      Delimiter = ContainerCharacter | WS
+
 }
