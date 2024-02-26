@@ -5,21 +5,26 @@ codesnippets {
     | "š" Name Code  -- namedcode
     | "λ" Name Code  -- namedpredicate
 
-  Name = bracketed_rune
+  Name = bracketed_rune_nobr
   Code = bracketed_rune
   
   bracketed_rune = "⟪" rune+ "⟫"
+  bracketed_rune_nobr = "⟪" runenobr+ "⟫"
 
   rune =
-    | eLT attr+ eGT stuff+ eLTSL id eGT -- wrapped
+    | eLT id attr? eGT stuff+ eLTSL id eGT -- wrapped
     | rawrune -- raw
     
   rawrune = 
     | next -- next
     | ~eLTSL ~eGT ~eLT ~open ~close ~lq ~rq any  -- any
 
+  runenobr =
+    | eLT id attr? eGT -- br
+    | rune -- other
+    
   id = notGT+
-  attr = notGT
+  attr = (eSP | eTAB) notGT+
   notGT = ~eGT any
   stuff = ~eLTSL any
 
@@ -32,4 +37,6 @@ codesnippets {
   eGT = "%3E" // | ">"
   eSL = "%2F" // | "\\"
   eLTSL = eLT eSL
+  eSP  = "%20"
+  eTAB = "%09"
 }

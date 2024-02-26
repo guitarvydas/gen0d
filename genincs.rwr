@@ -13,15 +13,19 @@ codesnippets {
   Code [bracketed_rune] = ‛«bracketed_rune»’
   
   bracketed_rune [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
+  bracketed_rune_nobr [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
 
-  rune_wrapped [eLT attr+ eGT stuff+ eLTSL id eGT2] = ‛«id»’
+  rune_wrapped [eLT id attr? eGT stuff+ eLTSL id2 eGT2] = ‛«stuff»’
   rune_raw [r] = ‛«r»’
 
   rawrune_next [c] = ‛«c»’
   rawrune_any [c] = ‛«c»’
 
+  runenobr_br [eLT id attr? eGT] = ‛’
+  runenobr_other [r] = ‛«r»’
+
   id [cs+] = ‛«cs»’
-  attr [c] = ‛«c»’
+  attr [ws cs+] = ‛«ws»«cs»’
   notGT [c] = ‛«c»’
   stuff [c] = ‛«c»’
 
