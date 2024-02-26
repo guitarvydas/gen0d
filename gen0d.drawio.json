@@ -2297,6 +2297,10 @@
         "name": "Generate Odin Code",
         "children": [
             {
+                "name": "Mangle Names for Odin",
+                "id": 3
+            },
+            {
                 "name": "Generate Procs",
                 "id": 7
             },
@@ -2305,20 +2309,12 @@
                 "id": 8
             },
             {
-                "name": "?B",
+                "name": "?A",
                 "id": 13
             },
             {
                 "name": "Combine Generated Code",
                 "id": 14
-            },
-            {
-                "name": "Mangle Names for Odin",
-                "id": 24
-            },
-            {
-                "name": "?A",
-                "id": 25
             }
         ],
         "connections": [
@@ -2331,20 +2327,7 @@
                 "source_port": "",
                 "target": {
                     "name": "Mangle Names for Odin",
-                    "id": 24
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "?A",
-                    "id": 25
+                    "id": 3
                 },
                 "target_port": ""
             },
@@ -2352,7 +2335,7 @@
                 "dir": 1,
                 "source": {
                     "name": "Mangle Names for Odin",
-                    "id": 24
+                    "id": 3
                 },
                 "source_port": "",
                 "target": {
@@ -2365,7 +2348,7 @@
                 "dir": 1,
                 "source": {
                     "name": "Mangle Names for Odin",
-                    "id": 24
+                    "id": 3
                 },
                 "source_port": "",
                 "target": {
@@ -2404,25 +2387,12 @@
                 "dir": 1,
                 "source": {
                     "name": "Mangle Names for Odin",
-                    "id": 24
+                    "id": 3
                 },
-                "source_port": "",
+                "source_port": "\u2717",
                 "target": {
-                    "name": "?B",
+                    "name": "?A",
                     "id": 13
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Combine Generated Code",
-                    "id": 14
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
                 },
                 "target_port": ""
             },
@@ -2442,8 +2412,21 @@
             {
                 "dir": 2,
                 "source": {
+                    "name": "Combine Generated Code",
+                    "id": 14
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
                     "name": "Mangle Names for Odin",
-                    "id": 24
+                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {

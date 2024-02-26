@@ -15,6 +15,7 @@ codesnippets {
   bracketed_rune [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
   bracketed_rune_nobr [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
 
+  rune_br [eLT _br attr? eGT] = ‛«eLT»«_br»«attr»«eGT»’
   rune_wrapped [eLT id attr? eGT stuff+ eLTSL id2 eGT2] = ‛«stuff»’
   rune_raw [r] = ‛«r»’
 
