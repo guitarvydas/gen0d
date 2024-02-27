@@ -1,0 +1,30 @@
+ė ⟪<span style=\"border-color: var(--border-color);\">
+  <span style=\"border-color: var(--border-color);\">
+    \u03bb
+  </span>⟫
+  ⟪<sub style=\"border-color: var(--border-color);\">
+    <font style=\"border-color: var(--border-color); font-size: 7px;\">
+      f1&nbsp;
+    </font>
+  </sub>
+</span>
+p.ok == 0
+⟫
+
+ė ⟪<span style=\"border-color: var(--border-color);\"><span style=\"border-color: var(--border-color);\">\u03bb</span><sub style=\"border-color: var(--border-color);\"><font style=\"border-color: var(--border-color); font-size: 7px;\">f1%26nbsp;</font></sub></span>p.ok == 0⟫
+
+ė ⟪<s A><s B>\u03bb</span><sub C><font D>f1%26nbsp;</font></sub></span>p.ok == 0⟫
+
+⟪
+<span A>
+  <span B>
+    \u03bb
+  </span>
+  <sub C>
+    <font D>
+      f1%26nbsp;
+    </font>
+  </sub>
+</span>
+p.ok == 0
+⟫

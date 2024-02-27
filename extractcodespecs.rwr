@@ -10,7 +10,7 @@ extractcodespecs {
   
   NoNameCode [_eh Name] = ‛ė «Name»’
   NamedCode [_sh Name Code] = ‛š «Name» «Code»’ 
-  NamedPredicate [_zh Name Code] = ‛ž «Name» «Code»’
+  NamedPredicate [_zh Name Code] = ‛λ «Name» «Code»’
 
   Array [_lb x+ _rb] = ‛«x»’
   Name [bracketed_runes] = ‛«bracketed_runes»’

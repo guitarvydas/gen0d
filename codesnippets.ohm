@@ -1,20 +1,63 @@
 codesnippets {
+
   Snippets = CodeSpec+
   CodeSpec =
     | "ė" Name       -- nonamecode
     | "š" Name Code  -- namedcode
-    | "ž" Name Code  -- namedpredicate
+    | "λ" Name Code  -- namedpredicate
 
-  Name = bracketed_rune
-  Code = bracketed_rune
+  Name =  "⟪" ID "⟫"
+  Code =  "⟪" CodeContent "⟫"
+
+  ID =
+    | HTMLbr -- br  // allows treating <br> in name differently than <br> in Content
+    | ContentItem -- other
+  CodeContent = ContentItem+
   
-  bracketed_rune = "⟪" nonspecialrune+ "⟫"
-  nonspecialrune = 
-    | ~open ~close ~lq ~rq next -- next
-    | ~open ~close ~lq ~rq any  -- any
-  next = "⇒" | "\\u21d2" | "%5Cu21d2"
-  open = "⟪"
-  close = "⟫"
-  lq = "“"
-  rq = "”"
+
+
+//// mid level
+
+    ContentItem =
+      | cLT BasicID Attr? cGT ContentItem+ cLTSL BasicID cGT -- wrapped
+      | BasicContent -- basic
+
+    BasicContent = 
+      | cNext -- next
+      | cSP -- space
+      | cTAB -- tab
+      | cNL -- newline
+      | string -- string
+      | ~Delimiter any  -- any
+
+    Attr = (cSP | cTAB) SingleAttr+
+    SingleAttr = (cSP | cTAB)? BasicID "=" string ","?
+    
+    HTMLbr = cLT "br" Attr? cGT
+
+    BasicID = firstLetter moreIDCharacter*
+    firstLetter = letter | "_"
+    moreIDCharacter = letter | digit | "_"
+    
+//// low level
+
+      cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
+      cOpen = "⟪"
+      cClose = "⟫"
+      cLT = "%3C" | "<"
+      cGT = "%3E" | ">"
+      cSL = "%2F" | "/"
+      cLTSL = cLT cSL
+      cSP  = "%20" | " "
+      cTAB = "%09" | "\t"
+      cNL = "%09" | "\n"
+      lq = "“"
+      rq = "”"
+      string = lq (~rq any)* rq
+
+      MacroCharacter = cNext
+      ContainerCharacter = cOpen | cClose | cLT | cGT | cSL | cLTSL
+      WS = cSP | cTAB | cNL
+      Delimiter = ContainerCharacter | WS
+
 }

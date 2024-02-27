@@ -12,28 +12,28 @@
                 "id": 11
             },
             {
-                "name": "Generate Code",
+                "name": "Finalize For Testing",
                 "id": 16
             },
             {
-                "name": "Remove Drawio Noise",
-                "id": 17
+                "name": "Finalize",
+                "id": 18
             },
             {
-                "name": "Finalize",
+                "name": "Generate Code",
                 "id": 23
             },
             {
                 "name": "Encode JSON",
-                "id": 29
+                "id": 24
             },
             {
                 "name": "Split Names and Code",
-                "id": 35
+                "id": 29
             },
             {
                 "name": "Extract Code",
-                "id": 36
+                "id": 34
             }
         ],
         "connections": [
@@ -53,38 +53,25 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Remove Drawio Noise",
-                    "id": 17
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Encode JSON",
-                    "id": 29
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Encode JSON",
-                    "id": 29
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Split Names and Code",
-                    "id": 35
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Generate Code",
-                    "id": 16
+                    "id": 23
                 },
                 "source_port": "",
                 "target": {
                     "name": "Finalize",
+                    "id": 18
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Extract Code",
+                    "id": 34
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Generate Code",
                     "id": 23
                 },
                 "target_port": ""
@@ -97,21 +84,21 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Remove Drawio Noise",
-                    "id": 17
+                    "name": "Encode JSON",
+                    "id": 24
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Split Names and Code",
-                    "id": 35
+                    "name": "Encode JSON",
+                    "id": 24
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Extract Code",
-                    "id": 36
+                    "name": "Split Names and Code",
+                    "id": 29
                 },
                 "target_port": ""
             },
@@ -131,34 +118,21 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Extract Code",
-                    "id": 36
+                    "name": "Split Names and Code",
+                    "id": 29
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Generate Code",
-                    "id": 16
+                    "name": "Extract Code",
+                    "id": 34
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Encode JSON",
-                    "id": 29
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Split Names and Code",
-                    "id": 35
+                    "name": "Extract Code",
+                    "id": 34
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -171,6 +145,32 @@
                 "dir": 2,
                 "source": {
                     "name": "Finalize",
+                    "id": 18
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Finalize",
+                    "id": 18
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Code",
                     "id": 23
                 },
                 "source_port": "\u2717",
@@ -183,21 +183,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Remove Drawio Noise",
-                    "id": 17
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Extract Code",
-                    "id": 36
+                    "name": "Encode JSON",
+                    "id": 24
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -235,21 +222,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Generate Code",
+                    "name": "Finalize For Testing",
                     "id": 16
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Finalize",
-                    "id": 23
                 },
                 "source_port": "",
                 "target": {
@@ -257,6 +231,19 @@
                     "id": 0
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Split Names and Code",
+                    "id": 29
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             }
         ]
     },
@@ -2025,6 +2012,117 @@
     },
     {
         "file": "gen0d.drawio",
+        "name": "Finalize For Testing",
+        "children": [
+            {
+                "name": "br2nl",
+                "id": 8
+            },
+            {
+                "name": "Decode",
+                "id": 13
+            },
+            {
+                "name": "Cleanout HTML",
+                "id": 15
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Decode",
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Cleanout HTML",
+                    "id": 15
+                },
+                "source_port": "",
+                "target": {
+                    "name": "br2nl",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Decode",
+                    "id": 13
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Cleanout HTML",
+                    "id": 15
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "br2nl",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Cleanout HTML",
+                    "id": 15
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Decode",
+                    "id": 13
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "br2nl",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
         "name": "Cleanout HTML",
         "children": [
             {
@@ -2199,16 +2297,24 @@
         "name": "Generate Odin Code",
         "children": [
             {
+                "name": "Mangle Names for Odin",
+                "id": 3
+            },
+            {
                 "name": "Generate Procs",
                 "id": 7
             },
             {
                 "name": "Generate Includes",
-                "id": 9
+                "id": 8
+            },
+            {
+                "name": "?A",
+                "id": 13
             },
             {
                 "name": "Combine Generated Code",
-                "id": 15
+                "id": 14
             }
         ],
         "connections": [
@@ -2220,16 +2326,16 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Generate Includes",
-                    "id": 9
+                    "name": "Mangle Names for Odin",
+                    "id": 3
                 },
                 "target_port": ""
             },
             {
-                "dir": 0,
+                "dir": 1,
                 "source": {
-                    "name": "",
-                    "id": 0
+                    "name": "Mangle Names for Odin",
+                    "id": 3
                 },
                 "source_port": "",
                 "target": {
@@ -2241,34 +2347,86 @@
             {
                 "dir": 1,
                 "source": {
+                    "name": "Mangle Names for Odin",
+                    "id": 3
+                },
+                "source_port": "",
+                "target": {
                     "name": "Generate Includes",
-                    "id": 9
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Generate Procs",
+                    "id": 7
                 },
                 "source_port": "",
                 "target": {
                     "name": "Combine Generated Code",
-                    "id": 15
+                    "id": 14
+                },
+                "target_port": "proc"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Generate Includes",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Combine Generated Code",
+                    "id": 14
                 },
                 "target_port": "inc"
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Procs",
-                    "id": 7
+                    "name": "Mangle Names for Odin",
+                    "id": 3
                 },
-                "source_port": "",
+                "source_port": "\u2717",
                 "target": {
-                    "name": "Combine Generated Code",
-                    "id": 15
+                    "name": "?A",
+                    "id": 13
                 },
-                "target_port": "proc"
+                "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Generate Procs",
-                    "id": 7
+                    "name": "Combine Generated Code",
+                    "id": 14
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Combine Generated Code",
+                    "id": 14
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Mangle Names for Odin",
+                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2281,7 +2439,7 @@
                 "dir": 2,
                 "source": {
                     "name": "Generate Includes",
-                    "id": 9
+                    "id": 8
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2293,21 +2451,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Combine Generated Code",
-                    "id": 15
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Combine Generated Code",
-                    "id": 15
+                    "name": "Generate Procs",
+                    "id": 7
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2371,14 +2516,14 @@
     },
     {
         "file": "gen0d.drawio",
-        "name": "zzz deprecated Legalize Names",
+        "name": "Mangle Names for Odin",
         "children": [
             {
                 "name": "Transpile",
                 "id": 4
             },
             {
-                "name": "'legalizeforodinsupport.js'",
+                "name": "'odinsupport.js'",
                 "id": 13
             },
             {
@@ -2403,7 +2548,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'legalizeforodinsupport.js'",
+                    "name": "'odinsupport.js'",
                     "id": 13
                 },
                 "target_port": "\u237a"
@@ -2502,7 +2647,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'legalizeforodinsupport.js'",
+                    "name": "'odinsupport.js'",
                     "id": 13
                 },
                 "source_port": "\u237a",
