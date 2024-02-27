@@ -1,42 +1,57 @@
-// rules:
-// text1         --> ė⟪text1⟫
-// ėtext1 text2  --> š⟪text1⟫⟪text2⟫
-// λtext1 text2  --> λ⟪gensym⟫⟪text2⟫
 namesandcode {
-  chars [cs+] = ‛«cs»’
+  chars [char+] = ‛«char»’
   char_predicate [x] = ‛«x»’
   char_code [x] = ‛«x»’
   char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
-  predicateString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _lambda predname cs* rq2] = ‛λ⟪«predname»⟫⟪«cs»⟫’
-  codeString [lq1 _name rq1 _spc1 _colon _spc2 lq2 _shMark codename cs* rq2] = ‛š⟪«codename»⟫⟪«cs»⟫’ 
-  nameString [lq _name rq _spc1 _colon _spc2 s] = ‛ė⟪«s»⟫’
 
-  string [lq cs* rq] = ‛«cs»’
-  lq [c] = ‛«c»’
-  rq [c] = ‛«c»’
-  codeChar [c] = ‛«c»’
-  lambdaMark [c] = ‛«c»’
-  shMark [c] = ‛«c»’
-  nextMark [c] = ‛«c»’
+  predicateString [lq _name rq spaces _colon spaces lq cLambda id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces»«lq»«cLambda»«id»«codeChar»«rq »’
+  codeString [lq _name rq spaces _colon spaces lq cCh id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces»«lq»«cCh»«id»«codeChar»«rq»‛ 
+  nameString [lq _name rq spaces _colon spaces string] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces»«string»’
 
-  id_bracketed [x] = ‛«x»’
-  id_basic [x ws] = ‛«x»’
-  bracketedID [eLT basicID attr? eGT eLT2 stuff eSL basicID2 eGT2] = ‛«eLT»«basicID»«attr»«eGT»«eLT2»«stuff»«eSL»«basicID2»«eGT2»’
-  stuff_nested [bID] = ‛«bID»’
-  stuff_other [c+] = ‛«c»’
-  basicChar [c] = ‛«c»’
-  basicID [first more*] = ‛«first»«more»’
-  firstLetter [c] = ‛«c»’
-  moreLetter [c] = ‛«c»’
-  attr [ws cs+] = ‛«ws»«cs»’
+  id [idItem+] = ‛«idItem»’
+  idItem_br [c] = ‛«c»’
+  idItem_other [c] = ‛«c»’
+    
+    contentItem_wrapped [cLT basicID attr? cGT contentItem+ cLTSL basicID cGT] = ‛«LT»«basicID»«attr»«cGT»«contentItem»«cLTSL»«basicID»«cGT»’
+    contentItem_basic [c] = ‛«c»’
 
-  ws [c] = ‛«c»’
-  eLT [c] = ‛«c»’
-  eGT [c] = ‛«c»’
-  eSL [c] = ‛«c»’
-  eSP [c] = ‛«c»’
-  eTAB [c] = ‛«c»’
-  eNL [c] = ‛«c»’
-  eEQ [c] = ‛«c»’
+    basicContent_next [c] = ‛«c»’
+    basicContent_space [c] = ‛«c»’
+    basicContent_tab [c] = ‛«c»’
+    basicContent_newlne [c] = ‛«c»’
+    basicContent_string [c] = ‛«c»’
+    basicContent_any [c] = ‛«c»’
+
+    attr [ws+ singleAttr+] = ‛«ws»«singleAttr»’
+    singleAttr [ws* basicID _eq string _comma?] = ‛«ws»«basicID»«_eq»«string»«_comma»’
+    
+    brHTML [cLT _br attr? cGT] = ‛«cLT»«_br»«attr»«cGT»’
+
+    basicID [firstLetter moreIDCharacter*] = ‛«firstLetter»«moreIDCharacter»’
+    firstLetter [c] = ‛«c»’
+    moreIDCharacter [c] = ‛«c»’ 
+    
+      cLambda [c] = ‛«c»’ 
+      cCh [c] = ‛«c»’ 
+
+      cLTSL [cLT cSL] = ‛«cLT»«cSL»’
+      string [lq cs* rq] = ‛«lq»«cs»«rq»’
+
+      cNext [c] = ‛«c»’ 
+      cOpen [c] = ‛«c»’ 
+      cClose [c] = ‛«c»’ 
+      cLT [c] = ‛«c»’ 
+      cGT [c] = ‛«c»’ 
+      cSL [c] = ‛«c»’ 
+      cSP  [c] = ‛«c»’ 
+      cTAB [c] = ‛«c»’ 
+      cNL [c] = ‛«c»’ 
+      lq [c] = ‛«c»’ 
+      rq [c] = ‛«c»’ 
+
+      macroCharacter [c] = ‛«c»’ 
+      containerCharacter [c] = ‛«c»’ 
+      ws [c] = ‛«c»’
+      delimiter [c] = ‛«c»’ 
 }

@@ -67,40 +67,4 @@ namesandcode {
 
 
 
----
-
-
-
-
-
-
-  attr = ws (~rq ~eLT ~eGT any)+
-  string = lq codeChar* rq
-
-  id =
-    | bracketedID -- bracketed
-    | basicID space -- basic
-  bracketedID = eLT basicID attr? eGT stuff eLT eSL basicID eGT
-  stuff = 
-    | bracketedID -- nested
-    | basicChar+ -- other
-  basicChar = ~(eLT eSL) any
-  basicID = firstLetter moreLetter*
-  firstLetter = letter | "_"
-  moreLetter = letter | digit | "_"
-  
-
-  lq = "“"
-  rq = "”"
-  codeChar = ~rq any
-  nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
-  ws = eSP | eTAB // | " " | "\\t"
-  eLT = "%3C" // | "<"
-  eGT = "%3E" // | ">"
-  eSL = "%2F" // | "\\"
-  eSP  = "%20"
-  eTAB = "%09"
-  eNL  = "%0A"
-  eEQ = "%3D"
-  space += eSP | eTAB | eNL
 }
