@@ -3,12 +3,12 @@ extractcodespecs {
   Drawing = "{" FileName DrawingName Children "}"
 
   FileName = Key<"file"> ":" string
-  DrawingName = NoNameCode
+  DrawingName = NoCode
   Children = Key<"children"> ":" Array<Child>
 
-  Child = "{" (NoNameCode | NamedCode | NamedPredicate) Key<"id"> ":" integer "}"
+  Child = "{" (NoCode | NamedCode | NamedPredicate) Key<"id"> ":" integer "}"
   
-  NoNameCode = "ė" Name
+  NoCode = "ė" Name
   NamedCode =  "š" Name Code
   NamedPredicate = "λ" Name Code
 

@@ -5,9 +5,9 @@ namesandcode {
   char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
 
-  predicateString [lq _name rq spaces _colon spaces lq cLambda id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces»«lq»«cLambda»«id»«codeChar»«rq »’
-  codeString [lq _name rq spaces _colon spaces lq cCh id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces»«lq»«cCh»«id»«codeChar»«rq»‛ 
-  nameString [lq _name rq spaces _colon spaces string] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces»«string»’
+  predicateString [lq _name rq spaces _colon spaces2 lq cLambda id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces2»«lq»«cLambda»«id»«codeChar»«rq »’
+  codeString [lq _name rq spaces _colon spaces2 lq cCh id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces2»«lq»«cCh»«id»«codeChar»«rq»’ 
+  nameString [lq _name rq spaces _colon spaces2 string] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces2»«string»’
 
   id [idItem+] = ‛«idItem»’
   idItem_br [c] = ‛«c»’
@@ -17,9 +17,6 @@ namesandcode {
     contentItem_basic [c] = ‛«c»’
 
     basicContent_next [c] = ‛«c»’
-    basicContent_space [c] = ‛«c»’
-    basicContent_tab [c] = ‛«c»’
-    basicContent_newlne [c] = ‛«c»’
     basicContent_string [c] = ‛«c»’
     basicContent_any [c] = ‛«c»’
 
@@ -32,6 +29,8 @@ namesandcode {
     firstLetter [c] = ‛«c»’
     moreIDCharacter [c] = ‛«c»’ 
     
+      codeChar [c] = ‛«c»’ 
+
       cLambda [c] = ‛«c»’ 
       cCh [c] = ‛«c»’ 
 

@@ -3,7 +3,7 @@ codesnippets {
   Snippets = CodeSpec+
   CodeSpec =
     | "ė" Name       -- nonamecode
-    | "š" Name Code  -- namedcode
+    | "č" Name Code  -- namedcode
     | "λ" Name Code  -- namedpredicate
 
   Name =  "⟪" ID "⟫"

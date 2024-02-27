@@ -1,6 +1,6 @@
 // rules:
-// text1          --> ė⟪text1⟫
-// štext1 text2  --> š⟪text1⟫⟪text2⟫
+// text1         --> ė⟪text1⟫
+// čtext1 text2  --> č⟪text1⟫⟪text2⟫
 // λtext2        --> λ⟪gensym⟫⟪text2⟫
 namesandcode {
   chars = char+
@@ -10,15 +10,17 @@ namesandcode {
     | nameString -- name
     | any -- other
 
-  predicateString = lq "name" rq spaces ":" spaces lq cLambda id codeChar* rq 
-  codeString = lq "name" rq spaces ":" spaces lq cCh id codeChar* rq 
+  predicateString = lq "name" rq spaces ":" spaces lq cLambda id codeChar+ rq 
+  codeString = lq "name" rq spaces ":" spaces lq cCh id codeChar+ rq 
   nameString = lq "name" rq spaces ":" spaces string
 
   id = idItem+
   idItem =
     | brHTML -- br
     | contentItem -- other
-    
+
+  codeChar = ~rq any
+  
 //// mid level
 
     contentItem =
@@ -27,9 +29,6 @@ namesandcode {
 
     basicContent = 
       | cNext -- next
-      | cSP -- space
-      | cTAB -- tab
-      | cNL -- newline
       | string -- string
       | ~delimiter any  -- any
 
@@ -45,7 +44,7 @@ namesandcode {
 //// low level
 
       cLambda = "λ" | "%5Cu03bb" | "%5Cu03BB"
-      cCh= "č" | "%5Cu0161"
+      cCh= "č" | "%5Cu010D"
       cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
       cOpen = "⟪"
       cClose = "⟫"
