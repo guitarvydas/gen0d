@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-02-27T02:23:36.654Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="TFpdY1gWTZ_TKEGCXmHh" version="23.1.5" type="device" pages="18">
+<mxfile host="Electron" modified="2024-02-27T10:37:08.434Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="RrZY6GDNky_M2Tepilot" version="23.1.5" type="device" pages="18">
   <diagram name="main" id="m0zTKrYATkNEm8Ja8VeW">
     <mxGraphModel dx="1175" dy="1603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -207,6 +207,21 @@
         <mxCell id="NZhU6R4YnjEDI7i5cA2u-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;curved=0;" edge="1" parent="1" source="nSmw6h7VeHDicx8E_0bV-3" target="oi65mrcfNY2p0OcdCMCG-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="EawUHG758-FikfK3aMip-1" value="use encodeURL to encode the contents of all strings (i.e. the main data structure of JSON) so that strings contain no whitespace and appear to be log runs of printable ASCII" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=none;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="850" y="-100" width="140" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="EawUHG758-FikfK3aMip-2" value="find all &quot;name&quot; : &quot;...&quot; sequences that contain the character prefixes &quot;λ&quot; and &quot;š&quot;, then split them up into Name and Code parts, enclosed in unicode brackets &quot;...&quot; ; all &quot;name&quot; : &quot;...&quot; sequences that don&#39;t contain prefixes using the above characters are converted into &quot;nocode&quot; components with only prefix &quot;ė&quot; and only a Name" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=none;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="-150" width="140" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="EawUHG758-FikfK3aMip-3" value="drop anything that isn&#39;t in the form &quot;name&quot; : &quot;...&quot;, since the following passes only look at &quot;name&quot; : &quot;...&quot;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=none;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="-70" width="140" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="jaG_TJkaT6T19FuyvBMu-1" value="trim off the &quot;connections&quot; section, since that won&#39;t be used in downstream passes" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=none;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="400" y="-60" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="jaG_TJkaT6T19FuyvBMu-2" value="generate code in a target language for each &quot;name&quot; : &quot;... construct" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=none;shadow=1;size=20;pointerEvents=1;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="-75" width="140" height="125" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -343,7 +358,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="xc-7a-P2q4sFTYbv2FOA" name="Encode JSON">
-    <mxGraphModel dx="1149" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1175" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -613,7 +628,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Delete Connections Section" id="Qbw6DCc-uML8NpiIjb-J">
-    <mxGraphModel dx="1149" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1175" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="1buoqAQooCMRWTLwz8os-0" />
         <mxCell id="1buoqAQooCMRWTLwz8os-1" parent="1buoqAQooCMRWTLwz8os-0" />

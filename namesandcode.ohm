@@ -10,17 +10,72 @@ namesandcode {
     | nameString -- name
     | any -- other
 
-  predicateString = lq "name" rq spaces ":" spaces lq lambdaMark id codeChar* rq 
-  codeString = lq "name" rq spaces ":" spaces lq shMark id codeChar* rq 
+  predicateString = lq "name" rq spaces ":" spaces lq cLambda id codeChar* rq 
+  codeString = lq "name" rq spaces ":" spaces lq cCh id codeChar* rq 
   nameString = lq "name" rq spaces ":" spaces string
 
+  id = idItem+
+  idItem =
+    | brHTML -- br
+    | contentItem -- other
+    
+//// mid level
+
+    contentItem =
+      | cLT basicID attr? cGT contentItem+ cLTSL basicID cGT -- wrapped
+      | basicContent -- basic
+
+    basicContent = 
+      | cNext -- next
+      | cSP -- space
+      | cTAB -- tab
+      | cNL -- newline
+      | string -- string
+      | ~delimiter any  -- any
+
+    attr = (cSP | cTAB)+ singleAttr+
+    singleAttr = (cSP | cTAB)* basicID "=" string ","?
+    
+    brHTML = cLT "br" attr? cGT
+
+    basicID = firstLetter moreIDCharacter*
+    firstLetter = letter | "_"
+    moreIDCharacter = letter | digit | "_"
+    
+//// low level
+
+      cLambda = "λ" | "%5Cu03bb" | "%5Cu03BB"
+      cCh= "č" | "%5Cu0161"
+      cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
+      cOpen = "⟪"
+      cClose = "⟫"
+      cLT = "%3C" | "<"
+      cGT = "%3E" | ">"
+      cSL = "%2F" | "/"
+      cLTSL = cLT cSL
+      cSP  = "%20" | " "
+      cTAB = "%09" | "\t"
+      cNL = "%09" | "\n"
+      lq = "“"
+      rq = "”"
+      string = lq (~rq any)* rq
+
+      macroCharacter = cNext
+      containerCharacter = cOpen | cClose | cLT | cGT | cSL | cLTSL
+      ws = cSP | cTAB | cNL
+      delimiter = containerCharacter | ws
+
+
+
+---
+
+
+
+
+
+
+  attr = ws (~rq ~eLT ~eGT any)+
   string = lq codeChar* rq
-  lq = "“"
-  rq = "”"
-  codeChar = ~rq any
-  lambdaMark = "λ" | "%5Cu03bb" | "%5Cu03BB"
-  shMark = "š" | "%5Cu0161"
-  nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
 
   id =
     | bracketedID -- bracketed
@@ -34,16 +89,15 @@ namesandcode {
   firstLetter = letter | "_"
   moreLetter = letter | digit | "_"
   
-  attr = ws (~rq ~eLT ~eGT any)+
+
+  lq = "“"
+  rq = "”"
+  codeChar = ~rq any
+  nextMark = "⇒" | "\\u21d2" | "%5Cu21d2"
   ws = eSP | eTAB // | " " | "\\t"
   eLT = "%3C" // | "<"
   eGT = "%3E" // | ">"
   eSL = "%2F" // | "\\"
-
-  //ehMark = "ė" | "%5Cu0117"
-  //codeMark = "∷" | "\\u2237" | "%5Cu2237"
-  //predicateMark = "⁇" | "\\u2047" | "%5Cu2047"
-
   eSP  = "%20"
   eTAB = "%09"
   eNL  = "%0A"
