@@ -46,7 +46,7 @@ codesnippets {
       cClose = "⟫"
       cLT = "%3C" | "<"
       cGT = "%3E" | ">"
-      cSL = "%2F" | "\\"
+      cSL = "%2F" | "/"
       cLTSL = cLT cSL
       cSP  = "%20" | " "
       cTAB = "%09" | "\t"
