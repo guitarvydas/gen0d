@@ -5,9 +5,9 @@ namesandcode {
   char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
 
-  predicateString [lq _name rq spaces _colon spaces2 lq cLambda id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces2»«lq»«cLambda»«id»«codeChar»«rq »’
-  codeString [lq _name rq spaces _colon spaces2 lq cCh id codeChar* rq] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces2»«lq»«cCh»«id»«codeChar»«rq»’ 
-  nameString [lq _name rq spaces _colon spaces2 string] = ‛«lq»«_name»«rq»«spaces»«_colon»«spaces2»«string»’
+  predicateString [lq _name rq spaces _colon spaces2 lq2 cLambda id codeChar* rq2] = ‛λ ⟪«id»⟫ ⟪«codeChar»⟫’
+  codeString [lq _name rq spaces _colon spaces2 lq2 cCh id codeChar* rq2] = ‛č ⟪«id»⟫ ⟪«codeChar»«rq2»⟫’ 
+  nameString [lq _name rq spaces _colon spaces2 string] = ‛ė ⟪«string»⟫’
 
   id [idItem+] = ‛«idItem»’
   idItem_br [c] = ‛«c»’
@@ -35,7 +35,7 @@ namesandcode {
       cCh [c] = ‛«c»’ 
 
       cLTSL [cLT cSL] = ‛«cLT»«cSL»’
-      string [lq cs* rq] = ‛«lq»«cs»«rq»’
+      string [lq cs* rq] = ‛«cs»’
 
       cNext [c] = ‛«c»’ 
       cOpen [c] = ‛«c»’ 

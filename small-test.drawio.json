@@ -4,62 +4,7 @@
         "name": "Page-1",
         "children": [
             {
-                "name": "\u0161<sub>hit_monster</sub><br>zd.send (eh, \"\", zd.new_datum_int_as_string (p.pwr), msg)<br>\u21d2",
-                "id": 3
-            },
-            {
-                "name": "\u03bb<sub style=\"border-color: var(--border-color);\">pred_0</sub><br style=\"border-color: var(--border-color);\"><span style=\"border-color: var(--border-color);\">x &gt; y</span>",
-                "id": 8
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "\u0161<sub>hit_monster</sub><br>zd.send (eh, \"\", zd.new_datum_int_as_string (p.pwr), msg)<br>\u21d2",
-                    "id": 3
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "\u0161<sub>hit_monster</sub><br>zd.send (eh, \"\", zd.new_datum_int_as_string (p.pwr), msg)<br>\u21d2",
-                    "id": 3
-                },
-                "source_port": "",
-                "target": {
-                    "name": "\u03bb<sub style=\"border-color: var(--border-color);\">pred_0</sub><br style=\"border-color: var(--border-color);\"><span style=\"border-color: var(--border-color);\">x &gt; y</span>",
-                    "id": 8
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "\u03bb<sub style=\"border-color: var(--border-color);\">pred_0</sub><br style=\"border-color: var(--border-color);\"><span style=\"border-color: var(--border-color);\">x &gt; y</span>",
-                    "id": 8
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            }
-        ]
-    },
-    {
-        "file": "small-test.drawio",
-        "name": "Page-2",
-        "children": [
-            {
-                "name": "Empty",
+                "name": "\u03bbf1\u00a0p.ok == 0",
                 "id": 4
             }
         ],
@@ -72,7 +17,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Empty",
+                    "name": "\u03bbf1\u00a0p.ok == 0",
                     "id": 4
                 },
                 "target_port": ""
@@ -80,32 +25,10 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Empty",
+                    "name": "\u03bbf1\u00a0p.ok == 0",
                     "id": 4
                 },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            }
-        ]
-    },
-    {
-        "file": "small-test.drawio",
-        "name": "Empty",
-        "children": [
-
-        ],
-        "connections": [
-            {
-                "dir": 3,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
+                "source_port": "yes",
                 "target": {
                     "name": "",
                     "id": 0

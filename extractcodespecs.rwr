@@ -3,12 +3,12 @@ extractcodespecs {
   Drawing [ _lb FileName DrawingName Children _rb] = ‛«Children»’
 
   FileName [Key_file _colon string] = ‛’
-  DrawingName [NoNameCode] = ‛’
+  DrawingName [NoCode] = ‛’
   Children [Key_children _colon Array_Child] = ‛«Array_Child»’
 
   Child [_lb nameAndCode Key_id _colon integer _rb] = ‛\n«nameAndCode»’
   
-  NoNameCode [_eh Name] = ‛ė «Name»’
+  NoCode [_eh Name] = ‛ė «Name»’
   NamedCode [_sh Name Code] = ‛š «Name» «Code»’ 
   NamedPredicate [_zh Name Code] = ‛λ «Name» «Code»’
 

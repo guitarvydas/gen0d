@@ -9,7 +9,7 @@ extractcodespecs {
   Child = "{" (NoCode | NamedCode | NamedPredicate) Key<"id"> ":" integer "}"
   
   NoCode = "ė" Name
-  NamedCode =  "š" Name Code
+  NamedCode =  "č" Name Code
   NamedPredicate = "λ" Name Code
 
   Array<x> = "[" x* "]"
