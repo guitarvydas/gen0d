@@ -8,8 +8,8 @@ codesnippets {
   Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
   Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
 
-  ID [x]_br = ‛«x»’
-  ID [x]_other = ‛«x»’
+  ID_br [x] = ‛«x»’
+  ID_other [x] = ‛«x»’
 
   CodeContent [ContentItem+] = ‛«ContentItem»’
   

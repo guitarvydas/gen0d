@@ -52,7 +52,7 @@ namesandcode {
       cGT = "%3E" | ">"
       cSL = "%2F" | "/"
       cLTSL = cLT cSL
-      cSP  = "%20" | " "
+      cSP  = "%20" | " " | "%5Cu00a0"
       cTAB = "%09" | "\t"
       cNL = "%09" | "\n"
       lq = "“"
