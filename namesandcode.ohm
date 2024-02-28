@@ -44,7 +44,7 @@ namesandcode {
 //// low level
 
       cLambda = "λ" | "%5Cu03bb" | "%5Cu03BB"
-      cCh= "č" | "%5Cu010D"
+      cCh= "č" | "%5Cu010D" | "%5Cu010d"
       cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
       cOpen = "⟪"
       cClose = "⟫"
