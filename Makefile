@@ -2,7 +2,9 @@ LIBSRC=0D/odin/std
 ODIN_FLAGS ?= -debug -o:none
 D2J=0d/das2json/das2json
 
-dev-test: clean small-src.json run
+all: dev-small
+
+dev-small: clean small-src.json run
 
 dev-big: clean big-src.json run
 

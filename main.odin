@@ -80,7 +80,8 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
 br2nl :: proc(name: string, owner : ^zd.Eh) -> ^zd.Eh {
     handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	s := msg.datum.repr (msg.datum)
-	r, _ := strings.replace_all (s, "<br>", "\n")
+	r0, _ := strings.replace_all (s, "<br>", "\n")
+	r, _ := strings.replace_all (s, "&#xa;", "\n")
         zd.send (eh=eh, port="", datum=zd.new_datum_string (r), causingMessage=msg)
     }
     name_with_id := zd.gensym("br2nl")

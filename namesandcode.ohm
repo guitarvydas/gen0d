@@ -54,7 +54,7 @@ namesandcode {
       cLTSL = cLT cSL
       cSP  = "%20" | " " | "%5Cu00a0"
       cTAB = "%09" | "\t"
-      cNL = "%09" | "\n"
+      cNL = "%0A" | "\n" | "%26%23xa%3B"
       lq = "“"
       rq = "”"
       string = lq (~rq any)* rq

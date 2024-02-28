@@ -4,8 +4,8 @@
         "name": "Page-1",
         "children": [
             {
-                "name": "\u010dc0 p.ok <= 0",
-                "id": 5
+                "name": "\u010dinit&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                "id": 4
             }
         ],
         "connections": [
@@ -17,18 +17,18 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "\u010dc0 p.ok <= 0",
-                    "id": 5
+                    "name": "\u010dinit&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                    "id": 4
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "\u010dc0 p.ok <= 0",
-                    "id": 5
+                    "name": "\u010dinit&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                    "id": 4
                 },
-                "source_port": "yes",
+                "source_port": "",
                 "target": {
                     "name": "",
                     "id": 0
