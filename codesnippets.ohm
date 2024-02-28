@@ -29,7 +29,7 @@ codesnippets {
       | cTAB -- tab
       | cNL -- newline
       | string -- string
-      | ~Delimiter any  -- any
+      | ~cClose any  -- any
 
     Attr = (cSP | cTAB) SingleAttr+
     SingleAttr = (cSP | cTAB)? BasicID "=" string ","?

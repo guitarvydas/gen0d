@@ -6,7 +6,6 @@ dev-test: clean small-src.json run
 
 dev-big: clean big-src.json run
 
-
 run: gen0d transpile.drawio.json src.json
 	./gen0d src.json main gen0d.drawio $(LIBSRC)/transpile.drawio
 

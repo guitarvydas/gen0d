@@ -4,7 +4,7 @@
         "name": "Page-1",
         "children": [
             {
-                "name": "\u03bbf1\u00a0p.ok == 0",
+                "name": "\u03bbf1 p.ok <= 0",
                 "id": 4
             }
         ],
@@ -17,7 +17,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "\u03bbf1\u00a0p.ok == 0",
+                    "name": "\u03bbf1 p.ok <= 0",
                     "id": 4
                 },
                 "target_port": ""
@@ -25,7 +25,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "\u03bbf1\u00a0p.ok == 0",
+                    "name": "\u03bbf1 p.ok <= 0",
                     "id": 4
                 },
                 "source_port": "yes",

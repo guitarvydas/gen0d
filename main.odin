@@ -70,6 +70,10 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("rmHTML.ohm"))
     zd.append_leaf (leaves, std.string_constant ("rmHTML.rwr"))
 
+    zd.append_leaf (leaves, std.string_constant ("* D *"))
+    zd.append_leaf (leaves, std.string_constant ("* E *"))
+    zd.append_leaf (leaves, std.string_constant ("* F *"))
+
 
 }
 
