@@ -1,39 +1,62 @@
 codesnippets {
-  Snippets [Code+] = ‛«Code»’
-  CodeSpec_nonamecode [_tag Name] = ‛«_tag» «Name»’
 
-  CodeSpec_namedcode [_tag Name Code] =  ‛«_tag» «Name» «Code»’
+  Snippets [CodeSpecs+] = ‛«CodeSpecs»’
+  CodeSpec_nonamecode [_e Name] = ‛«_e» «Name»’
+  CodeSpec_namedcode [_ch Name Code] = ‛«_ch» «Name» «Code»’
+  CodeSpec_namedpredicate [_la Name Code] = ‛«_la» «Name» «Code»’
 
-  CodeSpec_namedpredicate [_tag Name Code] = ‛«_tag» «Name» «Code»’
+  Name [_lb ID _rb] = ‛«_lb»«_.legalizeName (ID)»«_rb»’
+  Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
 
-  Name [bracketed_rune] = ‛«_.legalizeName (bracketed_rune)»’
-  Code [bracketed_rune] = ‛«bracketed_rune»’
+  ID [item+] = ‛«item»’
+  IDitem_br [x] = ‛«x»’
+  IDitem_other [x] = ‛«x»’
+
+  CodeContent [ContentItem+] = ‛«ContentItem»’
   
-  bracketed_rune [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
-  bracketed_rune_nobr [_lb rune+ _rb] = ‛«_lb»«rune»«_rb»’
 
-  rune_br [eLT _br attr? eGT] = ‛«eLT»«_br»«attr»«eGT»’
-  rune_wrapped [eLT id attr? eGT stuff+ eLTSL id2 eGT2] = ‛«stuff»’
-  rune_raw [r] = ‛«r»’
 
-  rawrune_next [c] = ‛«c»’
-  rawrune_any [c] = ‛«c»’
+//// mid level
 
-  runenobr_br [eLT id attr? eGT] = ‛’
-  runenobr_other [r] = ‛«r»’
+    ContentItem_wrapped [cLT BasicID Attr? cGT ContentItem+ cLTSL BasicID2 cGT2] = ‛«cLT»«BasicID»«Attr»«cGT»«ContentItem»«cLTSL»«BasicID»«cGT»’
+    ContentItem_basic [c] = ‛«c»’
+ 
+    BasicContent_next	 [c] = ‛«c»’
+    BasicContent_space [c] = ‛«c»’
+    BasicContent_tab [c] = ‛«c»’
+    BasicContent_newline [c] = ‛«c»’
+    BasicContent_string [c] = ‛«c»’
+    BasicContent_any [c] = ‛«c»’
 
-  id [cs+] = ‛«cs»’
-  attr [ws cs+] = ‛«ws»«cs»’
-  notGT [c] = ‛«c»’
-  stuff [c] = ‛«c»’
+    Attr [ws SingleAttr+] = ‛«ws»«SingleAttr»’
+    SingleAttr [ws? BasicID _eq string _comma?] = ‛«ws»«BasicID»«_eq»«string»«_comma»’
+    
+    HTMLbr [cLT _br Attr? cGT] = ‛«cLT»«_br»«Attr»«cGT»’
 
-  next [c] = ‛«c»’
-  open [c] = ‛«c»’
-  close [c] = ‛«c»’
-  lq [c] = ‛«c»’
-  rq [c] = ‛«c»’
-  eLT [c] = ‛«c»’
-  eGT [c] = ‛«c»’
-  eSL [c] = ‛«c»’
-  eLTSL [lt sl] = ‛«lt»«sl»’
+    BasicID [firstLetter moreIDCharacter*] = ‛«firstLetter»«moreIDCharacter»’
+    firstLetter [c] = ‛«c»’ 
+    moreIDCharacter [c] = ‛«c»’ 
+    
+//// low level
+
+      cLTSL [cLT cSL] = ‛«cLT»«cSL»’
+      string [lq cs* rq] = ‛«lq»«cs»«rq»’
+
+      cNext [c] = ‛«c»’ 
+      cOpen [c] = ‛«c»’ 
+      cClose [c] = ‛«c»’ 
+      cLT [c] = ‛«c»’ 
+      cGT [c] = ‛«c»’ 
+      cSL [c] = ‛«c»’ 
+      cSP  [c] = ‛«c»’ 
+      cTAB [c] = ‛«c»’ 
+      cNL [c] = ‛«c»’ 
+      lq [c] = ‛«c»’ 
+      rq [c] = ‛«c»’ 
+
+      MacroCharacter [c] = ‛«c»’ 
+      ContainerCharacter [c] = ‛«c»’ 
+      WS [c] = ‛«c»’
+      Delimiter [c] = ‛«c»’ 
+
 }

@@ -9,7 +9,8 @@ codesnippets {
   Name =  "⟪" ID "⟫"
   Code =  "⟪" CodeContent "⟫"
 
-  ID =
+  ID = IDitem+
+  IDitem =
     | HTMLbr -- br  // allows treating <br> in name differently than <br> in Content
     | ContentItem -- other
   CodeContent = ContentItem+

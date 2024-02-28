@@ -8,36 +8,28 @@
                 "id": 5
             },
             {
-                "name": "Finalize For Testing",
-                "id": 10
-            },
-            {
                 "name": "Delete Connections Section",
                 "id": 11
-            },
-            {
-                "name": "?B",
-                "id": 15
-            },
-            {
-                "name": "?A",
-                "id": 17
             },
             {
                 "name": "Finalize",
                 "id": 18
             },
             {
+                "name": "Split Names and Code",
+                "id": 22
+            },
+            {
                 "name": "Encode JSON",
                 "id": 24
             },
             {
-                "name": "Split Names and Code",
-                "id": 29
-            },
-            {
                 "name": "Extract Code",
                 "id": 34
+            },
+            {
+                "name": "Finalize For Testing",
+                "id": 36
             },
             {
                 "name": "Generate Code",
@@ -61,32 +53,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Encode JSON",
-                    "id": 24
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Split Names and Code",
-                    "id": 29
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Split Names and Code",
-                    "id": 29
-                },
-                "source_port": "",
-                "target": {
-                    "name": "?B",
-                    "id": 15
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Generate Code",
                     "id": 39
                 },
@@ -100,13 +66,13 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Split Names and Code",
-                    "id": 29
+                    "name": "Encode JSON",
+                    "id": 24
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Extract Code",
-                    "id": 34
+                    "name": "Split Names and Code",
+                    "id": 22
                 },
                 "target_port": ""
             },
@@ -120,32 +86,6 @@
                 "target": {
                     "name": "Encode JSON",
                     "id": 24
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Extract Code",
-                    "id": 34
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Generate Code",
-                    "id": 39
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Encode JSON",
-                    "id": 24
-                },
-                "source_port": "",
-                "target": {
-                    "name": "?A",
-                    "id": 17
                 },
                 "target_port": ""
             },
@@ -163,23 +103,36 @@
                 "target_port": ""
             },
             {
-                "dir": 2,
+                "dir": 1,
                 "source": {
+                    "name": "Split Names and Code",
+                    "id": 22
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Extract Code",
+                    "id": 34
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Extract Code",
+                    "id": 34
+                },
+                "source_port": "",
+                "target": {
                     "name": "Generate Code",
                     "id": 39
                 },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
+                "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
                     "name": "Finalize For Testing",
-                    "id": 10
+                    "id": 36
                 },
                 "source_port": "",
                 "target": {
@@ -191,21 +144,21 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Extract Code",
-                    "id": 34
+                    "name": "Finalize",
+                    "id": 18
                 },
-                "source_port": "\u2717",
+                "source_port": "",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "\u2717"
+                "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
                     "name": "Split Names and Code",
-                    "id": 29
+                    "id": 22
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -243,15 +196,15 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Finalize",
-                    "id": 18
+                    "name": "Generate Code",
+                    "id": 39
                 },
-                "source_port": "",
+                "source_port": "\u2717",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": ""
+                "target_port": "\u2717"
             },
             {
                 "dir": 2,
@@ -271,6 +224,19 @@
                 "source": {
                     "name": "Read Text File",
                     "id": 5
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Extract Code",
+                    "id": 34
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2331,6 +2297,10 @@
         "name": "Generate Odin Code",
         "children": [
             {
+                "name": "Mangle Names for Odin",
+                "id": 3
+            },
+            {
                 "name": "Generate Procs",
                 "id": 7
             },
@@ -2339,16 +2309,12 @@
                 "id": 8
             },
             {
+                "name": "?A",
+                "id": 13
+            },
+            {
                 "name": "Combine Generated Code",
                 "id": 14
-            },
-            {
-                "name": "Identity Code Snippets",
-                "id": 20
-            },
-            {
-                "name": "Mangle Names for Odin",
-                "id": 24
             }
         ],
         "connections": [
@@ -2360,8 +2326,8 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Identity Code Snippets",
-                    "id": 20
+                    "name": "Generate Includes",
+                    "id": 8
                 },
                 "target_port": ""
             },
@@ -2392,6 +2358,19 @@
                 "target_port": "inc"
             },
             {
+                "dir": 1,
+                "source": {
+                    "name": "Generate Includes",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?A",
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
                 "dir": 2,
                 "source": {
                     "name": "Combine Generated Code",
@@ -2408,7 +2387,7 @@
                 "dir": 2,
                 "source": {
                     "name": "Mangle Names for Odin",
-                    "id": 24
+                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2416,19 +2395,6 @@
                     "id": 0
                 },
                 "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Combine Generated Code",
-                    "id": 14
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
             },
             {
                 "dir": 2,
@@ -2459,8 +2425,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Identity Code Snippets",
-                    "id": 20
+                    "name": "Combine Generated Code",
+                    "id": 14
                 },
                 "source_port": "",
                 "target": {
@@ -2468,19 +2434,6 @@
                     "id": 0
                 },
                 "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Identity Code Snippets",
-                    "id": 20
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
             }
         ]
     },
