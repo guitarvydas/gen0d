@@ -8,9 +8,9 @@ extractcodespecs {
 
   Child [_lb nameAndCode Key_id _colon integer _rb] = ‛\n«nameAndCode»’
   
-  NoCode [_eh Name] = ‛ė «Name»’
-  NamedCode [_sh Name Code] = ‛č «Name» «Code»’ 
-  NamedPredicate [_zh Name Code] = ‛λ «Name» «Code»’
+  NoCode [_eh Name Raw] = ‛ė «Name» «Raw»’
+  NamedCode [_sh Name Code Raw] = ‛č «Name» «Code» «Raw»’ 
+  NamedPredicate [_zh Name Code Raw] = ‛λ «Name» «Code» «Raw»’
 
   Array [_lb x+ _rb] = ‛«x»’
   Name [bracketed_runes] = ‛«bracketed_runes»’

@@ -1,12 +1,13 @@
 codesnippets {
 
   Snippets [CodeSpecs+] = ‛«CodeSpecs»’
-  CodeSpec_nonamecode [_e Name] = ‛«_e» «Name»’
-  CodeSpec_namedcode [_sh Name Code] = ‛«_sh» «Name» «Code»’
-  CodeSpec_namedpredicate [_la Name Code] = ‛«_la» «Name» «Code»’
+  CodeSpec_nonamecode [_e Name Raw] = ‛«_e» «Name» «Raw»’
+  CodeSpec_namedcode [_sh Name Code Raw] = ‛«_sh» «Name» «Code» «Raw»’
+  CodeSpec_namedpredicate [_la Name Code Raw] = ‛«_la» «Name» «Code» «Raw»’
 
   Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
   Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
+  Raw [_lb x _rb] = ‛«_lb»«x»«_rb»’
 
   ID [item+] = ‛«item»’
   IDitem_br [x] = ‛«x»’
@@ -14,6 +15,7 @@ codesnippets {
 
   CodeContent [ContentItem+] = ‛«ContentItem»’
   
+  RawContent [x+] = ‛«x»’
 
 
 //// mid level

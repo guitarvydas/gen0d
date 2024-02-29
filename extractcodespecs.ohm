@@ -8,13 +8,14 @@ extractcodespecs {
 
   Child = "{" (NoCode | NamedCode | NamedPredicate) Key<"id"> ":" integer "}"
   
-  NoCode = "ė" Name
-  NamedCode =  "č" Name Code
-  NamedPredicate = "λ" Name Code
+  NoCode = "ė" Name Raw
+  NamedCode =  "č" Name Code Raw
+  NamedPredicate = "λ" Name Code Raw
 
   Array<x> = "[" x* "]"
   Name = bracketed_runes
   Code = bracketed_runes
+  Raw = bracketed_runes
   bracketed_runes = "⟪" nonspecialrune+ "⟫"
   string = lq nonspecialrune* rq
   nonspecialrune = ~open ~close ~lq ~rq any

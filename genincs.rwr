@@ -1,20 +1,23 @@
 codesnippets {
 
   Snippets [CodeSpecs+] = ‛«CodeSpecs»’
-  CodeSpec_nonamecode [_e Name] = ‛’
-  CodeSpec_namedcode [_sh Name Code] = 
+  CodeSpec_nonamecode [_e Name Raw] = ‛’
+  CodeSpec_namedcode [_sh Name Code Raw] = 
    ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Name»", instantiate = «_.legalizeName (Name)» })’
-  CodeSpec_namedpredicate [_la Name Code] =
+  CodeSpec_namedpredicate [_la Name Code Raw] =
    ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Name»", instantiate = «_.legalizeName (Name)» })’
 
   Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
   Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
+  Raw [_lb x _rb] = ‛«_lb»«x»«_rb»’
 
   ID [item+] = ‛«item»’
   IDitem_br [x] = ‛«x»’
   IDitem_other [x] = ‛«x»’
 
   CodeContent [ContentItem+] = ‛«ContentItem»’
+
+  RawContent [x+] = ‛«x»’
   
 
 

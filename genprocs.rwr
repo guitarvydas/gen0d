@@ -1,16 +1,16 @@
 codesnippets {
 
   Snippets [CodeSpecs+] = ‛«CodeSpecs»’
-  CodeSpec_nonamecode [_e Name] = ‛’
+  CodeSpec_nonamecode [_e Name Raw] = ‛’
   
-  CodeSpec_namedcode [_sh Name Code] = 
+  CodeSpec_namedcode [_sh Name Code Raw] = 
    ‛\n«_.legalizeName (Name)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {«Code»
 	}
 	return zd.make_leaf ("«Name»", owner, nil, handler)
     }’
 
-  CodeSpec_namedpredicate [_la Name Code] = 
+  CodeSpec_namedpredicate [_la Name Code Raw] = 
    ‛\n«_.legalizeName (Name)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	  if («Code») {
@@ -25,6 +25,7 @@ codesnippets {
 
   Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
   Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
+  Raw [_lb x _rb] = ‛«_lb»«x»«_rb»’
 
   ID [item+] = ‛«item»’
   IDitem_br [x] = ‛«x»’
@@ -32,6 +33,7 @@ codesnippets {
 
   CodeContent [ContentItem+] = ‛«ContentItem»’
   
+  RawContent [x+] = ‛«x»’
 
 
 //// mid level

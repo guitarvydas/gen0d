@@ -5,9 +5,9 @@ namesandcode {
   char_name [x] = ‛«x»’
   char_other [x] = ‛«x»’
 
-  predicateString [lq _name rq spaces _colon spaces2 lq2 cLambda id codeChar* rq2] = ‛λ ⟪«_.cleanupName (id)»⟫ ⟪«codeChar»⟫’
-  codeString [lq _name rq spaces _colon spaces2 lq2 cCh id codeChar* rq2] = ‛č ⟪«_.cleanupName (id)»⟫ ⟪«codeChar»⟫’ 
-  nameString [lq _name rq spaces _colon spaces2 string] = ‛ė ⟪«_.cleanupName (string)»⟫’
+  predicateString [lq _name rq spaces _colon spaces2 lq2 cLambda id codeChar* rq2] = ‛λ ⟪«_.cleanupName (id)»⟫ ⟪«codeChar»⟫ ⟪«id + codeChar»⟫’
+  codeString [lq _name rq spaces _colon spaces2 lq2 cCh id codeChar* rq2] = ‛č ⟪«_.cleanupName (id)»⟫ ⟪«codeChar»⟫ ⟪«id + codeChar»⟫’ 
+  nameString [lq _name rq spaces _colon spaces2 string] = ‛ė ⟪«_.cleanupName (string)»⟫ ⟪«string»⟫’
 
   id [idItem+] = ‛«idItem»’
   idItem_br [c] = ‛’

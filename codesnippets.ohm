@@ -2,19 +2,20 @@ codesnippets {
 
   Snippets = CodeSpec+
   CodeSpec =
-    | "ė" Name       -- nonamecode
-    | "č" Name Code  -- namedcode
-    | "λ" Name Code  -- namedpredicate
+    | "ė" Name Raw      -- nonamecode
+    | "č" Name Code Raw -- namedcode
+    | "λ" Name Code Raw -- namedpredicate
 
   Name =  "⟪" ID "⟫"
   Code =  "⟪" CodeContent "⟫"
+  Raw  =  "⟪" RawContent "⟫"
 
   ID = IDitem+
   IDitem =
     | HTMLbr -- br  // allows treating <br> in name differently than <br> in Content
     | ContentItem -- other
   CodeContent = ContentItem+
-  
+  RawContent = BasicContent+  
 
 
 //// mid level
