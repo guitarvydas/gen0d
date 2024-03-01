@@ -3,9 +3,9 @@ codesnippets {
   Snippets [CodeSpecs+] = ‛«CodeSpecs»’
   CodeSpec_nonamecode [_e Name Raw] = ‛’
   CodeSpec_namedcode [_sh Name Code Raw] = 
-   ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Name»", instantiate = «_.legalizeName (Name)» })’
+   ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Raw»", instantiate = «_.legalizeName (Name)» })’
   CodeSpec_namedpredicate [_la Name Code Raw] =
-   ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Name»", instantiate = «_.legalizeName (Name)» })’
+   ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Raw»", instantiate = «_.legalizeName (Name)» })’
 
   Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
   Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
