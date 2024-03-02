@@ -44,6 +44,7 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("decode"))
     zd.append_leaf (leaves, std.string_constant ("decode.ohm"))
     zd.append_leaf (leaves, std.string_constant ("decode.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("encodesupport.js"))
 
     zd.append_leaf (leaves, std.string_constant ("namesandcode"))
     zd.append_leaf (leaves, std.string_constant ("namesandcode.ohm"))

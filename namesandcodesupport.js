@@ -34,9 +34,6 @@ _ = {
     popChoiceName : function () {
 	_.choiceNameStack.pop ();
 	return "";
-    },
-    cleanupName : function (s) {
-	return s;
     }
 }
 ,
