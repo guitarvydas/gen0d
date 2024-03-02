@@ -1,0 +1,17 @@
+extractnames {
+  Drawings = "[" Drawing+ "]"
+  Drawing = "{" FileName DrawingName Children "}"
+
+  FileName = Key<"file"> ":" string
+  DrawingName = Key<"name"> ":" string
+  Children = Key<"children"> ":" "[" Child+ "]"
+  Child = "{" Key<"name"> ":" string Key<"id"> ":" integer "}"
+
+
+  string = lq notQuote* rq
+  notQuote = ~lq ~rq any
+  lq = "“"
+  rq = "”"
+  Key<s> = lq s rq
+  integer = digit+
+}

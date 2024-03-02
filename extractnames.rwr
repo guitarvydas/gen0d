@@ -1,0 +1,16 @@
+extractnames {
+  Drawings [_lb Drawings+ _rb] = ‛«Drawings»’
+  Drawing [ _lb FileName DrawingName Children _rb] = ‛«Children»’
+
+  FileName [Key_file _colon string] = ‛’
+  DrawingName [Key_name _colon string] = ‛’
+  Children [Key_children _colon _lb Child+ _rb] = ‛«Child»’
+
+  Child [_lb _name _colon1 str Key_id _colon integer _rb] = ‛\n«str»’
+  string [lq rune* rq] = ‛«lq»«rune»«rq»’
+  notQuote [c] = ‛«c»’
+  lq [c] = ‛«c»’
+  rq [c] = ‛«c»’
+  Key [lq s rq] = ‛«lq»«s»«rq»’
+  integer [digits+] = ‛«digits»’
+}

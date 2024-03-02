@@ -55,9 +55,9 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("delconn.ohm"))
     zd.append_leaf (leaves, std.string_constant ("delconn.rwr"))
 
-    zd.append_leaf (leaves, std.string_constant ("extractcodespecs"))
-    zd.append_leaf (leaves, std.string_constant ("extractcodespecs.ohm"))
-    zd.append_leaf (leaves, std.string_constant ("extractcodespecs.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("extractnames"))
+    zd.append_leaf (leaves, std.string_constant ("extractnames.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("extractnames.rwr"))
 
     zd.append_leaf (leaves, std.string_constant ("codesnippets"))
     zd.append_leaf (leaves, std.string_constant ("codesnippets.ohm"))
