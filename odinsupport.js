@@ -8,6 +8,22 @@ _ = {
     },
     decode0D : function (s) {
 	return s.replaceAll ("∘", " ")
+    },
+    delete_reserved_characters : function (s) {
+	return s.replace ("\\u010d", "").replace ("\\u03bb", "").replace ("\\u0117", "");
+    },
+    first_line : function (s) {
+	let lines = s.split ("&#xa;");
+	return lines [0];
+    },
+    rest_of_lines : function (s) {
+	let lines = s.split ("&#xa;");
+	let rest = lines.slice (1);
+	return rest.join ("\n");
+    },
+    name_of : function (s) {
+	let name = _.delete_reserved_characters (_.first_line (s));
+	return name;
     }
 }
 ,

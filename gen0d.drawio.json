@@ -8,12 +8,8 @@
                 "id": 3
             },
             {
-                "name": "?A",
-                "id": 8
-            },
-            {
                 "name": "Read Text File",
-                "id": 9
+                "id": 5
             },
             {
                 "name": "Delete Connections Section",
@@ -42,33 +38,7 @@
                 "source_port": "",
                 "target": {
                     "name": "Read Text File",
-                    "id": 9
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Encode JSON",
-                    "id": 24
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Extract Name Strings",
-                    "id": 29
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Generate Code",
-                    "id": 3
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Finalize",
-                    "id": 18
+                    "id": 5
                 },
                 "target_port": ""
             },
@@ -89,7 +59,7 @@
                 "dir": 1,
                 "source": {
                     "name": "Read Text File",
-                    "id": 9
+                    "id": 5
                 },
                 "source_port": "",
                 "target": {
@@ -101,60 +71,34 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Code",
-                    "id": 3
+                    "name": "Encode JSON",
+                    "id": 24
                 },
                 "source_port": "",
                 "target": {
-                    "name": "?A",
-                    "id": 8
+                    "name": "Extract Name Strings",
+                    "id": 29
                 },
                 "target_port": ""
             },
             {
-                "dir": 2,
-                "source": {
-                    "name": "Finalize",
-                    "id": 18
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Generate Code",
-                    "id": 3
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
+                "dir": 1,
                 "source": {
                     "name": "Extract Name Strings",
                     "id": 29
                 },
                 "source_port": "",
                 "target": {
-                    "name": "",
-                    "id": 0
+                    "name": "Generate Code",
+                    "id": 3
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Finalize",
-                    "id": 18
+                    "name": "Extract Name Strings",
+                    "id": 29
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -168,6 +112,45 @@
                 "source": {
                     "name": "Encode JSON",
                     "id": 24
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Code",
+                    "id": 3
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Finalize",
+                    "id": 18
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Code",
+                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -193,7 +176,7 @@
                 "dir": 2,
                 "source": {
                     "name": "Read Text File",
-                    "id": 9
+                    "id": 5
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -205,8 +188,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Extract Name Strings",
-                    "id": 29
+                    "name": "Finalize",
+                    "id": 18
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -2326,19 +2309,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Includes",
-                    "id": 8
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Combine Generated Code",
-                    "id": 14
-                },
-                "target_port": "inc"
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Generate Procs",
                     "id": 7
                 },
@@ -2368,18 +2338,18 @@
                     "name": "Combine Generated Code",
                     "id": 14
                 },
-                "source_port": "\u2717",
+                "source_port": "",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "\u2717"
+                "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Combine Generated Code",
-                    "id": 14
+                    "name": "Generate Includes",
+                    "id": 8
                 },
                 "source_port": "",
                 "target": {
@@ -2387,6 +2357,19 @@
                     "id": 0
                 },
                 "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Combine Generated Code",
+                    "id": 14
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             },
             {
                 "dir": 2,

@@ -1,48 +1,27 @@
 codesnippets {
 
-  Snippets = CodeSpec+
-  CodeSpec =
-    | "ė" Name Raw      -- nonamecode
-    | "č" Name Code Raw -- namedcode
-    | "λ" Name Code Raw -- namedpredicate
+  Snippets = Code+
 
-  Name =  "⟪" ID "⟫"
-  Code =  "⟪" CodeContent "⟫"
-  Raw  =  "⟪" RawContent "⟫"
-
-  ID = IDitem+
-  IDitem =
-    | HTMLbr -- br  // allows treating <br> in name differently than <br> in Content
-    | ContentItem -- other
-  CodeContent = ContentItem+
-  RawContent = BasicContent+  
+  Code =
+    | codeString -- ehstring
+    | predicateString -- lambdastring
+    | string
 
 
 //// mid level
 
-    ContentItem =
-      | cLT BasicID Attr? cGT ContentItem+ cLTSL BasicID cGT -- wrapped
-      | BasicContent -- basic
+      codeString = lq cCode (~rq any)* rq
+      predicateString = lq cPredicate (~rq any)* rq
+      string = lq (~rq any)* rq
 
-    BasicContent = 
-      | cNext -- next
-      | cSP -- space
-      | cTAB -- tab
-      | cNL -- newline
-      | string -- string
-      | ~cClose any  -- any
-
-    Attr = (cSP | cTAB) SingleAttr+
-    SingleAttr = (cSP | cTAB)? BasicID "=" string ","?
-    
-    HTMLbr = cLT "br" Attr? cGT
-
-    BasicID = firstLetter moreIDCharacter*
-    firstLetter = letter | "_"
-    moreIDCharacter = letter | digit | "_"
-    
+      cCode = cEh
+      cPredicate = cLambda
+      
 //// low level
 
+      cLambda = "λ" | "\\u03bb" | "\\u03BB"
+      cCh= "č" | "\\u010D" | "\\u010d"
+      cEh= "ė" | "\\u0117" | "\\u0117"
       cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
       cOpen = "⟪"
       cClose = "⟫"
@@ -55,7 +34,6 @@ codesnippets {
       cNL = "%09" | "\n"
       lq = "“"
       rq = "”"
-      string = lq (~rq any)* rq
 
       MacroCharacter = cNext
       ContainerCharacter = cOpen | cClose | cLT | cGT | cSL | cLTSL
