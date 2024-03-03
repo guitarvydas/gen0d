@@ -4,13 +4,13 @@ _ = {
 	return r;
     },
     encode0D : function (s) {
-	return s.replaceAll (" ", "∘").replaceAll ('\\"', "⦙")
+	return s.replaceAll (" ", "∘").replaceAll ('\\"', "⦙").replaceAll ('\\\\', "∫")
     },
     decode0D : function (s) {
 	return s.replaceAll ("∘", " ").replaceAll ("⦙", '"')
     },
     decode0DForName : function (s) {
-	return s.replaceAll ("⦙", '\\"')
+	return s.replaceAll ("⦙", '\\"').replaceAll ("∫", '\\\\')
     },
     delete_reserved_characters : function (s) {
 	return s.replace ("\\u010d", "").replace ("\\u03bb", "").replace ("\\u0117", "");
