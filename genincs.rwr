@@ -5,8 +5,8 @@ codesnippets {
 
 //// mid
 
-      codeString [lq c cs* rq] = ‛«_.name_of (cs)»’
-      predicateString [lq c cs* rq] = ‛«_.name_of (cs)»’
+      codeString [lq c cs* rq] = ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«cs»", instantiate = «_.name_of (cs)» })’
+      predicateString [lq c cs* rq] =    ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«cs»", instantiate = «_.name_of (cs)» })’
       string [lq cs* rq] = ‛’
 
       cCode [c] = ‛«c»’ 

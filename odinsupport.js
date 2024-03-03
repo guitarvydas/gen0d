@@ -24,6 +24,10 @@ _ = {
     name_of : function (s) {
 	let name = _.delete_reserved_characters (_.first_line (s));
 	return name;
+    },
+    code_of : function (s) {
+	let body = _.rest_of_lines (s);
+	return body;
     }
 }
 ,

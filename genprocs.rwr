@@ -5,8 +5,25 @@ codesnippets {
 
 //// mid
 
-      codeString [lq c cs* rq] = ‛«_.name_of (cs)»’
-      predicateString [lq c cs* rq] = ‛«_.name_of (cs)»’
+      codeString [lq c cs* rq] =
+   ‛\n«_.name_of (cs)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
+	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {«_.code_of (cs)»
+	}
+	return zd.make_leaf ("«cs»", owner, nil, handler)
+    }’
+      
+      predicateString [lq c cs* rq] =
+   ‛\n«_.name_of (cs)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
+	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
+	  if («_.code_of (cs)») {
+            zd.send (eh=eh, port="yes", datum=zd.new_datum_bang (), causingMessage=msg)
+          } else {
+            zd.send (eh=eh, port="no", datum=zd.new_datum_bang (), causingMessage=msg)
+          }
+	}
+	return zd.make_leaf ("«cs»", owner, nil, handler)
+    }’
+      
       string [lq cs* rq] = ‛’
 
       cCode [c] = ‛«c»’ 

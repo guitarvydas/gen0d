@@ -2309,15 +2309,15 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Procs",
-                    "id": 7
+                    "name": "Generate Includes",
+                    "id": 8
                 },
                 "source_port": "",
                 "target": {
                     "name": "Combine Generated Code",
                     "id": 14
                 },
-                "target_port": "proc"
+                "target_port": "inc"
             },
             {
                 "dir": 2,
@@ -2348,8 +2348,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Generate Includes",
-                    "id": 8
+                    "name": "Generate Procs",
+                    "id": 7
                 },
                 "source_port": "",
                 "target": {
