@@ -16,16 +16,12 @@
                 "id": 11
             },
             {
-                "name": "Finalize",
+                "name": "Encode JSON",
                 "id": 18
             },
             {
-                "name": "Encode JSON",
-                "id": 24
-            },
-            {
                 "name": "Extract Name Strings",
-                "id": 29
+                "id": 23
             }
         ],
         "connections": [
@@ -45,19 +41,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Delete Connections Section",
-                    "id": 11
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Encode JSON",
-                    "id": 24
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Read Text File",
                     "id": 5
                 },
@@ -72,12 +55,12 @@
                 "dir": 1,
                 "source": {
                     "name": "Encode JSON",
-                    "id": 24
+                    "id": 18
                 },
                 "source_port": "",
                 "target": {
                     "name": "Extract Name Strings",
-                    "id": 29
+                    "id": 23
                 },
                 "target_port": ""
             },
@@ -85,7 +68,7 @@
                 "dir": 1,
                 "source": {
                     "name": "Extract Name Strings",
-                    "id": 29
+                    "id": 23
                 },
                 "source_port": "",
                 "target": {
@@ -95,10 +78,49 @@
                 "target_port": ""
             },
             {
+                "dir": 1,
+                "source": {
+                    "name": "Delete Connections Section",
+                    "id": 11
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Encode JSON",
+                    "id": 18
+                },
+                "target_port": ""
+            },
+            {
                 "dir": 2,
                 "source": {
                     "name": "Extract Name Strings",
-                    "id": 29
+                    "id": 23
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Code",
+                    "id": 3
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Code",
+                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -111,46 +133,7 @@
                 "dir": 2,
                 "source": {
                     "name": "Encode JSON",
-                    "id": 24
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Generate Code",
-                    "id": 3
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Finalize",
                     "id": 18
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Generate Code",
-                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -177,190 +160,6 @@
                 "source": {
                     "name": "Read Text File",
                     "id": 5
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Finalize",
-                    "id": 18
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Remove Drawio Noise",
-        "children": [
-            {
-                "name": "Transpile",
-                "id": 4
-            },
-            {
-                "name": "'null.js'",
-                "id": 13
-            },
-            {
-                "name": "'stripHTML.rwr'",
-                "id": 16
-            },
-            {
-                "name": "'stripHTML.ohm'",
-                "id": 19
-            },
-            {
-                "name": "'stripHTML'",
-                "id": 22
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'null.js'",
-                    "id": 13
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'stripHTML.rwr'",
-                    "id": 16
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'stripHTML.ohm'",
-                    "id": 19
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'stripHTML'",
-                    "id": 22
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'null.js'",
-                    "id": 13
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'stripHTML.rwr'",
-                    "id": 16
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'stripHTML.ohm'",
-                    "id": 19
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'stripHTML'",
-                    "id": 22
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -513,177 +312,6 @@
                     "id": 4
                 },
                 "target_port": "grammar name"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Split Names and Code",
-        "children": [
-            {
-                "name": "Transpile",
-                "id": 4
-            },
-            {
-                "name": "'namesandcodesupport.js'",
-                "id": 13
-            },
-            {
-                "name": "'namesandcode.rwr'",
-                "id": 14
-            },
-            {
-                "name": "'namesandcode.ohm'",
-                "id": 17
-            },
-            {
-                "name": "'namesandcode'",
-                "id": 20
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'namesandcodesupport.js'",
-                    "id": 13
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'namesandcode.rwr'",
-                    "id": 14
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'namesandcode'",
-                    "id": 20
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'namesandcode.ohm'",
-                    "id": 17
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'namesandcode.rwr'",
-                    "id": 14
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'namesandcode.ohm'",
-                    "id": 17
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'namesandcode'",
-                    "id": 20
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'namesandcodesupport.js'",
-                    "id": 13
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrsupportfn"
             },
             {
                 "dir": 2,
@@ -1045,6 +673,191 @@
                 "source": {
                     "name": "Transpile",
                     "id": 4
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "Generate Code",
+        "children": [
+            {
+                "name": "Generate Odin Code",
+                "id": 8
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Generate Odin Code",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Odin Code",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Generate Odin Code",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "...",
+        "children": [
+
+        ],
+        "connections": [
+
+        ]
+    },
+    {
+        "file": "gen0d.drawio",
+        "name": "Combine Generated Code",
+        "children": [
+            {
+                "name": "String Concatenate",
+                "id": 7
+            },
+            {
+                "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
+                "id": 14
+            },
+            {
+                "name": "String Concatenate",
+                "id": 18
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "proc",
+                "target": {
+                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
+                    "id": 14
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "proc",
+                "target": {
+                    "name": "String Concatenate",
+                    "id": 18
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "inc",
+                "target": {
+                    "name": "String Concatenate",
+                    "id": 18
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
+                    "id": 14
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "String Concatenate",
+                    "id": 7
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 18
+                },
+                "source_port": "",
+                "target": {
+                    "name": "String Concatenate",
+                    "id": 7
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 7
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 7
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 18
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -1690,140 +1503,6 @@
     },
     {
         "file": "gen0d.drawio",
-        "name": "...",
-        "children": [
-
-        ],
-        "connections": [
-
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Combine Generated Code",
-        "children": [
-            {
-                "name": "String Concatenate",
-                "id": 7
-            },
-            {
-                "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
-                "id": 14
-            },
-            {
-                "name": "String Concatenate",
-                "id": 18
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "proc",
-                "target": {
-                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
-                    "id": 14
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "proc",
-                "target": {
-                    "name": "String Concatenate",
-                    "id": 18
-                },
-                "target_port": "1"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "inc",
-                "target": {
-                    "name": "String Concatenate",
-                    "id": 18
-                },
-                "target_port": "2"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
-                    "id": 14
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "String Concatenate",
-                    "id": 7
-                },
-                "target_port": "1"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "String Concatenate",
-                    "id": 18
-                },
-                "source_port": "",
-                "target": {
-                    "name": "String Concatenate",
-                    "id": 7
-                },
-                "target_port": "2"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "String Concatenate",
-                    "id": 7
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "String Concatenate",
-                    "id": 7
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "String Concatenate",
-                    "id": 18
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
         "name": "Finalize",
         "children": [
             {
@@ -1965,288 +1644,6 @@
     },
     {
         "file": "gen0d.drawio",
-        "name": "Finalize For Testing",
-        "children": [
-            {
-                "name": "br2nl",
-                "id": 8
-            },
-            {
-                "name": "Decode",
-                "id": 13
-            },
-            {
-                "name": "Cleanout HTML",
-                "id": 15
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Decode",
-                    "id": 13
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Cleanout HTML",
-                    "id": 15
-                },
-                "source_port": "",
-                "target": {
-                    "name": "br2nl",
-                    "id": 8
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Decode",
-                    "id": 13
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Cleanout HTML",
-                    "id": 15
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "br2nl",
-                    "id": 8
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Cleanout HTML",
-                    "id": 15
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Decode",
-                    "id": 13
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "br2nl",
-                    "id": 8
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Cleanout HTML",
-        "children": [
-            {
-                "name": "Transpile",
-                "id": 4
-            },
-            {
-                "name": "'null.js'",
-                "id": 13
-            },
-            {
-                "name": "'rmHTML.rwr'",
-                "id": 16
-            },
-            {
-                "name": "'rmHTML.ohm'",
-                "id": 19
-            },
-            {
-                "name": "'rmHTML'",
-                "id": 22
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'null.js'",
-                    "id": 13
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'rmHTML.rwr'",
-                    "id": 16
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'rmHTML.ohm'",
-                    "id": 19
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'rmHTML'",
-                    "id": 22
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'null.js'",
-                    "id": 13
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'rmHTML.rwr'",
-                    "id": 16
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'rmHTML.ohm'",
-                    "id": 19
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'rmHTML'",
-                    "id": 22
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
         "name": "Generate Odin Code",
         "children": [
             {
@@ -2359,399 +1756,6 @@
                 "source": {
                     "name": "Generate Procs",
                     "id": 7
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Generate Code",
-        "children": [
-            {
-                "name": "Generate Odin Code",
-                "id": 8
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Generate Odin Code",
-                    "id": 8
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Generate Odin Code",
-                    "id": 8
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Generate Odin Code",
-                    "id": 8
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Mangle Names for Odin",
-        "children": [
-            {
-                "name": "Transpile",
-                "id": 4
-            },
-            {
-                "name": "'odinsupport.js'",
-                "id": 13
-            },
-            {
-                "name": "'legalizeforodin.rwr'",
-                "id": 14
-            },
-            {
-                "name": "'codesnippets.ohm'",
-                "id": 17
-            },
-            {
-                "name": "'codesnippets'",
-                "id": 20
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'odinsupport.js'",
-                    "id": 13
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'legalizeforodin.rwr'",
-                    "id": 14
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets'",
-                    "id": 20
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets.ohm'",
-                    "id": 17
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'legalizeforodin.rwr'",
-                    "id": 14
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'codesnippets.ohm'",
-                    "id": 17
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'codesnippets'",
-                    "id": 20
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'odinsupport.js'",
-                    "id": 13
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            }
-        ]
-    },
-    {
-        "file": "gen0d.drawio",
-        "name": "Identity Code Snippets",
-        "children": [
-            {
-                "name": "Transpile",
-                "id": 4
-            },
-            {
-                "name": "'null.js'",
-                "id": 13
-            },
-            {
-                "name": "'codesnippets.rwr'",
-                "id": 14
-            },
-            {
-                "name": "'codesnippets.ohm'",
-                "id": 17
-            },
-            {
-                "name": "'codesnippets'",
-                "id": 20
-            }
-        ],
-        "connections": [
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'null.js'",
-                    "id": 13
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets.rwr'",
-                    "id": 14
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets'",
-                    "id": 20
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "input"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets.ohm'",
-                    "id": 17
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'codesnippets.rwr'",
-                    "id": 14
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'codesnippets.ohm'",
-                    "id": 17
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'codesnippets'",
-                    "id": 20
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'null.js'",
-                    "id": 13
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
                 },
                 "source_port": "\u2717",
                 "target": {

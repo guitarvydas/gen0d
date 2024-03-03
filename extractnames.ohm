@@ -4,7 +4,7 @@ extractnames {
 
   FileName = Key<"file"> ":" string
   DrawingName = Key<"name"> ":" string
-  Children = Key<"children"> ":" "[" Child+ "]"
+  Children = Key<"children"> ":" "[" Child* "]"
   Child = "{" Key<"name"> ":" string Key<"id"> ":" integer "}"
 
 

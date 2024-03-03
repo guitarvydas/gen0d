@@ -19,7 +19,6 @@ codesnippets {
 //// low level
 
       cLambda = "λ" | "\\u03bb" | "\\u03BB"
-      cCh= "č" | "\\u010D" | "\\u010d"
       cEh= "ė" | "\\u0117" | "\\u0117"
       cNext = "⇒" | "\\u21d2" | "%5Cu21d2"
       cOpen = "⟪"

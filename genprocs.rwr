@@ -37,6 +37,8 @@ codesnippets {
 
       cLTSL [cLT cSL] = ‛«cLT»«cSL»’
 
+      cLambda [c] = ‛«c»’ 
+      cEh [c] = ‛«c»’ 
       cNext [c] = ‛???’
       cOpen [c] = ‛«c»’ 
       cClose [c] = ‛«c»’ 
