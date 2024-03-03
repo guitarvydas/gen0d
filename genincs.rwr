@@ -1,52 +1,22 @@
 codesnippets {
 
-  Snippets [CodeSpecs+] = ‛«CodeSpecs»’
-  CodeSpec_nonamecode [_e Name Raw] = ‛’
-  CodeSpec_namedcode [_sh Name Code Raw] = 
-   ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Name»", instantiate = «_.legalizeName (Name)» })’
-  CodeSpec_namedpredicate [_la Name Code Raw] =
-   ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«Name»", instantiate = «_.legalizeName (Name)» })’
+  Snippets [Code+] = ‛«Code»’
+  Code_codestring [lq c cs* rq] = ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«cs»", instantiate = «_.name_of (cs)» })’
+  Code_predicatestring [lq c cs* rq] =    ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«cs»", instantiate = «_.name_of (cs)» })’
+  Code_other [lq cs* rq] = ‛’
 
-  Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
-  Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
-  Raw [_lb x _rb] = ‛«_lb»«x»«_rb»’
+//// mid
 
-  ID [item+] = ‛«item»’
-  IDitem_br [x] = ‛«x»’
-  IDitem_other [x] = ‛«x»’
+      cCode [c] = ‛«c»’ 
+      cPredicate [c] = ‛«c»’ 
 
-  CodeContent [ContentItem+] = ‛«ContentItem»’
-
-  RawContent [x+] = ‛«x»’
-  
-
-
-//// mid level
-
-    ContentItem_wrapped [cLT BasicID Attr? cGT ContentItem+ cLTSL BasicID2 cGT2] = ‛«cLT»«BasicID»«Attr»«cGT»«ContentItem»«cLTSL»«BasicID»«cGT»’
-    ContentItem_basic [c] = ‛«c»’
- 
-    BasicContent_next	 [c] = ‛«c»’
-    BasicContent_space [c] = ‛«c»’
-    BasicContent_tab [c] = ‛«c»’
-    BasicContent_newline [c] = ‛«c»’
-    BasicContent_string [c] = ‛«c»’
-    BasicContent_any [c] = ‛«c»’
-
-    Attr [ws SingleAttr+] = ‛«ws»«SingleAttr»’
-    SingleAttr [ws? BasicID _eq string _comma?] = ‛«ws»«BasicID»«_eq»«string»«_comma»’
-    
-    HTMLbr [cLT _br Attr? cGT] = ‛«cLT»«_br»«Attr»«cGT»’
-
-    BasicID [firstLetter moreIDCharacter*] = ‛«firstLetter»«moreIDCharacter»’
-    firstLetter [c] = ‛«c»’ 
-    moreIDCharacter [c] = ‛«c»’ 
-    
 //// low level
 
       cLTSL [cLT cSL] = ‛«cLT»«cSL»’
-      string [lq cs* rq] = ‛«lq»«cs»«rq»’
 
+      cLambda [c] = ‛«c»’ 
+      cCh [c] = ‛«c»’ 
+      cEh [c] = ‛«c»’ 
       cNext [c] = ‛«c»’ 
       cOpen [c] = ‛«c»’ 
       cClose [c] = ‛«c»’ 

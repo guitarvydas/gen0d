@@ -1,68 +1,43 @@
 codesnippets {
 
-  Snippets [CodeSpecs+] = ‛«CodeSpecs»’
-  CodeSpec_nonamecode [_e Name Raw] = ‛’
-  
-  CodeSpec_namedcode [_sh Name Code Raw] = 
-   ‛\n«_.legalizeName (Name)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
-	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {«Code»
-	}
-	return zd.make_leaf ("«Name»", owner, nil, handler)
-    }’
+  Snippets [Code+] = ‛«Code»’
 
-  CodeSpec_namedpredicate [_la Name Code Raw] = 
-   ‛\n«_.legalizeName (Name)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
+
+  Code_codestring [lq c cs* rq] =
+   ‛\n«_.name_of (cs)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
-	  if («Code») {
+	«_.code_of (cs)»
+	}
+	return zd.make_leaf ("«cs»", owner, nil, handler)
+    }’
+      
+   Code_predicatestring [lq c cs* rq] =
+   ‛\n«_.name_of (cs)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
+	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
+	  if («_.code_of (cs)») {
             zd.send (eh=eh, port="yes", datum=zd.new_datum_bang (), causingMessage=msg)
           } else {
             zd.send (eh=eh, port="no", datum=zd.new_datum_bang (), causingMessage=msg)
           }
 	}
-	return zd.make_leaf ("«Name»", owner, nil, handler)
+	return zd.make_leaf ("«cs»", owner, nil, handler)
     }’
+      
+    Code_other [lq cs* rq] = ‛’
 
+//// mid
 
-  Name [_lb ID _rb] = ‛«_lb»«ID»«_rb»’
-  Code [_lb CodeContent _rb] = ‛«_lb»«CodeContent»«_rb»’
-  Raw [_lb x _rb] = ‛«_lb»«x»«_rb»’
+      cCode [c] = ‛«c»’ 
+      cPredicate [c] = ‛«c»’
 
-  ID [item+] = ‛«item»’
-  IDitem_br [x] = ‛«x»’
-  IDitem_other [x] = ‛«x»’
+      codeChar_next [c] = ‛ zd.send (eh=eh, port="", datum=zd.new_datum_bang (), causingMessage=msg) ’
+      codeChar_other [c] = ‛«c»’
 
-  CodeContent [ContentItem+] = ‛«ContentItem»’
-  
-  RawContent [x+] = ‛«x»’
-
-
-//// mid level
-
-    ContentItem_wrapped [cLT BasicID Attr? cGT ContentItem+ cLTSL BasicID2 cGT2] = ‛«cLT»«BasicID»«Attr»«cGT»«ContentItem»«cLTSL»«BasicID»«cGT»’
-    ContentItem_basic [c] = ‛«c»’
- 
-    BasicContent_next	 [c] = ‛«c»’
-    BasicContent_space [c] = ‛«c»’
-    BasicContent_tab [c] = ‛«c»’
-    BasicContent_newline [c] = ‛«c»’
-    BasicContent_string [c] = ‛«c»’
-    BasicContent_any [c] = ‛«c»’
-
-    Attr [ws SingleAttr+] = ‛«ws»«SingleAttr»’
-    SingleAttr [ws? BasicID _eq string _comma?] = ‛«ws»«BasicID»«_eq»«string»«_comma»’
-    
-    HTMLbr [cLT _br Attr? cGT] = ‛«cLT»«_br»«Attr»«cGT»’
-
-    BasicID [firstLetter moreIDCharacter*] = ‛«firstLetter»«moreIDCharacter»’
-    firstLetter [c] = ‛«c»’ 
-    moreIDCharacter [c] = ‛«c»’ 
-    
 //// low level
 
       cLTSL [cLT cSL] = ‛«cLT»«cSL»’
-      string [lq cs* rq] = ‛«lq»«cs»«rq»’
 
-      cNext [c] = ‛ zd.send (eh=eh, port="", datum=zd.new_datum_bang (), causingMessage=msg) ’
+      cNext [c] = ‛???’
       cOpen [c] = ‛«c»’ 
       cClose [c] = ‛«c»’ 
       cLT [c] = ‛«c»’ 

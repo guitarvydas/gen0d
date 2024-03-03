@@ -4,6 +4,10 @@
         "name": "main",
         "children": [
             {
+                "name": "Generate Code",
+                "id": 3
+            },
+            {
                 "name": "Read Text File",
                 "id": 5
             },
@@ -16,24 +20,12 @@
                 "id": 18
             },
             {
-                "name": "Split Names and Code",
-                "id": 22
-            },
-            {
                 "name": "Encode JSON",
                 "id": 24
             },
             {
-                "name": "Extract Code",
-                "id": 34
-            },
-            {
-                "name": "Finalize For Testing",
-                "id": 36
-            },
-            {
-                "name": "Generate Code",
-                "id": 39
+                "name": "Extract Name Strings",
+                "id": 29
             }
         ],
         "connections": [
@@ -53,32 +45,6 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Generate Code",
-                    "id": 39
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Finalize",
-                    "id": 18
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Encode JSON",
-                    "id": 24
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Split Names and Code",
-                    "id": 22
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "Delete Connections Section",
                     "id": 11
                 },
@@ -105,60 +71,34 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "Split Names and Code",
-                    "id": 22
+                    "name": "Encode JSON",
+                    "id": 24
                 },
                 "source_port": "",
                 "target": {
-                    "name": "Extract Code",
-                    "id": 34
+                    "name": "Extract Name Strings",
+                    "id": 29
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Extract Code",
-                    "id": 34
+                    "name": "Extract Name Strings",
+                    "id": 29
                 },
                 "source_port": "",
                 "target": {
                     "name": "Generate Code",
-                    "id": 39
+                    "id": 3
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "Finalize For Testing",
-                    "id": 36
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Finalize",
-                    "id": 18
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Split Names and Code",
-                    "id": 22
+                    "name": "Extract Name Strings",
+                    "id": 29
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -183,21 +123,34 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Finalize",
-                    "id": 18
+                    "name": "Generate Code",
+                    "id": 3
                 },
-                "source_port": "\u2717",
+                "source_port": "",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "\u2717"
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Finalize",
+                    "id": 18
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
                     "name": "Generate Code",
-                    "id": 39
+                    "id": 3
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -235,8 +188,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Extract Code",
-                    "id": 34
+                    "name": "Finalize",
+                    "id": 18
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -427,7 +380,7 @@
                 "id": 4
             },
             {
-                "name": "'null.js'",
+                "name": "'encodesupport.js'",
                 "id": 13
             },
             {
@@ -452,7 +405,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'null.js'",
+                    "name": "'encodesupport.js'",
                     "id": 13
                 },
                 "target_port": "\u237a"
@@ -512,7 +465,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'null.js'",
+                    "name": "'encodesupport.js'",
                     "id": 13
                 },
                 "source_port": "\u237a",
@@ -933,7 +886,7 @@
     },
     {
         "file": "gen0d.drawio",
-        "name": "Extract Code",
+        "name": "Extract Name Strings",
         "children": [
             {
                 "name": "Transpile",
@@ -944,15 +897,15 @@
                 "id": 13
             },
             {
-                "name": "'extractcodespecs.rwr'",
+                "name": "'extractnames.rwr'",
                 "id": 14
             },
             {
-                "name": "'extractcodespecs.ohm'",
+                "name": "'extractnames.ohm'",
                 "id": 17
             },
             {
-                "name": "'extractcodespecs'",
+                "name": "'extractnames'",
                 "id": 20
             }
         ],
@@ -978,7 +931,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'extractcodespecs.rwr'",
+                    "name": "'extractnames.rwr'",
                     "id": 14
                 },
                 "target_port": "\u237a"
@@ -991,7 +944,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'extractcodespecs'",
+                    "name": "'extractnames'",
                     "id": 20
                 },
                 "target_port": "\u237a"
@@ -1017,7 +970,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'extractcodespecs.ohm'",
+                    "name": "'extractnames.ohm'",
                     "id": 17
                 },
                 "target_port": "\u237a"
@@ -1025,7 +978,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'extractcodespecs.rwr'",
+                    "name": "'extractnames.rwr'",
                     "id": 14
                 },
                 "source_port": "\u237a",
@@ -1038,7 +991,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'extractcodespecs.ohm'",
+                    "name": "'extractnames.ohm'",
                     "id": 17
                 },
                 "source_port": "\u237a",
@@ -1051,7 +1004,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'extractcodespecs'",
+                    "name": "'extractnames'",
                     "id": 20
                 },
                 "source_port": "\u237a",
@@ -1107,12 +1060,12 @@
         "name": "Generate Procs",
         "children": [
             {
-                "name": "E",
-                "id": 3
-            },
-            {
                 "name": "Transpile",
                 "id": 4
+            },
+            {
+                "name": "'odinsupport.js'",
+                "id": 13
             },
             {
                 "name": "'genprocs.rwr'",
@@ -1125,10 +1078,6 @@
             {
                 "name": "'codesnippets'",
                 "id": 20
-            },
-            {
-                "name": "'odinsupport.js'",
-                "id": 25
             }
         ],
         "connections": [
@@ -1141,7 +1090,7 @@
                 "source_port": "",
                 "target": {
                     "name": "'odinsupport.js'",
-                    "id": 25
+                    "id": 13
                 },
                 "target_port": "\u237a"
             },
@@ -1155,19 +1104,6 @@
                 "target": {
                     "name": "'genprocs.rwr'",
                     "id": 14
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets.ohm'",
-                    "id": 17
                 },
                 "target_port": "\u237a"
             },
@@ -1198,30 +1134,17 @@
                 "target_port": "input"
             },
             {
-                "dir": 1,
+                "dir": 0,
                 "source": {
-                    "name": "'codesnippets'",
-                    "id": 20
+                    "name": "",
+                    "id": 0
                 },
-                "source_port": "\u237a",
+                "source_port": "",
                 "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "'codesnippets.ohm'",
                     "id": 17
                 },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
+                "target_port": "\u237a"
             },
             {
                 "dir": 1,
@@ -1239,8 +1162,34 @@
             {
                 "dir": 1,
                 "source": {
+                    "name": "'codesnippets.ohm'",
+                    "id": 17
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'codesnippets'",
+                    "id": 20
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 1,
+                "source": {
                     "name": "'odinsupport.js'",
-                    "id": 25
+                    "id": 13
                 },
                 "source_port": "\u237a",
                 "target": {
@@ -1248,19 +1197,6 @@
                     "id": 4
                 },
                 "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "E",
-                    "id": 3
-                },
-                "target_port": ""
             },
             {
                 "dir": 2,
@@ -1590,20 +1526,20 @@
                 "id": 4
             },
             {
-                "name": "'null.js'",
+                "name": "'decode.rwr'",
                 "id": 13
             },
             {
-                "name": "'decode.rwr'",
+                "name": "'decode.ohm'",
                 "id": 16
             },
             {
-                "name": "'decode.ohm'",
+                "name": "'decode'",
                 "id": 19
             },
             {
-                "name": "'decode'",
-                "id": 22
+                "name": "'encodesupport.js'",
+                "id": 23
             }
         ],
         "connections": [
@@ -1615,8 +1551,8 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "'null.js'",
-                    "id": 13
+                    "name": "'encodesupport.js'",
+                    "id": 23
                 },
                 "target_port": "\u237a"
             },
@@ -1629,7 +1565,7 @@
                 "source_port": "",
                 "target": {
                     "name": "'decode.rwr'",
-                    "id": 16
+                    "id": 13
                 },
                 "target_port": "\u237a"
             },
@@ -1642,7 +1578,7 @@
                 "source_port": "",
                 "target": {
                     "name": "'decode.ohm'",
-                    "id": 19
+                    "id": 16
                 },
                 "target_port": "\u237a"
             },
@@ -1655,7 +1591,7 @@
                 "source_port": "",
                 "target": {
                     "name": "'decode'",
-                    "id": 22
+                    "id": 19
                 },
                 "target_port": "\u237a"
             },
@@ -1675,34 +1611,21 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'null.js'",
-                    "id": 13
+                    "name": "'decode'",
+                    "id": 19
                 },
                 "source_port": "\u237a",
                 "target": {
                     "name": "Transpile",
                     "id": 4
                 },
-                "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "'decode.rwr'",
-                    "id": 16
-                },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "rwrfn"
+                "target_port": "grammar name"
             },
             {
                 "dir": 1,
                 "source": {
                     "name": "'decode.ohm'",
-                    "id": 19
+                    "id": 16
                 },
                 "source_port": "\u237a",
                 "target": {
@@ -1714,15 +1637,28 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'decode'",
-                    "id": 22
+                    "name": "'decode.rwr'",
+                    "id": 13
                 },
                 "source_port": "\u237a",
                 "target": {
                     "name": "Transpile",
                     "id": 4
                 },
-                "target_port": "grammar name"
+                "target_port": "rwrfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'encodesupport.js'",
+                    "id": 23
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "rwrsupportfn"
             },
             {
                 "dir": 2,
@@ -1771,7 +1707,7 @@
                 "id": 7
             },
             {
-                "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
                 "id": 14
             },
             {
@@ -1788,7 +1724,7 @@
                 },
                 "source_port": "proc",
                 "target": {
-                    "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
                     "id": 14
                 },
                 "target_port": "\u237a"
@@ -1822,7 +1758,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
                     "id": 14
                 },
                 "source_port": "\u237a",
@@ -2398,12 +2334,12 @@
                     "name": "Combine Generated Code",
                     "id": 14
                 },
-                "source_port": "\u2717",
+                "source_port": "",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": "\u2717"
+                "target_port": ""
             },
             {
                 "dir": 2,
@@ -2411,12 +2347,12 @@
                     "name": "Combine Generated Code",
                     "id": 14
                 },
-                "source_port": "",
+                "source_port": "\u2717",
                 "target": {
                     "name": "",
                     "id": 0
                 },
-                "target_port": ""
+                "target_port": "\u2717"
             },
             {
                 "dir": 2,

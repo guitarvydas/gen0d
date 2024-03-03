@@ -24,7 +24,7 @@ start_function :: proc (arg: string, main_container : ^zd.Eh) {
 
 
 components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
-    zd.append_leaf (leaves, std.string_constant ("<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>"))
+    zd.append_leaf (leaves, std.string_constant ("<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>"))
 
     zd.append_leaf (leaves, std.string_constant ("<br>generated_components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {<br>"))
     zd.append_leaf (leaves, std.string_constant ("<br>}<br>"))
@@ -44,6 +44,7 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("decode"))
     zd.append_leaf (leaves, std.string_constant ("decode.ohm"))
     zd.append_leaf (leaves, std.string_constant ("decode.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("encodesupport.js"))
 
     zd.append_leaf (leaves, std.string_constant ("namesandcode"))
     zd.append_leaf (leaves, std.string_constant ("namesandcode.ohm"))
@@ -54,9 +55,9 @@ components_to_include_in_project :: proc (leaves: ^[dynamic]zd.Leaf_Template) {
     zd.append_leaf (leaves, std.string_constant ("delconn.ohm"))
     zd.append_leaf (leaves, std.string_constant ("delconn.rwr"))
 
-    zd.append_leaf (leaves, std.string_constant ("extractcodespecs"))
-    zd.append_leaf (leaves, std.string_constant ("extractcodespecs.ohm"))
-    zd.append_leaf (leaves, std.string_constant ("extractcodespecs.rwr"))
+    zd.append_leaf (leaves, std.string_constant ("extractnames"))
+    zd.append_leaf (leaves, std.string_constant ("extractnames.ohm"))
+    zd.append_leaf (leaves, std.string_constant ("extractnames.rwr"))
 
     zd.append_leaf (leaves, std.string_constant ("codesnippets"))
     zd.append_leaf (leaves, std.string_constant ("codesnippets.ohm"))
