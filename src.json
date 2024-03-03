@@ -4,11 +4,11 @@
         "name": "Page-1",
         "children": [
             {
-                "name": "\u03bbf1&#xa;p.wallet > 0&#xa;",
+                "name": "\u03bbf1&#xa;p.wallet > 0",
                 "id": 5
             },
             {
-                "name": "\u010dinit&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
                 "id": 6
             },
             {
@@ -29,7 +29,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "\u010dinit&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
                     "id": 6
                 },
                 "target_port": ""
@@ -37,7 +37,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "\u010dinit&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
                     "id": 6
                 },
                 "source_port": "",

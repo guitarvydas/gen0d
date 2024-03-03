@@ -10,12 +10,15 @@ codesnippets {
 
 //// mid level
 
-      codeString = lq cCode (~rq any)* rq
+      codeString = lq cCode codeChar* rq
       predicateString = lq cPredicate (~rq any)* rq
       string = lq (~rq any)* rq
 
       cCode = cEh
       cPredicate = cLambda
+      codeChar =
+        | ~rq cNext -- next
+	| ~rq any -- other
       
 //// low level
 

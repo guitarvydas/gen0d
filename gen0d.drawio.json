@@ -1060,12 +1060,12 @@
         "name": "Generate Procs",
         "children": [
             {
-                "name": "E",
-                "id": 3
-            },
-            {
                 "name": "Transpile",
                 "id": 4
+            },
+            {
+                "name": "'odinsupport.js'",
+                "id": 13
             },
             {
                 "name": "'genprocs.rwr'",
@@ -1078,10 +1078,6 @@
             {
                 "name": "'codesnippets'",
                 "id": 20
-            },
-            {
-                "name": "'odinsupport.js'",
-                "id": 25
             }
         ],
         "connections": [
@@ -1094,7 +1090,7 @@
                 "source_port": "",
                 "target": {
                     "name": "'odinsupport.js'",
-                    "id": 25
+                    "id": 13
                 },
                 "target_port": "\u237a"
             },
@@ -1108,19 +1104,6 @@
                 "target": {
                     "name": "'genprocs.rwr'",
                     "id": 14
-                },
-                "target_port": "\u237a"
-            },
-            {
-                "dir": 0,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "'codesnippets.ohm'",
-                    "id": 17
                 },
                 "target_port": "\u237a"
             },
@@ -1151,30 +1134,17 @@
                 "target_port": "input"
             },
             {
-                "dir": 1,
+                "dir": 0,
                 "source": {
-                    "name": "'codesnippets'",
-                    "id": 20
+                    "name": "",
+                    "id": 0
                 },
-                "source_port": "\u237a",
+                "source_port": "",
                 "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "grammar name"
-            },
-            {
-                "dir": 1,
-                "source": {
                     "name": "'codesnippets.ohm'",
                     "id": 17
                 },
-                "source_port": "\u237a",
-                "target": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "target_port": "ohmfn"
+                "target_port": "\u237a"
             },
             {
                 "dir": 1,
@@ -1192,8 +1162,34 @@
             {
                 "dir": 1,
                 "source": {
+                    "name": "'codesnippets.ohm'",
+                    "id": 17
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "ohmfn"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'codesnippets'",
+                    "id": 20
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Transpile",
+                    "id": 4
+                },
+                "target_port": "grammar name"
+            },
+            {
+                "dir": 1,
+                "source": {
                     "name": "'odinsupport.js'",
-                    "id": 25
+                    "id": 13
                 },
                 "source_port": "\u237a",
                 "target": {
@@ -1201,19 +1197,6 @@
                     "id": 4
                 },
                 "target_port": "rwrsupportfn"
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Transpile",
-                    "id": 4
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "E",
-                    "id": 3
-                },
-                "target_port": ""
             },
             {
                 "dir": 2,

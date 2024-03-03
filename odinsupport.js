@@ -26,7 +26,7 @@ _ = {
 	return name;
     },
     code_of : function (s) {
-	let body = _.rest_of_lines (s);
+	let body = _.rest_of_lines (_.decode0D (s));
 	return body;
     }
 }
