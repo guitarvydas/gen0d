@@ -4,7 +4,7 @@
         "name": "Page-1",
         "children": [
             {
-                "name": "\u03bbf1&#xa;p.wallet > 0",
+                "name": "\u0117Rest0&#xa;p.ok = max_recharge&#xa;ndays += 1&#xa;zd.send (eh=eh, port=\"\", datum=zd.new_datum_string (fmt.aprintf (\"p=%v m=%v ndays=%v\\n\", p, m, ndays)), causingMessage=msg)&#xa;\u21d2",
                 "id": 5
             },
             {
@@ -18,6 +18,10 @@
             {
                 "name": "Read Text File",
                 "id": 12
+            },
+            {
+                "name": "\u03bbf1 p.wallet > 0",
+                "id": 16
             }
         ],
         "connections": [

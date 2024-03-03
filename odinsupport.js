@@ -4,17 +4,21 @@ _ = {
 	return r;
     },
     encode0D : function (s) {
-	return s.replaceAll (" ", "∘")
+	return s.replaceAll (" ", "∘").replaceAll ('\\"', "⦙")
     },
     decode0D : function (s) {
-	return s.replaceAll ("∘", " ")
+	return s.replaceAll ("∘", " ").replaceAll ("⦙", '"')
+    },
+    decode0DForName : function (s) {
+	return s.replaceAll ("⦙", '\\"')
     },
     delete_reserved_characters : function (s) {
 	return s.replace ("\\u010d", "").replace ("\\u03bb", "").replace ("\\u0117", "");
     },
     first_line : function (s) {
-	let lines = s.split ("&#xa;");
-	return lines [0];
+	let lines1 = s.split ("&#xa;");
+	let lines = (_.decode0D (lines1 [0]).split (" "))[0];
+	return lines;
     },
     rest_of_lines : function (s) {
 	let lines = s.split ("&#xa;");
@@ -22,7 +26,7 @@ _ = {
 	return rest.join ("\n");
     },
     name_of : function (s) {
-	let name = _.delete_reserved_characters (_.first_line (s));
+	let name = _.delete_reserved_characters (_.decode0DForName (_.first_line (s)));
 	return name;
     },
     code_of : function (s) {

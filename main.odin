@@ -10,7 +10,7 @@ main :: proc() {
     // zd.log_light_handlers // set this to only track handlers in Components
     // zd.log_full_handlers // set this to only track handlers, in full glory, in Components
     // zd.log_all // set this to track everything, equivalent to runtime.Logger_Level.Debug
-    context.logger = std.log (zd.log_light_handlers) // see ../../0d/odin/std/lib.odin for other options
+    //context.logger = std.log (zd.log_light_handlers) // see ../../0d/odin/std/lib.odin for other options
     arg, main_container_name, diagram_names := std.parse_command_line_args ()
     palette := std.initialize_component_palette (diagram_names, components_to_include_in_project)
     std.run (&palette, arg, main_container_name, diagram_names, start_function)
