@@ -1,11 +1,9 @@
 codesnippets {
 
   Snippets [Code+] = ‛«Code»’
-  Code [s] = ‛«s»’
 
-//// mid
 
-      codeString [lq c cs* rq] =
+  Code_codestring [lq c cs* rq] =
    ‛\n«_.name_of (cs)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	«_.code_of (cs)»
@@ -13,7 +11,7 @@ codesnippets {
 	return zd.make_leaf ("«cs»", owner, nil, handler)
     }’
       
-      predicateString [lq c cs* rq] =
+   Code_predicatestring [lq c cs* rq] =
    ‛\n«_.name_of (cs)» :: proc (name: string, owner : ^zd.Eh) -> ^zd.Eh {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	  if («_.code_of (cs)») {
@@ -25,7 +23,9 @@ codesnippets {
 	return zd.make_leaf ("«cs»", owner, nil, handler)
     }’
       
-      string [lq cs* rq] = ‛’
+    Code_other [lq cs* rq] = ‛’
+
+//// mid
 
       cCode [c] = ‛«c»’ 
       cPredicate [c] = ‛«c»’
@@ -36,7 +36,6 @@ codesnippets {
 //// low level
 
       cLTSL [cLT cSL] = ‛«cLT»«cSL»’
-      string [lq cs* rq] = ‛«lq»«cs»«rq»’
 
       cNext [c] = ‛???’
       cOpen [c] = ‛«c»’ 

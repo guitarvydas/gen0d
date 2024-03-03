@@ -3,16 +3,12 @@ codesnippets {
   Snippets = Code+
 
   Code =
-    | codeString -- ehstring
-    | predicateString -- lambdastring
-    | string
+    | lq cCode codeChar* rq -- codestring
+    | lq cPredicate (~rq any)* rq -- predicatestring
+    | lq (~rq any)* rq -- other
 
 
 //// mid level
-
-      codeString = lq cCode codeChar* rq
-      predicateString = lq cPredicate (~rq any)* rq
-      string = lq (~rq any)* rq
 
       cCode = cEh
       cPredicate = cLambda

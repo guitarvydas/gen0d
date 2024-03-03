@@ -1707,7 +1707,7 @@
                 "id": 7
             },
             {
-                "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
                 "id": 14
             },
             {
@@ -1724,7 +1724,7 @@
                 },
                 "source_port": "proc",
                 "target": {
-                    "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
                     "id": 14
                 },
                 "target_port": "\u237a"
@@ -1758,7 +1758,7 @@
             {
                 "dir": 1,
                 "source": {
-                    "name": "'<br>package generated<br>import \"core:fmt\"<br>import \"0d/odin/0d\"<br><br>'",
+                    "name": "'<br>package ___<br>import \"core:fmt\"<br>import \"0d/odin\"<br><br>'",
                     "id": 14
                 },
                 "source_port": "\u237a",
@@ -2303,6 +2303,19 @@
                 "target_port": "inc"
             },
             {
+                "dir": 1,
+                "source": {
+                    "name": "Generate Procs",
+                    "id": 7
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Combine Generated Code",
+                    "id": 14
+                },
+                "target_port": "proc"
+            },
+            {
                 "dir": 2,
                 "source": {
                     "name": "Generate Includes",
@@ -2320,19 +2333,6 @@
                 "source": {
                     "name": "Combine Generated Code",
                     "id": 14
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Generate Procs",
-                    "id": 7
                 },
                 "source_port": "",
                 "target": {
