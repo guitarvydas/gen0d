@@ -8,7 +8,7 @@ codesnippets {
 	handler :: proc (eh: ^zd.Eh, msg: ^zd.Message) {
 	«_.code_of (cs)»
 	}
-	return zd.make_leaf ("«cs»", owner, nil, handler)
+	return zd.make_leaf ("«_.long_name_of (cs)»", owner, nil, handler)
     }’
       
    Code_predicatestring [lq c cs* rq] =
@@ -20,7 +20,7 @@ codesnippets {
             zd.send (eh=eh, port="no", datum=zd.new_datum_bang (), causingMessage=msg)
           }
 	}
-	return zd.make_leaf ("«cs»", owner, nil, handler)
+	return zd.make_leaf ("«_.long_name_of (cs)»", owner, nil, handler)
     }’
       
     Code_other [lq cs* rq] = ‛’

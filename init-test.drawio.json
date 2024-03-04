@@ -1,0 +1,40 @@
+[
+    {
+        "file": "init-test.drawio",
+        "name": "Page-1",
+        "children": [
+            {
+                "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                "id": 4
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                    "id": 4
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;\u21d2",
+                    "id": 4
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    }
+]
