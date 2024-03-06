@@ -44,7 +44,7 @@ _ = {
 	return name;
     },
     long_name_of: function (s) {
-	let name = _.delete_reserved_characters (_.decode0DForLongName (s));
+	let name = _.decode0DForLongName (s);
 	return name;
     },
     code_of : function (s) {

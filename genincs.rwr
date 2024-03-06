@@ -1,8 +1,8 @@
 codesnippets {
 
   Snippets [Code+] = ‛«Code»’
-  Code_codestring [lq c cs* rq] = ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«_.long_name_of (cs)»", instantiate = «_.name_of (cs)» })’
-  Code_predicatestring [lq c cs* rq] =    ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«_.long_name_of (cs)»", instantiate = «_.name_of (cs)» })’
+  Code_codestring [lq c cs* rq] = ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«c»«_.long_name_of (cs)»", instantiate = «_.name_of (cs)» })’
+  Code_predicatestring [lq c cs* rq] =    ‛\nzd.append_leaf (leaves, zd.Leaf_Template { name = "«c»«_.long_name_of (cs)»", instantiate = «_.name_of (cs)» })’
   Code_other [lq cs* rq] = ‛’
 
 //// mid

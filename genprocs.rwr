@@ -9,7 +9,7 @@ codesnippets {
 	«_.code_of (cs)»
 	zd.send (eh=eh, port="", datum=zd.new_datum_bang (), causingMessage=msg)
 	}
-	return zd.make_leaf ("«_.long_name_of (cs)»", owner, nil, handler)
+	return zd.make_leaf ("«c»«_.long_name_of (cs)»", owner, nil, handler)
     }’
       
    Code_predicatestring [lq c cs* rq] =
@@ -21,7 +21,7 @@ codesnippets {
             zd.send (eh=eh, port="no", datum=zd.new_datum_bang (), causingMessage=msg)
           }
 	}
-	return zd.make_leaf ("«_.long_name_of (cs)»", owner, nil, handler)
+	return zd.make_leaf ("«c»«_.long_name_of (cs)»", owner, nil, handler)
     }’
       
     Code_other [lq cs* rq] = ‛’

@@ -6,6 +6,10 @@
             {
                 "name": "Game",
                 "id": 6
+            },
+            {
+                "name": "?A",
+                "id": 7
             }
         ],
         "connections": [
@@ -21,6 +25,19 @@
                     "id": 6
                 },
                 "target_port": "cold start"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?A",
+                    "id": 7
+                },
+                "target_port": ""
             },
             {
                 "dir": 2,
@@ -42,36 +59,44 @@
         "name": "Game",
         "children": [
             {
-                "name": "Win",
-                "id": 2
-            },
-            {
-                "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0",
+                "name": "\u0117init&#xa;fmt.println (\"*** init ***\")&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;fmt.println (\"*** init EXIT ***\")",
                 "id": 4
             },
             {
                 "name": "Game Ask",
-                "id": 8
+                "id": 7
             },
             {
                 "name": "Rest",
-                "id": 15
+                "id": 14
             },
             {
                 "name": "Adventure",
-                "id": 19
+                "id": 18
+            },
+            {
+                "name": "Win",
+                "id": 23
             },
             {
                 "name": "Shop",
-                "id": 25
+                "id": 24
             },
             {
-                "name": "Die",
+                "name": "$ echo BEGIN",
+                "id": 27
+            },
+            {
+                "name": "?C",
                 "id": 29
             },
             {
                 "name": "Flee",
-                "id": 34
+                "id": 33
+            },
+            {
+                "name": "Die",
+                "id": 41
             }
         ],
         "connections": [
@@ -83,60 +108,8 @@
                 },
                 "source_port": "cold start",
                 "target": {
-                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0",
-                    "id": 4
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Adventure",
-                    "id": 19
-                },
-                "source_port": "flee",
-                "target": {
-                    "name": "Flee",
-                    "id": 34
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Shop",
-                    "id": 25
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Game Ask",
-                    "id": 8
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Rest",
-                    "id": 15
-                },
-                "source_port": "",
-                "target": {
-                    "name": "Game Ask",
-                    "id": 8
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Win",
-                    "id": 2
-                },
-                "source_port": "more",
-                "target": {
-                    "name": "Game Ask",
-                    "id": 8
+                    "name": "$ echo BEGIN",
+                    "id": 27
                 },
                 "target_port": ""
             },
@@ -144,38 +117,25 @@
                 "dir": 1,
                 "source": {
                     "name": "Game Ask",
-                    "id": 8
-                },
-                "source_port": "shop",
-                "target": {
-                    "name": "Shop",
-                    "id": 25
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Game Ask",
-                    "id": 8
+                    "id": 7
                 },
                 "source_port": "adventure",
                 "target": {
                     "name": "Adventure",
-                    "id": 19
+                    "id": 18
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "Game Ask",
-                    "id": 8
+                    "name": "Shop",
+                    "id": 24
                 },
-                "source_port": "rest",
+                "source_port": "",
                 "target": {
-                    "name": "Rest",
-                    "id": 15
+                    "name": "Game Ask",
+                    "id": 7
                 },
                 "target_port": ""
             },
@@ -183,25 +143,25 @@
                 "dir": 1,
                 "source": {
                     "name": "Adventure",
-                    "id": 19
+                    "id": 18
                 },
                 "source_port": "win",
                 "target": {
                     "name": "Win",
-                    "id": 2
+                    "id": 23
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0",
-                    "id": 4
+                    "name": "Adventure",
+                    "id": 18
                 },
-                "source_port": "",
+                "source_port": "die",
                 "target": {
-                    "name": "Game Ask",
-                    "id": 8
+                    "name": "Die",
+                    "id": 41
                 },
                 "target_port": ""
             },
@@ -209,25 +169,12 @@
                 "dir": 1,
                 "source": {
                     "name": "Flee",
-                    "id": 34
+                    "id": 33
                 },
                 "source_port": "more",
                 "target": {
                     "name": "Game Ask",
-                    "id": 8
-                },
-                "target_port": ""
-            },
-            {
-                "dir": 1,
-                "source": {
-                    "name": "Die",
-                    "id": 29
-                },
-                "source_port": "restart",
-                "target": {
-                    "name": "\u0117init&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0",
-                    "id": 4
+                    "id": 7
                 },
                 "target_port": ""
             },
@@ -235,25 +182,103 @@
                 "dir": 1,
                 "source": {
                     "name": "Adventure",
-                    "id": 19
+                    "id": 18
                 },
-                "source_port": "die",
+                "source_port": "flee",
                 "target": {
+                    "name": "Flee",
+                    "id": 33
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
                     "name": "Die",
+                    "id": 41
+                },
+                "source_port": "restart",
+                "target": {
+                    "name": "?C",
                     "id": 29
                 },
                 "target_port": ""
             },
             {
-                "dir": 2,
+                "dir": 1,
+                "source": {
+                    "name": "Win",
+                    "id": 23
+                },
+                "source_port": "more",
+                "target": {
+                    "name": "Game Ask",
+                    "id": 7
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Rest",
+                    "id": 14
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Game Ask",
+                    "id": 7
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
                 "source": {
                     "name": "Game Ask",
-                    "id": 8
+                    "id": 7
                 },
-                "source_port": "quit",
+                "source_port": "shop",
                 "target": {
-                    "name": "",
-                    "id": 0
+                    "name": "Shop",
+                    "id": 24
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Game Ask",
+                    "id": 7
+                },
+                "source_port": "rest",
+                "target": {
+                    "name": "Rest",
+                    "id": 14
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "\u0117init&#xa;fmt.println (\"*** init ***\")&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;fmt.println (\"*** init EXIT ***\")",
+                    "id": 4
+                },
+                "source_port": "",
+                "target": {
+                    "name": "Game Ask",
+                    "id": 7
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "$ echo BEGIN",
+                    "id": 27
+                },
+                "source_port": "",
+                "target": {
+                    "name": "\u0117init&#xa;fmt.println (\"*** init ***\")&#xa;p.ok = max_recharge&#xa;p.wallet = 0&#xa;p.pwr = 4&#xa;ndays = 0&#xa;fmt.println (\"*** init EXIT ***\")",
+                    "id": 4
                 },
                 "target_port": ""
             },
@@ -261,7 +286,7 @@
                 "dir": 2,
                 "source": {
                     "name": "Win",
-                    "id": 2
+                    "id": 23
                 },
                 "source_port": "Quit",
                 "target": {
@@ -274,9 +299,22 @@
                 "dir": 2,
                 "source": {
                     "name": "Die",
-                    "id": 29
+                    "id": 41
                 },
                 "source_port": "Quit",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Game Ask",
+                    "id": 7
+                },
+                "source_port": "quit",
                 "target": {
                     "name": "",
                     "id": 0
@@ -290,7 +328,7 @@
         "name": "Rest",
         "children": [
             {
-                "name": "\u0117Rest0&#xa;p.ok = max_recharge&#xa;ndays += 1&#xa;zd.send (eh=eh, port=\"\", datum=zd.new_datum_string (fmt.aprintf (\"p=%v m=%v ndays=%v\\n\", p, m, ndays)), causingMessage=msg)",
+                "name": "\u0117Rest1&#xa;p.ok = max_recharge&#xa;ndays += 1",
                 "id": 3
             }
         ],
@@ -303,7 +341,7 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "\u0117Rest0&#xa;p.ok = max_recharge&#xa;ndays += 1&#xa;zd.send (eh=eh, port=\"\", datum=zd.new_datum_string (fmt.aprintf (\"p=%v m=%v ndays=%v\\n\", p, m, ndays)), causingMessage=msg)",
+                    "name": "\u0117Rest1&#xa;p.ok = max_recharge&#xa;ndays += 1",
                     "id": 3
                 },
                 "target_port": ""
@@ -311,7 +349,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "\u0117Rest0&#xa;p.ok = max_recharge&#xa;ndays += 1&#xa;zd.send (eh=eh, port=\"\", datum=zd.new_datum_string (fmt.aprintf (\"p=%v m=%v ndays=%v\\n\", p, m, ndays)), causingMessage=msg)",
+                    "name": "\u0117Rest1&#xa;p.ok = max_recharge&#xa;ndays += 1",
                     "id": 3
                 },
                 "source_port": "",
@@ -328,8 +366,12 @@
         "name": "Sync Ask",
         "children": [
             {
-                "name": "$ dialog",
+                "name": "\u0161",
                 "id": 8
+            },
+            {
+                "name": "1then2",
+                "id": 11
             }
         ],
         "connections": [
@@ -341,15 +383,54 @@
                 },
                 "source_port": "",
                 "target": {
-                    "name": "$ dialog",
+                    "name": "1then2",
+                    "id": 11
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "1then2",
+                    "id": 11
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 11
+                },
+                "source_port": "1",
+                "target": {
+                    "name": "\u0161",
                     "id": 8
                 },
-                "target_port": ""
+                "target_port": "arg"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "1then2",
+                    "id": 11
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "\u0161",
+                    "id": 8
+                },
+                "target_port": "run"
             },
             {
                 "dir": 2,
                 "source": {
-                    "name": "$ dialog",
+                    "name": "\u0161",
                     "id": 8
                 },
                 "source_port": "",
@@ -362,7 +443,7 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "$ dialog",
+                    "name": "\u0161",
                     "id": 8
                 },
                 "source_port": "\u2717",
@@ -384,6 +465,14 @@
             },
             {
                 "name": "Sync Ask",
+                "id": 13
+            },
+            {
+                "name": "?B",
+                "id": 17
+            },
+            {
+                "name": "?A",
                 "id": 18
             },
             {
@@ -406,10 +495,23 @@
                 "target_port": ""
             },
             {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?A",
+                    "id": 18
+                },
+                "target_port": ""
+            },
+            {
                 "dir": 1,
                 "source": {
                     "name": "Sync Ask",
-                    "id": 18
+                    "id": 13
                 },
                 "source_port": "",
                 "target": {
@@ -427,41 +529,41 @@
                 "source_port": "",
                 "target": {
                     "name": "Sync Ask",
-                    "id": 18
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Game Choice",
+                    "id": 20
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?B",
+                    "id": 17
                 },
                 "target_port": ""
             },
             {
                 "dir": 2,
                 "source": {
+                    "name": "Sync Ask",
+                    "id": 13
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
                     "name": "Game Choice",
                     "id": 20
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Sync Ask",
-                    "id": 18
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Demux 4",
-                    "id": 9
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -521,6 +623,19 @@
                     "id": 0
                 },
                 "target_port": "quit"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 9
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
             }
         ]
     },
@@ -1184,28 +1299,6 @@
     },
     {
         "file": "../dc0d/dc0d.drawio",
-        "name": "Flee",
-        "children": [
-
-        ],
-        "connections": [
-            {
-                "dir": 3,
-                "source": {
-                    "name": "",
-                    "id": 0
-                },
-                "source_port": "",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "more"
-            }
-        ]
-    },
-    {
-        "file": "../dc0d/dc0d.drawio",
         "name": "Win",
         "children": [
             {
@@ -1269,6 +1362,28 @@
                     "id": 0
                 },
                 "target_port": "again"
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Flee",
+        "children": [
+
+        ],
+        "connections": [
+            {
+                "dir": 3,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "more"
             }
         ]
     },
@@ -1576,20 +1691,20 @@
         "name": "Shop",
         "children": [
             {
-                "name": "<b>Shop Menu</b>",
+                "name": "\u0117upgrade&#xa;p.pwr += damage_sword&#xa;p.wallet -= cost_sword",
                 "id": 5
             },
             {
-                "name": "\u0117upgrade&#xa;p.pwr += damage_sword&#xa;p.wallet -= cost_sword",
-                "id": 9
+                "name": "<b>Shop Menu</b>",
+                "id": 8
             },
             {
                 "name": "\u03bbf0 p.wallet >= cost_sword",
-                "id": 13
+                "id": 16
             },
             {
-                "name": "<font color=\"#cccccc\">1then2</font>",
-                "id": 18
+                "name": "1then2",
+                "id": 19
             }
         ],
         "connections": [
@@ -1602,7 +1717,7 @@
                 "source_port": "",
                 "target": {
                     "name": "\u03bbf0 p.wallet >= cost_sword",
-                    "id": 13
+                    "id": 16
                 },
                 "target_port": ""
             },
@@ -1610,12 +1725,12 @@
                 "dir": 1,
                 "source": {
                     "name": "\u0117upgrade&#xa;p.pwr += damage_sword&#xa;p.wallet -= cost_sword",
-                    "id": 9
+                    "id": 5
                 },
                 "source_port": "",
                 "target": {
                     "name": "\u03bbf0 p.wallet >= cost_sword",
-                    "id": 13
+                    "id": 16
                 },
                 "target_port": ""
             },
@@ -1623,38 +1738,38 @@
                 "dir": 1,
                 "source": {
                     "name": "<b>Shop Menu</b>",
-                    "id": 5
+                    "id": 8
                 },
                 "source_port": "buy",
                 "target": {
                     "name": "\u0117upgrade&#xa;p.pwr += damage_sword&#xa;p.wallet -= cost_sword",
-                    "id": 9
+                    "id": 5
                 },
                 "target_port": ""
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "<font color=\"#cccccc\">1then2</font>",
-                    "id": 18
+                    "name": "1then2",
+                    "id": 19
                 },
                 "source_port": "1",
                 "target": {
                     "name": "<b>Shop Menu</b>",
-                    "id": 5
+                    "id": 8
                 },
                 "target_port": "buy?"
             },
             {
                 "dir": 1,
                 "source": {
-                    "name": "<font color=\"#cccccc\">1then2</font>",
-                    "id": 18
+                    "name": "1then2",
+                    "id": 19
                 },
                 "source_port": "2",
                 "target": {
                     "name": "<b>Shop Menu</b>",
-                    "id": 5
+                    "id": 8
                 },
                 "target_port": "ask"
             },
@@ -1662,33 +1777,33 @@
                 "dir": 1,
                 "source": {
                     "name": "\u03bbf0 p.wallet >= cost_sword",
-                    "id": 13
+                    "id": 16
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<font color=\"#cccccc\">1then2</font>",
-                    "id": 18
+                    "name": "1then2",
+                    "id": 19
                 },
-                "target_port": "1"
+                "target_port": "2"
             },
             {
                 "dir": 1,
                 "source": {
                     "name": "\u03bbf0 p.wallet >= cost_sword",
-                    "id": 13
+                    "id": 16
                 },
                 "source_port": "",
                 "target": {
-                    "name": "<font color=\"#cccccc\">1then2</font>",
-                    "id": 18
+                    "name": "1then2",
+                    "id": 19
                 },
-                "target_port": "2"
+                "target_port": "1"
             },
             {
                 "dir": 2,
                 "source": {
                     "name": "<b>Shop Menu</b>",
-                    "id": 5
+                    "id": 8
                 },
                 "source_port": "leave",
                 "target": {
@@ -1704,16 +1819,16 @@
         "name": "Shop Menu",
         "children": [
             {
-                "name": "Demux 4",
-                "id": 4
-            },
-            {
                 "name": "Sync Ask",
                 "id": 6
             },
             {
+                "name": "Demux 4",
+                "id": 10
+            },
+            {
                 "name": "Shop Choice",
-                "id": 19
+                "id": 21
             }
         ],
         "connections": [
@@ -1723,12 +1838,25 @@
                     "name": "",
                     "id": 0
                 },
-                "source_port": "",
+                "source_port": "buy?",
                 "target": {
                     "name": "Shop Choice",
-                    "id": 19
+                    "id": 21
                 },
-                "target_port": ""
+                "target_port": "buy?"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "ask",
+                "target": {
+                    "name": "Shop Choice",
+                    "id": 21
+                },
+                "target_port": "ask"
             },
             {
                 "dir": 1,
@@ -1739,7 +1867,7 @@
                 "source_port": "",
                 "target": {
                     "name": "Demux 4",
-                    "id": 4
+                    "id": 10
                 },
                 "target_port": ""
             },
@@ -1747,7 +1875,20 @@
                 "dir": 1,
                 "source": {
                     "name": "Shop Choice",
-                    "id": 19
+                    "id": 21
+                },
+                "source_port": "ask",
+                "target": {
+                    "name": "Shop Choice",
+                    "id": 21
+                },
+                "target_port": "ask"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "Shop Choice",
+                    "id": 21
                 },
                 "source_port": "",
                 "target": {
@@ -1759,34 +1900,8 @@
             {
                 "dir": 2,
                 "source": {
-                    "name": "Sync Ask",
-                    "id": 6
-                },
-                "source_port": "\u2717",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "\u2717"
-            },
-            {
-                "dir": 2,
-                "source": {
                     "name": "Demux 4",
-                    "id": 4
-                },
-                "source_port": "2",
-                "target": {
-                    "name": "",
-                    "id": 0
-                },
-                "target_port": "leave"
-            },
-            {
-                "dir": 2,
-                "source": {
-                    "name": "Demux 4",
-                    "id": 4
+                    "id": 10
                 },
                 "source_port": "1",
                 "target": {
@@ -1799,7 +1914,33 @@
                 "dir": 2,
                 "source": {
                     "name": "Demux 4",
-                    "id": 4
+                    "id": 10
+                },
+                "source_port": "2",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "leave"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Sync Ask",
+                    "id": 6
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Demux 4",
+                    "id": 10
                 },
                 "source_port": "\u2717",
                 "target": {
@@ -1812,7 +1953,492 @@
                 "dir": 2,
                 "source": {
                     "name": "Shop Choice",
-                    "id": 19
+                    "id": 21
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Dialog",
+        "children": [
+            {
+                "name": "'node dialog.js '",
+                "id": 6
+            },
+            {
+                "name": "String Concatenate",
+                "id": 8
+            },
+            {
+                "name": "?C",
+                "id": 13
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "String Concatenate",
+                    "id": 8
+                },
+                "target_port": "2"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "'node dialog.js '",
+                    "id": 6
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "'node dialog.js '",
+                    "id": 6
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "String Concatenate",
+                    "id": 8
+                },
+                "target_port": "1"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "?C",
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "String Concatenate",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Game Choice",
+        "children": [
+            {
+                "name": "''adventure;shop;rest;quit''",
+                "id": 5
+            },
+            {
+                "name": "Dialog",
+                "id": 8
+            },
+            {
+                "name": "?B",
+                "id": 12
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "''adventure;shop;rest;quit''",
+                    "id": 5
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''adventure;shop;rest;quit''",
+                    "id": 5
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''adventure;shop;rest;quit''",
+                    "id": 5
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "?B",
+                    "id": 12
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Fight Choice",
+        "children": [
+            {
+                "name": "''fight;flee''",
+                "id": 6
+            },
+            {
+                "name": "Dialog",
+                "id": 8
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "''fight;flee''",
+                    "id": 6
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''fight;flee''",
+                    "id": 6
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Win Choice",
+        "children": [
+            {
+                "name": "''go home;continue''",
+                "id": 6
+            },
+            {
+                "name": "Dialog",
+                "id": 8
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "''go home;continue''",
+                    "id": 6
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''go home;continue''",
+                    "id": 6
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Die Choice",
+        "children": [
+            {
+                "name": "''quit;restart''",
+                "id": 6
+            },
+            {
+                "name": "Dialog",
+                "id": 8
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "",
+                "target": {
+                    "name": "''quit;restart''",
+                    "id": 6
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''quit;restart''",
+                    "id": 6
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 8
+                },
+                "source_port": "\u2717",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": "\u2717"
+            }
+        ]
+    },
+    {
+        "file": "../dc0d/dc0d.drawio",
+        "name": "Shop Choice",
+        "children": [
+            {
+                "name": "''leave''",
+                "id": 7
+            },
+            {
+                "name": "''buy;leave''",
+                "id": 10
+            },
+            {
+                "name": "Dialog",
+                "id": 13
+            }
+        ],
+        "connections": [
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "ask",
+                "target": {
+                    "name": "''leave''",
+                    "id": 7
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 0,
+                "source": {
+                    "name": "",
+                    "id": 0
+                },
+                "source_port": "buy?",
+                "target": {
+                    "name": "''buy;leave''",
+                    "id": 10
+                },
+                "target_port": "\u237a"
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''buy;leave''",
+                    "id": 10
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Dialog",
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 1,
+                "source": {
+                    "name": "''leave''",
+                    "id": 7
+                },
+                "source_port": "\u237a",
+                "target": {
+                    "name": "Dialog",
+                    "id": 13
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 13
+                },
+                "source_port": "",
+                "target": {
+                    "name": "",
+                    "id": 0
+                },
+                "target_port": ""
+            },
+            {
+                "dir": 2,
+                "source": {
+                    "name": "Dialog",
+                    "id": 13
                 },
                 "source_port": "\u2717",
                 "target": {

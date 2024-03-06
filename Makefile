@@ -24,7 +24,8 @@ transpile.drawio.json: $(LIBSRC)/transpile.drawio
 
 clean:
 	rm -rf gen0d gen0d.dSYM
-	rm -rf src.json dc0d.drawio.json small-src.json big-src.json
+	rm -rf src.json dc0d.drawio.json small-src.json big-src.json rest-src.json
+	rm -rf rest-test.drawio.json small-test.drawio.json
 
 
 big-src.json: dc0d.drawio.json
